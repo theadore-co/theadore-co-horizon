@@ -3,7 +3,7 @@
 
 
 {% if block_settings.use_height != blank %}
-  <div class="use-height-icon" style="--height: {{ block_settings.height }}px;">
+  <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings.custom_mobile_height }}px;{% endif %}">
 {% endif %}
   {% capture icon %}
     {% render 'icon-or-image',
@@ -324,6 +324,23 @@
       "unit": "px",
       "default": 24,
       "visible_if": "{{ block.settings.use_height == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_height",
+      "label": "Custom mobile height",
+      "visible_if": "{{ block.settings.use_height == true }}"
+    },
+    {
+      "type": "range",
+      "id": "mobile-height",
+      "label": "Mobile height",
+      "min": 12,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ block.settings.custom_mobile_height == true }}"
     },
     {
       "type": "url",

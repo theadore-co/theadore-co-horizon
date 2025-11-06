@@ -74,13 +74,9 @@ body, .text-block.paragraph > * {
     margin-bottom: -4px;
 }
 
-.use-height-icon {
-    display: block;
-    height: var(--height) !important;
-}
-
 .use-height-icon img, .use-height-icon svg {
     width: auto !important;
+    height: var(--height) !important;
 }
 
 @media (min-width: 750px) {
@@ -188,5 +184,9 @@ body, .text-block.paragraph > * {
     }
     .header__columns {
         --header-mobile-bookend: auto !important;
+    }
+
+    .use-height-icon[style*="--mobile-height"] img, .use-height-icon[style*="--mobile-height"] svg {
+        height: var(--mobile-height) !important;
     }
 }
