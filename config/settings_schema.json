@@ -397,6 +397,10 @@
             "label": "10px"
           },
           {
+            "value": "11",
+            "label": "11px"
+          },
+          {
             "value": "12",
             "label": "12px"
           },
@@ -1079,6 +1083,10 @@
           {
             "value": "10",
             "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
           },
           {
             "value": "12",

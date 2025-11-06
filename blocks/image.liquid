@@ -5,6 +5,8 @@
   case block_settings.image_ratio
     when 'landscape'
       assign ratio = '16 / 9'
+    when 'standard'
+      assign ratio = '4 / 4.5'
     when 'portrait'
       assign ratio = '4 / 5'
     when 'adapt'
@@ -137,6 +139,10 @@
         {
           "value": "portrait",
           "label": "t:options.portrait"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
         },
         {
           "value": "square",

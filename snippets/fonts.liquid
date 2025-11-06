@@ -40,3 +40,50 @@
   >
 {%- endunless -%}
 {% # theme-check-enable %}
+
+{% style %}
+  @font-face {
+      font-family: 'Metropolis';
+      src: url({{ 'Metropolis-Regular.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Metropolis-Regular.woff' | asset_url }}) format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Metropolis';
+      src: url({{ 'Metropolis-Medium.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Metropolis-Medium.woff' | asset_url }}) format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Metropolis';
+      src: url({{ 'Metropolis-Bold.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Metropolis-Bold.woff' | asset_url }}) format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Metropolis';
+      src: url({{ 'Metropolis-RegularItalic.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Metropolis-RegularItalic.woff' | asset_url }}) format('woff');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Metropolis Semi';
+      src: url({{ 'Metropolis-SemiBold.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Metropolis-SemiBold.woff' | asset_url }}) format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+  }
+{% endstyle %}
