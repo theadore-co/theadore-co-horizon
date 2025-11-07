@@ -25,7 +25,7 @@
     aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
   >
     <p class="announcement-bar__text">
-      {{ block.settings.text }}{% if block_settings.link != blank %}<span class="arrow-link">{{- 'icon-long-arrow.svg' | inline_asset_content -}}</span>{% endif %}
+      {{ block.settings.text }}{% if block_settings.link != blank %}<span class="arrow-link">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>{% endif %}
     </p>
 
     {% if block_settings.link != blank %}
