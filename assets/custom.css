@@ -162,7 +162,7 @@ slideshow-arrows[position="top"] .slideshow-control {
         grid-column: 1 / -1;
     }
 
-    .carousel--mobile-full-width .resource-list__carousel[style*="--mobile-card-size: 100cqw;"] slideshow-slides {
+    .carousel--mobile-full-width .resource-list__carousel[style*="--mobile-card-size: 100%;"] slideshow-slides {
         padding-inline: 0 !important;
         scroll-padding-inline-start: 0;
     }
