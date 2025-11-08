@@ -4,7 +4,7 @@
   {%  render 'spacing-style', settings: block_settings %}
   {% render 'border-override', settings: block_settings %}
    --size-style-width: {{ block_settings.custom_width }}%; --size-style-width-mobile: {{ block_settings.custom_width_mobile }}%;
-   --size-style-aspect-ratio: {% if block_settings.source == 'uploaded' %}{{ block_settings.video.aspect_ratio | default: 'auto' }}{% elsif block_settings.cover_image == blank %}{{ block_settings.aspect_ratio }}{% else %}auto{% endif %};
+   --size-style-aspect-ratio: {% if block_settings.source == 'uploaded' %}{{ block_settings.aspect_ratio | default: 'auto' }}{% elsif block_settings.cover_image == blank %}{{ block_settings.aspect_ratio }}{% else %}auto{% endif %};
 {% endcapture %}
 
 {% if block_settings.source == 'uploaded' %}
@@ -14,6 +14,7 @@
     video_loop: block_settings.video_loop,
     video_style: video_style,
     video_preview_image: block_settings.video.preview_image,
+    aspect_ratio: block_settings.aspect_ratio,
     additional_attributes: block.shopify_attributes,
     section_id: section.id
   %}
@@ -126,7 +127,7 @@
       "type": "select",
       "id": "aspect_ratio",
       "label": "t:settings.aspect_ratio",
-      "visible_if": "{{ block.settings.source == 'url' and block.settings.cover_image == blank }}",
+      "visible_if": "{{ block.settings.cover_image == blank }}",
       "options": [
         {
           "value": "auto",
@@ -137,12 +138,24 @@
           "label": "t:options.portrait"
         },
         {
+          "value": "6/5",
+          "label": "Classic"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
           "value": "1/1",
           "label": "t:options.square"
         },
         {
           "value": "16/9",
           "label": "t:options.landscape"
+        },
+        {
+          "value": "3 / 2",
+          "label": "Taller landscape"
         }
       ],
       "default": "auto"

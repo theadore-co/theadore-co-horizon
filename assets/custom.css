@@ -31,8 +31,8 @@ body, .text-block.paragraph > * {
 }
 
 .header-actions__action svg {
-    width: var(--icon-size-sm) !important;
-    height: var(--icon-size-sm) !important;
+    width: var(--icon-size-md) !important;
+    height: var(--icon-size-md) !important;
 }
 
 .header:not(.header--compact) .header__row--bottom {
@@ -79,6 +79,49 @@ body, .text-block.paragraph > * {
     height: var(--height) !important;
 }
 
+.resource-list__carousel slideshow-arrows[position="top"] .slideshow-control {
+    min-height: unset !important;
+    color: var(--color-foreground) !important;
+}
+
+slideshow-component[dragging] slideshow-arrows[position="top"] {
+    display: flex !important;
+}
+
+.resource-list__carousel slideshow-arrows[position="top"] {
+    position: relative !important;
+    width: auto;
+    max-width: fit-content;
+    margin-left: auto;
+    padding-left: 0;
+    gap: 1rem;
+}
+
+.resource-list__carousel slideshow-arrows[position="top"] .svg-wrapper,.resource-list__carousel slideshow-arrows[position="top"] .svg-wrapper > svg {
+    height: auto !important;
+}
+
+.resource-list__carousel slideshow-arrows[position="top"] .slideshow-control[disabled] {
+    display: block !important;
+}
+
+.resource-list__carousel slideshow-arrows[position="top"] {
+    mix-blend-mode: unset !important;
+    margin-block-end: var(--resource-list-column-gap);
+}
+.resource-list__carousel slideshow-arrows[position="top"] + slideshow-slides {
+    padding-block-start: 0;
+    margin-block-start: 0;
+}
+
+slideshow-arrows[position="top"] .slideshow-control {
+    pointer-events: auto;
+    opacity: 1;
+    line-height: 1em;
+    padding-inline: 0;
+    min-width: unset;
+}
+
 @media (min-width: 750px) {
     .search-modal__button {
         gap: var(--gap-xs);
@@ -89,6 +132,9 @@ body, .text-block.paragraph > * {
     .search-modal__button .svg-wrapper {
         height: auto !important;
         width: auto !important;
+    }
+    .resource-list__carousel {
+        --peek-next-slide-size: 0rem;
     }
 }
 
@@ -185,6 +231,11 @@ body, .text-block.paragraph > * {
     .header__columns {
         --header-mobile-bookend: auto !important;
     } */
+    header-actions .header-actions__action {
+        --button-size: 32px !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
 
     .use-height-icon[style*="--mobile-height"] img, .use-height-icon[style*="--mobile-height"] svg {
         height: var(--mobile-height) !important;

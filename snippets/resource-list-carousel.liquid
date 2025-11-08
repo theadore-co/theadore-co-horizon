@@ -6,7 +6,6 @@
   @param {number} slide_count - The number of slides to display in the carousel
   @param {object} settings - The block or sections settings from the parent block/section.
   @param {string} [slide_width_max] - The maximum width of the slides in the carousel.
-
   @example
   {% render 'resource-list-carousel', slides: slides, slide_count: slide_count, settings: block.settings %}
 {%- enddoc -%}
@@ -30,9 +29,13 @@
   {% endfor %}
 {% endcapture %}
 
+{% if settings.arrow_position == true %}
+  {% assign arrows_position = 'top' %}
+{% endif %}
+
 {% if settings.icons_style != 'none' %}
   {% capture slideshow_arrows %}
-    {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape %}
+    {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape, arrows_position: arrows_position %}
   {% endcapture %}
 {% endif %}
 

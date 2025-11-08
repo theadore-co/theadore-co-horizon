@@ -5,6 +5,10 @@
   case block_settings.image_ratio
     when 'landscape'
       assign ratio = '16 / 9'
+    when 'taller_landscape'
+      assign ratio = '4 / 3'
+    when 'classic'
+      assign ratio = '6 / 5'
     when 'standard'
       assign ratio = '4 / 4.5'
     when 'portrait'
@@ -141,6 +145,10 @@
           "label": "t:options.portrait"
         },
         {
+          "value": "classic",
+          "label": "Classic"
+        },
+        {
           "value": "standard",
           "label": "Standard"
         },
@@ -151,6 +159,10 @@
         {
           "value": "landscape",
           "label": "t:options.landscape"
+        },
+        {
+          "value": "taller_landscape",
+          "label": "Taller landscape"
         }
       ],
       "default": "adapt",

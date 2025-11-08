@@ -61,6 +61,8 @@
   # Calculate aspect ratio
   assign ratio = 1
   case block_settings.image_ratio
+    when 'taller_landscape'
+      assign ratio = '4 / 3'
     when 'landscape'
       assign ratio = '16 / 9'
     when 'portrait'

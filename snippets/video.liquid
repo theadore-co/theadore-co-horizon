@@ -15,6 +15,7 @@
   @param {string} [video_type] - 'youtube' or 'vimeo'
   @param {boolean} [disable_controls] - Whether to disable controls. If true, only play/pause will be usable.
   @param {object} video - The Shopify video object or a string containing a YouTube ID or Vimeo ID
+  @param {boolean} [aspect_ratio] - Aspect ratio
   @param {string} section_id - The section ID
   @param {object} [block] - The block object
 
@@ -99,6 +100,10 @@
       assign controls = true
       assign enable_js_api = false
     endif
+
+    if video_autoplay and video_loop
+      assign controls = false
+    endif
   %}
 
   {% capture video_tag %}
@@ -136,7 +141,7 @@
         aria-label="{{ alt }}"
         type="button"
         on:click="/showDeferredMedia"
-        style="--video-aspect-ratio: {{ video.aspect_ratio }}"
+        style="--video-aspect-ratio: {{ aspect_ratio }}"
       >
         {{
           video_preview_image

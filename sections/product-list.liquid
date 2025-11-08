@@ -130,6 +130,13 @@
       "visible_if": "{{ section.settings.layout_type != 'carousel' }}"
     },
     {
+      "type": "checkbox",
+      "id": "arrow_position",
+      "label": "Set arrow position on top",
+      "default": false,
+      "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
+    },
+    {
       "type": "range",
       "id": "max_products",
       "label": "t:settings.product_count",
