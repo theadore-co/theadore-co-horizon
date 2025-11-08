@@ -167,6 +167,10 @@ slideshow-arrows[position="top"] .slideshow-control {
         scroll-padding-inline-start: 0;
     }
 
+    :is(.carousel--mobile-full-width) .featured-blog-posts-card__content {
+        padding-inline: var(--page-margin);
+    }
+
     .mobile-group-column-reverse > .group-block-content {
         flex-direction: column-reverse !important;
     }
