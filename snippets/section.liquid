@@ -10,7 +10,7 @@
   {% if section.settings.add_section_id == true and section.settings.section_id != blank %}
     data-section-id="{{ section.settings.section_id }}"
   {% endif %}
-  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} {{ section.settings.css_class }}"
+  class="section  {% if section.settings.full_width_on_mobile %}section--mobile-full-width{% endif %} section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} {{ section.settings.css_class }}"
   data-testid="ui-test-section"
 
   {% if request.visual_preview_mode %}

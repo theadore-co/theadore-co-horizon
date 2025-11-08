@@ -207,6 +207,13 @@
       "default": "page-width"
     },
     {
+      "type": "checkbox",
+      "id": "full_width_on_mobile",
+      "label": "t:settings.full_width_on_mobile",
+      "default": false,
+      "visible_if": "{{ section.settings.section_width == 'page-width' }}"
+    },
+    {
       "type": "select",
       "id": "section_height",
       "label": "t:settings.height",
