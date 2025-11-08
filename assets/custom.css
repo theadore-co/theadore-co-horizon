@@ -162,6 +162,13 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     .page-width-wide, .page-width-normal, .page-width-narrow, .page-width-content {
         --page-margin: 24px !important;
     }
+    :is(.header__column--left,.header__column--center) .search-action {
+        margin-inline: 0 !important;
+    }
+    .header__column--right header-actions {
+        margin-inline-start: 0;
+        margin-inline-end: calc(var(--gap-md) * -1);
+    }
 }
 
 @media (max-width: 749px) {
