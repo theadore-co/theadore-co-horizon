@@ -136,6 +136,10 @@ slideshow-arrows[position="top"] .slideshow-control {
     min-width: unset;
 }
 
+slideshow-arrows[position="top"] .slideshow-control[disabled] {
+    opacity: .5;
+}
+
 .featured-blog-posts-card__content .blog-post-card__content-text a {
     margin-top: var(--margin-xs);
     text-decoration: underline;
