@@ -159,6 +159,9 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     .resource-list__carousel {
         --peek-next-slide-size: 0rem;
     }
+    .page-width-wide, .page-width-normal, .page-width-narrow, .page-width-content {
+        --page-margin: 24px !important;
+    }
 }
 
 @media (max-width: 749px) {
