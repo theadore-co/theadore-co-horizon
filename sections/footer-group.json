@@ -91,7 +91,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Theadore + Co. is an Australian luxury jewellery brand, crafting timeless engagement rings and wedding bands that celebrate modern love with ethical elegance.</p>",
+                "text": "<p>Theadore + Co. is an Australian luxury jewellery brand, crafting timeless engagement rings and wedding bands that celebrate modern love with ethical elegance. </p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
