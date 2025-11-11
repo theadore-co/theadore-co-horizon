@@ -46,6 +46,12 @@
       >
         {% if block_settings.display_type == 'text' %}
           {{ block_settings.label }}
+        {% elsif block_settings.display_type == 'long-arrow' %}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.51 25.06" 
+            focusable="false"
+            aria-hidden="true"class="email-signup__button-icon email-signup-long-arrow">
+              <path fill="currentColor" stroke-width="var(--icon-stroke-width)" d="M.67,13.49a1,1,0,0,1,0-1.92H65.28A17.91,17.91,0,0,1,60,5.43h0A15.4,15.4,0,0,1,58.42.87h0a.69.69,0,0,0,0-.2,1.15,1.15,0,0,1,0-.14h0c0-.35.32-.53,1-.53h0a1.43,1.43,0,0,1,.74.12,1,1,0,0,1,.27.55h0a8.89,8.89,0,0,0,.53,2h0a14.7,14.7,0,0,0,3.5,5.74A14.16,14.16,0,0,0,70.08,12h0a.54.54,0,0,1,0,1.06h0a14.16,14.16,0,0,0-5.71,3.62,14.7,14.7,0,0,0-3.5,5.74h0a16.44,16.44,0,0,0-.53,1.92h0a1,1,0,0,1-.27.6,1.43,1.43,0,0,1-.74.12h0c-.67,0-1-.18-1-.53h0a11,11,0,0,1,.29-1.2h0a17.09,17.09,0,0,1,6.67-9.84H.67Z"/>
+          </svg>
         {% else %}
           <svg
             viewBox="0 0 20 20"
@@ -105,6 +111,11 @@
     display: block;
   }
 
+  .email-signup-long-arrow {
+    width: var(--icon-size-sm);
+    height: auto;
+  }
+  
   .email-signup-block {
     min-width: fit-content;
 
@@ -164,7 +175,7 @@
 
   .email-signup__input,
   .email-signup__button--text {
-    padding: var(--padding-lg) var(--padding-3xl);
+    padding: var(--padding-lg) var(--padding-lg);
   }
 
   .email-signup__input-group .email-signup__input--underline {
@@ -240,7 +251,7 @@
   }
 
   .email-signup__button--integrated {
-    --button-offset: var(--margin-xs);
+    --button-offset: var(--margin-lg);
 
     position: absolute;
     height: calc(100% - (var(--button-offset) * 2) - (var(--border-width) * 2));
@@ -532,6 +543,10 @@
         {
           "value": "text",
           "label": "t:options.text"
+        },
+        {
+          "value": "long-arrow",
+          "label": "Long arrow"
         },
         {
           "value": "arrow",

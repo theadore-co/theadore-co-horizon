@@ -72,8 +72,8 @@ a.link:not(.hero__container .link):after {
 
 .arrow-link svg {
     display: block;
-    height: .5rem;
-    width: auto;
+    height: auto;
+    width: var(--icon-size-sm);
 }
 
 .text-block--background:not(.collection-card--image-bg .text-block--background) {
