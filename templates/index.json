@@ -3330,9 +3330,9 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Install Moast app widget: <a href=\"https://apps.shopify.com/moast-interactive-ugc\" title=\"https://apps.shopify.com/moast-interactive-ugc\">https://apps.shopify.com/moast-interactive-ugc</a></p>",
+                "text": "<p>Install Moast app widget (14-day free trial): <a href=\"https://apps.shopify.com/moast-interactive-ugc\" target=\"_blank\" title=\"https://apps.shopify.com/moast-interactive-ugc\">https://apps.shopify.com/moast-interactive-ugc</a></p>",
                 "width": "100%",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
