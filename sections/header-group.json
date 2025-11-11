@@ -31,6 +31,9 @@
       "block_order": [
         "announcement_BxgCk9"
       ],
+      "custom_css": [
+        "@media (max-width: 749px) {.announcement-bar {--padding-block-start: 10px !important; --padding-block-end: 10px !important; }}"
+      ],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
@@ -86,9 +89,9 @@
         "show_search": true,
         "search_position": "left",
         "search_row": "top",
-        "show_country": true,
+        "show_country": false,
         "country_selector_style": true,
-        "show_language": true,
+        "show_language": false,
         "localization_font": "body",
         "localization_font_size": "0.6875rem",
         "localization_position": "right",

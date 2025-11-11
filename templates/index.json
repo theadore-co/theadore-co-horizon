@@ -1523,7 +1523,7 @@
               "settings": {
                 "text": "<p>One-on-one appointments made simple and stress-free.</p>",
                 "width": "fit-content",
-                "max_width": "narrow",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1653,7 +1653,7 @@
               "settings": {
                 "text": "<p>Designed and crafted by hand in our local studio.</p>",
                 "width": "fit-content",
-                "max_width": "narrow",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1783,7 +1783,7 @@
               "settings": {
                 "text": "<p>Custom design services to create your unique vision</p>",
                 "width": "fit-content",
-                "max_width": "narrow",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1913,7 +1913,7 @@
               "settings": {
                 "text": "<p>Thoughtfully made to reflect your story and style.</p>",
                 "width": "fit-content",
-                "max_width": "narrow",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
