@@ -17,6 +17,8 @@
     case item
       when 'actions'
         assign item_column = 'right'
+      when 'header_button'
+        assign item_column = 'right'
     endcase
 
     if item_row == row
@@ -64,6 +66,8 @@
               {{ menu }}
             {% when 'localization' %}
               {{ localization }}
+            {% when 'header_button' %}
+              {{ header_button }}
             {% when 'search' %}
               {{ search }}
             {% when 'mobile_search' %}

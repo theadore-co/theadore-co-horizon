@@ -145,6 +145,10 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     text-decoration: underline;
 }
 
+.button--text {
+    margin-bottom: -3px;
+}
+
 @media (min-width: 750px) {
     .search-modal__button {
         gap: var(--gap-xs);

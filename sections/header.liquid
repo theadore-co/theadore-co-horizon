@@ -45,6 +45,10 @@
     content_for 'block', type: '_header-logo', id: 'header-logo'
   endcapture
 
+  capture header_button
+    content_for 'block', type: '_header-button', id: 'header-button', visibility_class: 'mobile:hidden'
+  endcapture
+
   capture menu
     content_for 'block', type: '_header-menu', id: 'header-menu'
   endcapture
@@ -70,22 +74,44 @@
     if section.settings.search_position == 'left'
       if shop.customer_accounts_enabled
         assign order = 'mobile_search,logo,search,localization,menu,actions'
+
+        if header_button != blank
+          assign order = 'mobile_search,logo,search,header_button,localization,menu,actions'
+        endif
       else
         assign order = 'logo,search,localization,menu,mobile_search,actions'
+
+        if header_button != blank
+          assign order = 'logo,search,header_button,localization,menu,mobile_search,actions'
+        endif
       endif
     else
       if shop.customer_accounts_enabled
         assign order = 'mobile_search,logo,localization,menu,search,actions'
+
+        if header_button != blank
+          assign order = 'mobile_search,logo,header_button,localization,menu,search,actions'
+        endif
       else
         assign order = 'logo,localization,menu,search,mobile_search,actions'
+
+        if header_button != blank
+          assign order = 'logo,header_button,localization,menu,search,mobile_search,actions'
+        endif
       endif
     endif
   else
     if section.settings.search_position == 'left'
       if shop.customer_accounts_enabled
         assign order = 'mobile_search,logo,search,menu,localization,actions'
+        if header_button != blank
+          assign order = 'mobile_search,logo,search,menu,header_button,localization,actions'
+        endif
       else
         assign order = 'logo,search,menu,localization,mobile_search,actions'
+        if header_button != blank
+          assign order = 'logo,search,menu,header_button,localization,mobile_search,actions'
+        endif
       endif
     endif
   endif
@@ -238,6 +264,7 @@
         first: first,
         logo: logo,
         menu: menu,
+        header_button: header_button,
         actions: actions,
         localization: localization_markup,
         search: search,
