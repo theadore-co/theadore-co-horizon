@@ -38,10 +38,14 @@
   case block_settings.image_ratio
     when 'landscape'
       assign ratio = '16 / 9'
+    when 'taller_landscape'
+      assign ratio = '4 / 3'
+    when 'classic'
+      assign ratio = '6 / 5'
+    when 'standard'
+      assign ratio = '4 / 4.5'
     when 'portrait'
       assign ratio = '4 / 5'
-    when 'square'
-      assign ratio = '1'
     when 'adapt'
       if product != blank
         assign current_featured_image_for_ratio = product.featured_image
