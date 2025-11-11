@@ -17,6 +17,7 @@
   {% if block_settings.style_class == 'button' %}
    --button-background-color: {{ block_settings.button_bg_color }};
    --button-color: {{ block_settings.button_text_color }};
+   --color-primary-button-hover-background: rgba({{ block_settings.button_bg_color.red }} {{ block_settings.button_bg_color.green }} {{ block_settings.button_bg_color.blue }} / .5);
   {% endif %}
   "
   {%- if block_settings.open_in_new_tab -%}
@@ -51,6 +52,10 @@
   .header-button.button {
     --style-border-radius-buttons-primary: 25px !important;
     padding: var(--padding-sm) var(--padding-lg);
+
+    &:hover {
+        background-color: var(--color-primary-button-hover-background) !important;
+    }
   }
 
   .header-button:has(.button--icon) {
