@@ -35,6 +35,17 @@ a.link:not(.hero__container .link):after {
 }
 
 /* Header */
+
+.menu-list__submenu-inner,.mega-menu__link--parent {
+    --menu-parent-font-size: var(--menu-top-level-font-size-desktop) !important;
+    --menu-child-font-size: var(--menu-top-level-font-size-desktop) !important;
+}
+
+.mega-menu__link--parent {
+    font-weight: 500;
+    margin-block-end: var(--margin-xs);
+}
+
 .menu-list__link {
     letter-spacing: var(--letter-spacing--body-loose) !important;
 }
