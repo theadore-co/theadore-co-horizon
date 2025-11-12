@@ -35,6 +35,9 @@ a.link:not(.hero__container .link):after {
 }
 
 /* Header */
+.header__columns {
+    --padding-block-end: calc(2 * var(--header-padding)) !important;
+}
 
 .menu-list__submenu-inner,.mega-menu__link--parent {
     --menu-parent-font-size: var(--menu-top-level-font-size-desktop) !important;
