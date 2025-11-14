@@ -456,7 +456,8 @@
       ],
       "custom_css": [
         "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
-        ".payment-icons__list .icon {height: var(--icon-size-sm);}"
+        ".payment-icons__list .icon {height: var(--icon-size-sm);}",
+        "@media (max-width: 749px) {.payment-icons__list {--alignment: center !important; }}"
       ],
       "settings": {
         "section_width": "page-width",
