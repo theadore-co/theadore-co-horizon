@@ -230,11 +230,11 @@
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 100,
             "enable_mobile_gap": true,
             "mobile_gap": 0,
             "width": "custom",
-            "custom_width": 75,
+            "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -412,7 +412,7 @@
       "custom_css": [
         "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "summary.menu__heading .menu__heading__default {font-weight: 500;}",
-        "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: 365px 1fr; }}",
+        "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: 365px auto; justify-content: space-between; }}",
         "@media (max-width: 749px) {summary {padding-block: var(--padding-lg); } .mobile-google-review > .group-block-content > div {width: 100%; }}"
       ],
       "name": "t:names.footer",
