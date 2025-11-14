@@ -26,15 +26,15 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
             "custom_mobile_alignment": true,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 24,
             "enable_mobile_gap": false,
             "mobile_gap": 12,
-            "width": "custom",
-            "custom_width": 48,
+            "width": "fill",
+            "custom_width": 50,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -75,7 +75,7 @@
                 "font": "heading",
                 "unit": "pixel",
                 "percent_width": 100,
-                "pixel_height": 32,
+                "pixel_height": 24,
                 "custom_mobile_size": false,
                 "unit_mobile": "percent",
                 "percent_width_mobile": 100,
@@ -139,12 +139,79 @@
                 "custom_url": ""
               },
               "blocks": {}
+            },
+            "group_dFe4Xa": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "custom_mobile_alignment": false,
+                "mobile_vertical_alignment": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 0,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "enable_mobile_radius": false,
+                "mobile_border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": true,
+                "mobile-padding-block-start": 20,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": "mobile:hidden"
+              },
+              "blocks": {
+                "custom_liquid_UQPFYn": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "<!-- Elfsight Google Reviews | Theadore + Co. Footer Google -->\n<script src=\"https://elfsightcdn.com/platform.js\" async></script>\n<div class=\"elfsight-app-e27879d2-07ef-45b9-89f8-f30f0595a539\" data-elfsight-app-lazy></div>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "custom_liquid_UQPFYn"
+              ]
             }
           },
           "block_order": [
             "logo_8yeCYq",
             "text_QY36Cw",
-            "social_links_VBwNU7"
+            "social_links_VBwNU7",
+            "group_dFe4Xa"
           ]
         },
         "group_3t9Rbq": {
@@ -167,7 +234,7 @@
             "enable_mobile_gap": true,
             "mobile_gap": 0,
             "width": "custom",
-            "custom_width": 100,
+            "custom_width": 75,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -262,12 +329,79 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "group_kEcgfC": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "custom_mobile_alignment": false,
+                "mobile_vertical_alignment": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 0,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "enable_mobile_radius": false,
+                "mobile_border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": true,
+                "mobile-padding-block-start": 20,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": "desktop:hidden mobile-google-review"
+              },
+              "blocks": {
+                "custom_liquid_GwVrkf": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "<!-- Elfsight Google Reviews | Theadore + Co. Footer Google -->\n<script src=\"https://elfsightcdn.com/platform.js\" async></script>\n<div class=\"elfsight-app-e27879d2-07ef-45b9-89f8-f30f0595a539\" data-elfsight-app-lazy></div>"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "custom_liquid_GwVrkf"
+              ]
             }
           },
           "block_order": [
             "menu_iww6wQ",
             "menu_76Lftw",
-            "menu_LqJQJR"
+            "menu_LqJQJR",
+            "group_kEcgfC"
           ]
         }
       },
@@ -278,7 +412,8 @@
       "custom_css": [
         "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "summary.menu__heading .menu__heading__default {font-weight: 500;}",
-        "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: auto 1fr; }}"
+        "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: 365px 1fr; }}",
+        "@media (max-width: 749px) {summary {padding-block: var(--padding-lg); } .mobile-google-review > .group-block-content > div {width: 100%; }}"
       ],
       "name": "t:names.footer",
       "settings": {
