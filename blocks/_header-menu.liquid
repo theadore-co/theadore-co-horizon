@@ -10,6 +10,10 @@
   assign animation_speed = 200
 %}
 
+{% capture list_items %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
 {% case variant %}
   {% when 'mobile' %}
     <div
@@ -20,7 +24,8 @@
       {% render 'header-drawer',
         class: 'header__drawer--mobile',
         linklist: block_settings.menu,
-        data_header_drawer_type: 'mobile-drawer'
+        data_header_drawer_type: 'mobile-drawer',
+        list_items_array: list_items
       %}
     </div>
 
@@ -62,7 +67,7 @@
       style="--submenu-animation-speed: {{ animation_speed }}ms;"
     >
       <div class="header-menu__inner">
-        {%- render 'header-menu' %}
+        {%- render 'header-menu', list_items_array: list_items %}
       </div>
 
       <script
@@ -527,6 +532,14 @@
   }
 
   .mega-menu__content-list--collections {
+    grid-template-columns: repeat(var(--menu-content-columns-tablet), minmax(0, 300px));
+
+    @media screen and (min-width: 990px) {
+      grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 300px));
+    }
+  }
+
+  .mega-menu__content-list--blocks {
     grid-template-columns: repeat(var(--menu-content-columns-tablet), minmax(0, 300px));
 
     @media screen and (min-width: 990px) {

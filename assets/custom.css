@@ -8,7 +8,8 @@
     --font-subheading--family: 'Metropolis Semi', sans-serif !important;
     --font-subheading--style: normal !important;
     --font-subheading--weight: 600 !important;
-    --letter-spacing--body-loose: 0.08em !important;
+    --letter-spacing--body-loose: 0.1em !important;
+    --font-h5--letter-spacing: var(--letter-spacing--body-loose) !important;
     --max-width--body-normal: 66ch !important;
 }
 
@@ -174,6 +175,20 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 
 .eapps-widget-toolbar-panel-views,.eapps-widget-toolbar-panel-edit,.eapps-widget-toolbar {
     display: none !important;
+}
+
+.group-block .background-image-container img, .zoom-on-hover img {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s;
+}
+
+.group-block:hover .background-image-container img, .group-block__link:hover~.group-block-content .zoom-on-hover img, .zoom-on-hover:hover img {
+    transform: scale(1.03);
+}
+
+.zoom-on-hover {
+    overflow: hidden;
 }
 
 @media (min-width: 750px) {
