@@ -300,10 +300,6 @@ body .xb-product-quantity.show, .cart-bubble__background {
     border: 0;
 }
 
-.header-drawer-button .header-button.button {
-    --style-border-radius-buttons-primary: 0px !important;
-}
-
 @media (min-width: 750px) {
     .search-modal__button {
         gap: var(--gap-xs);
