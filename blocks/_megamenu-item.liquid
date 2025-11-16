@@ -46,6 +46,7 @@
 %}
 
     <div class="
+        megamenu-block-item
         group-block
         group-block--height-fit
         group-block--width-fill
@@ -86,28 +87,23 @@
             --vertical-alignment-mobile: flex-start;
         "
         >
-            {% if block_settings.zoom_on_hover == true %}
-                <div class="zoom-on-hover">
-            {% endif %}
-
-            {% if block_settings.image != blank %}
-                {{
-                block_settings.image
-                | image_url: width: 3840
-                | image_tag:
-                    width: block_settings.image.width,
-                    widths: widths,
-                    height: block_settings.image.height,
-                    class: 'image-block__image border-style',
-                    style: image_border_style,
-                    sizes: sizes,
-                    alt: shop.name
-                }}
-            {% endif %}
-
-            {% if block_settings.zoom_on_hover == true %}
-                </div>
-            {% endif %}
+            
+            <div class="{% if block_settings.zoom_on_hover == true %}zoom-on-hover{% endif %}">
+                {% if block_settings.image != blank %}
+                    {{
+                    block_settings.image
+                    | image_url: width: 3840
+                    | image_tag:
+                        width: block_settings.image.width,
+                        widths: widths,
+                        height: block_settings.image.height,
+                        class: 'image-block__image border-style',
+                        style: image_border_style,
+                        sizes: sizes,
+                        alt: shop.name
+                    }}
+                {% endif %}
+            </div>
 
             {% if block_settings.text != blank %}
                 {% assign text = block_settings.text %}
@@ -117,33 +113,62 @@
     </div>
 
     {% stylesheet %}
-    .placeholder-image {
-        position: relative;
-        aspect-ratio: var(--ratio);
-        overflow: hidden;
-    }
+        .placeholder-image {
+            position: relative;
+            aspect-ratio: var(--ratio);
+            overflow: hidden;
+        }
 
-    placeholder-image img {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: var(--ratio);
-    }
+        placeholder-image img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: var(--ratio);
+        }
 
-    .image-block {
-        display: flex;
+        .image-block {
+            display: flex;
 
-        /* When the image is nested in a group, section, etc, respect the parent's horizontal alignment */
-        justify-content: var(--horizontal-alignment, 'inline-start');
-    }
+            /* When the image is nested in a group, section, etc, respect the parent's horizontal alignment */
+            justify-content: var(--horizontal-alignment, 'inline-start');
+        }
 
-    .image-block--height-fill .image-block__image {
-        height: 100%;
-    }
+        .image-block--height-fill .image-block__image {
+            height: 100%;
+        }
 
-    .image-block__image {
-        object-fit: cover;
-        aspect-ratio: var(--ratio);
-    }
+        .image-block__image {
+            object-fit: cover;
+            aspect-ratio: var(--ratio);
+        }
+
+        .blocks-drawer-items .megamenu-block-item {
+            padding: var(--padding-sm) !important;
+            background: #F7F5F4;
+            width: 100%;
+        }
+
+        .blocks-drawer-items .menu-drawer__list-item {
+            > div {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 749px) {
+            .blocks-drawer-items .megamenu-block-item .group-block-content {
+                flex-flow: row nowrap !important;
+                align-items: center !important;
+                --gap: 12px !important;
+
+                .image-block__image {
+                    --ratio: 1 !important;
+                    width: 8rem;
+                }
+
+                .text-block {
+                    --text-align: left !important;
+                }
+            }
+        }
     {% endstylesheet %}
 </div>
 <!--@list/{{ block_settings.assigned_to | handleize }}-->
