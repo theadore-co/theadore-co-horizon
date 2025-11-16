@@ -251,7 +251,7 @@
 
   if menu_content_type == 'mega_blocks'
     # desktop breakpoint
-    assign min_featured_block_columns = min_blocks | times: 2
+    assign min_featured_block_columns = 1 | times: 2
     assign temp_column_count = column_count | plus: min_featured_block_columns
 
     if temp_column_count > max_menu_columns
