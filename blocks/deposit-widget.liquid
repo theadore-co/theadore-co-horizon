@@ -1,3 +1,8 @@
+
+<noscript class="sdsd">
+    {{ product.selected_or_first_available_variant | json }}
+</noscript>
+
 {% liquid
   assign block_settings = block.settings
   assign product = closest.product
@@ -23,7 +28,7 @@
     "
 >
     {% if block_settings.label != blank %}
-        <div class="checkbox toggle-checkbox">
+        <toggle-checkbox class="checkbox toggle-checkbox">
             <input
                 type="checkbox"
                 name="deposit"
@@ -57,7 +62,7 @@
                 {% comment %} {{ 'icon-checkmark.svg' | inline_asset_content }} {% endcomment %}
                 <span class="checkbox__label-text">{{- block_settings.label | replace: '[price]', price -}}</span>
             </label>
-        </div>
+        </toggle-checkbox>
     {% endif %}
 
     {% if block_settings.description != blank %}
