@@ -274,7 +274,7 @@ body .xb-product-quantity.show, .cart-bubble__background {
 }
 
 .menu-drawer__menu-item--child {
-    min-height: calc(2 * var(--padding-lg) + var(--icon-size-xs));
+    min-height: calc(2 * var(--padding-sm) + var(--icon-size-xs));
 }
 
 .menu-drawer__menu--childlist:not(:has(.menu-drawer__animated-element)) {
