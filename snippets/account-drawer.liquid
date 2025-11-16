@@ -1,4 +1,5 @@
 {%- doc -%}
+  @param {boolean} [has_label] - Additional label
   Renders the account drawer, which is used for mobile users.
 {%- enddoc -%}
 
@@ -8,10 +9,10 @@
 ></script>
 
 <dialog-component
-  class="account-drawer"
+  class="account-drawer {{ visibility_class }}"
   {{ block.shopify_attributes }}
 >
-  {% render 'account-button', attributes: 'on:click="/showDialog"' %}
+  {% render 'account-button', attributes: 'on:click="/showDialog"', has_label: has_label %}
   <dialog
     ref="dialog"
     class="color-{{ settings.popover_color_scheme }} dialog-modal dialog-drawer dialog-bottom-sheet account-drawer__dialog"

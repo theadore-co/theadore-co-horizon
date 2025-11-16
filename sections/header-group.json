@@ -90,9 +90,9 @@
             "image_border_radius": 0,
             "navigation_bar": false,
             "color_scheme_navigation_bar": "",
-            "drawer_accordion": false,
+            "drawer_accordion": true,
             "drawer_accordion_expand_first": true,
-            "drawer_dividers": false
+            "drawer_dividers": true
           },
           "blocks": {
             "megamenu_item_A4nzcf": {
@@ -334,36 +334,6 @@
                 "open_in_new_tab": false
               },
               "blocks": {}
-            },
-            "megamenu_item_43Etaq": {
-              "type": "_megamenu-item",
-              "name": "Megamenu item",
-              "settings": {
-                "assigned_to": "Shop",
-                "image": "shopify://shop_images/Frame_5.jpg",
-                "zoom_on_hover": true,
-                "image_ratio": "standard",
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "text": "<p>TENNIS COLLECTION</p>",
-                "link": "shopify://collections/tennis-collection",
-                "read_only": false,
-                "alignment": "left",
-                "show_alignment": true,
-                "open_in_new_tab": false
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -374,8 +344,7 @@
             "megamenu_item_bjF8Md",
             "megamenu_item_jMbHLV",
             "megamenu_item_GrUgwe",
-            "megamenu_item_EiEqUx",
-            "megamenu_item_43Etaq"
+            "megamenu_item_EiEqUx"
           ]
         }
       },
@@ -386,9 +355,9 @@
         "show_search": true,
         "search_position": "left",
         "search_row": "top",
-        "show_country": false,
+        "show_country": true,
         "country_selector_style": true,
-        "show_language": false,
+        "show_language": true,
         "localization_font": "body",
         "localization_font_size": "0.6875rem",
         "localization_position": "right",

@@ -679,6 +679,10 @@
         class="menu-drawer__utility-links menu-drawer__animated-element"
         style="--menu-drawer-animation-index: {{ linklist.links.size }};"
       >
+        {% if shop.customer_accounts_enabled %}
+          {% render 'account-popover' %}
+          {% render 'account-drawer', visibility_class: 'desktop:hidden', has_label: true %}
+        {% endif %}
         {% liquid
           assign show_language = section.settings.show_language
           if localization.available_languages.size <= 1

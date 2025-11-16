@@ -5,11 +5,12 @@
   @param {string} [popover_id] - The id of the popover to target
   @param {string} [popover_action] - The id of the popover to target
   @param {string} [attributes] - Additional attributes to add to the tag
+  @param {boolean} [has_label] - Additional label
 {%- enddoc -%}
 
 {%- assign tag = tag | default: 'button' -%}
 <{{ tag }}
-  class="account-button header-actions__action"
+  class="account-button header-actions__action  {% if has_label %}header-icon-labeled{% endif %}"
   aria-label="{{ 'accessibility.account' | t }}"
   aria-haspopup="dialog"
   {%- if popover_id -%}
@@ -43,6 +44,18 @@
       {{- 'icon-account.svg' | inline_asset_content -}}
     </span>
   {%- endif -%}
+
+  {% if has_label == true %}    
+    {% if customer and customer.first_name != blank %}
+      <span class="header-icon-label">
+        {{ 'content.account_title_personalized' | t: first_name: customer.first_name }}
+      </span>
+    {% else %}
+      <span class="header-icon-label">
+        {{ 'content.account_title' | t }}
+      </span>
+    {% endif %}
+  {% endif %}
 </{{ tag }}>
 
 {% stylesheet %}

@@ -9,7 +9,7 @@
 >
   {% if shop.customer_accounts_enabled %}
     {% render 'account-popover' %}
-    {% render 'account-drawer' %}
+    {% render 'account-drawer', visibility_class: 'mobile:hidden' %}
   {% endif %}
 
   {% render 'wishlist-header-icon' %}
