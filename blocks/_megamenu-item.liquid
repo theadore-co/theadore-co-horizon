@@ -88,7 +88,7 @@
         "
         >
             
-            <div class="{% if block_settings.zoom_on_hover == true %}zoom-on-hover{% endif %}">
+            <div class="image-block-wrapper {% if block_settings.zoom_on_hover == true %}zoom-on-hover{% endif %}">
                 {% if block_settings.image != blank %}
                     {{
                     block_settings.image
@@ -159,9 +159,13 @@
                 align-items: center !important;
                 --gap: 12px !important;
 
+
+                .image-block-wrapper {
+                  width: 8rem;
+                }
+
                 .image-block__image {
                     --ratio: 1 !important;
-                    width: 8rem;
                 }
 
                 .text-block {
