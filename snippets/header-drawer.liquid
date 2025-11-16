@@ -677,7 +677,7 @@
         </ul>
 
         {% if header_button != blank %}
-          <div class="header-drawer-button">
+          <div class="header-drawer-button menu-drawer__animated-element" style="--menu-drawer-animation-index: {{ animation_index | plus: 1}};">
             {{ header_button }}
           </div>
         {% endif %}

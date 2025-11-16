@@ -230,10 +230,12 @@ body .xb-product-quantity.show, .cart-bubble__background {
 
 .zoom-on-hover {
     overflow: hidden;
+    display: block;
+    width: 100%;
 }
 
-.menu-drawer__featured-content-list-item {
-    width: 100%;
+.menu-drawer__featured-content-list-item:only-child {
+    flex: 1 auto;
 }
 
 .menu-drawer__featured-content-list-item:not(:only-child) {
@@ -291,6 +293,11 @@ body .xb-product-quantity.show, .cart-bubble__background {
 
 .header-drawer-button .header-button {
     display: flex !important;
+    max-width: fit-content;
+}
+
+.menu-drawer__menu > .menu-drawer__list-item .menu-drawer__menu-container--divider {
+    border: 0;
 }
 
 .header-drawer-button .header-button.button {
