@@ -184,6 +184,9 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 .featured-blog-posts-card__content .blog-post-card__content-text a {
     margin-top: var(--margin-xs);
     text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: auto;
 }
 
 .button--text {
