@@ -7,6 +7,7 @@
   @param {object} [block] - The block that can be used to provide settings
   @param {object} [section] - The section that can be used to provide settings
   @param {object} list_items_array - The megamenu items.
+  @param {string} header_button - The header button
 
   @example
   {% render 'header-drawer', linklist: section.settings.menu, class: 'header-drawer--mobile' %}
@@ -674,6 +675,12 @@
             {%- endfor -%}
           {% endif %}
         </ul>
+
+        {% if header_button != blank %}
+          <div class="header-drawer-button">
+            {{ header_button }}
+          </div>
+        {% endif %}
       </nav>
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
