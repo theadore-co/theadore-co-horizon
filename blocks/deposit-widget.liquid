@@ -1,0 +1,335 @@
+{% liquid
+  assign block_settings = block.settings
+  assign product = closest.product
+  assign deposit = product.selling_plan_groups[0].selling_plans | where: 'name', 'Partial Payment'
+
+  if deposit.size == 0
+    break
+  endif
+
+  assign product_form_id = 'BuyButtons-ProductForm-section.id' | replace: 'section.id', section.id
+  assign price = deposit[0].checkout_charge.value | money_without_trailing_zeros
+
+  if settings.currency_code_enabled_product_pages
+    assign price = deposit[0].checkout_charge.value | money_with_currency | replace: '.00', ''
+  endif
+%}
+
+<div class="group-block-content spacing-style layout-panel-flex layout-panel-flex--column mobile-column" 
+    style="
+        flex: 1 auto;
+        {% render 'layout-panel-style', settings: block_settings %}
+        {% render 'spacing-style', settings: block_settings %}
+    "
+>
+    {% if block_settings.label != blank %}
+        <div class="checkbox toggle-checkbox">
+            <input
+                type="checkbox"
+                name="deposit"
+                value="{{ deposit.selling_plans[0].id }}"
+                id="checkbox-{{ block.id }}"
+                class="checkbox__input-toggle"
+                data-label="{{ block_settings.label }}"
+                {% if checked %}
+                    checked
+                {% endif %}
+                {% if price %}
+                    data-price="{{ price }}"
+                {% endif %}
+                form="{{ product_form_id }}"
+            >
+            <label
+                class="checkbox__label"
+                for="checkbox-{{ block.id }}"
+                role="checkbox"
+            >
+                <span class="toggle-svg">
+                    <span class="toggle-knob">
+                        <span class="check-toggle">
+                            {{ 'icon-checkmark.svg' | inline_asset_content }}
+                        </span>
+                        <span class="close-toggle">
+                            {{ 'icon-close.svg' | inline_asset_content }}
+                        </span>
+                    </span>
+                </span>
+                {% comment %} {{ 'icon-checkmark.svg' | inline_asset_content }} {% endcomment %}
+                <span class="checkbox__label-text">{{- block_settings.label | replace: '[price]', price -}}</span>
+            </label>
+        </div>
+    {% endif %}
+
+    {% if block_settings.description != blank %}
+        <rte-formatter class="spacing-style text-block text-block--{{ block.id }} rte" 
+            style="
+                --padding-block-start: 0px;
+                --padding-block-end: 0px;
+                --padding-inline-start: 0px;
+                --padding-inline-end: 0px;
+                --width: fit-content;
+                --max-width: var(--max-width--body-normal);"
+            >
+            {{ block_settings.description | replace: '[price]', price }}
+        </rte-formatter>
+    {% endif %}
+</div>
+
+{% stylesheet %}
+/* Hide native checkbox */
+.checkbox__input-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Label wrapper */
+.checkbox__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Track */
+.toggle-svg {
+  width: 36px;
+  height: 20px;
+  background: var(--color-border); /* Unchecked color */
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+/* Knob */
+.toggle-knob {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FCFCFD;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%); /* NEW */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+
+  box-shadow:
+    0px 1px 2px rgba(16, 24, 39, 0.06),
+    0px 1px 3px rgba(16, 24, 39, 0.10);
+}
+
+/* Icons inside knob */
+.check-toggle,
+.close-toggle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-knob svg {
+  width: auto;
+  height: 12px;
+}
+
+.toggle-checkbox .icon-checkmark path {
+    stroke: var(--color-foreground) !important;
+    opacity: 1 !important;
+    transition: unset !important;
+}
+
+/* -------- STATES -------- */
+
+.close-toggle .icon-checkmark path {
+    stroke: var(--color-foreground);
+    opacity: 1;
+    border: 0;
+}
+
+.checkbox .icon-checkmark {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+/* Checked: purple track */
+.checkbox__input-toggle:checked + .checkbox__label .toggle-svg {
+  background: #B69DF8;
+}
+
+/* Move knob to right */
+.checkbox__input-toggle:checked + .checkbox__label .toggle-svg .toggle-knob {
+  transform: translate(16px, -50%); /* UPDATED */
+}
+
+/* Icon visibility */
+.checkbox__input-toggle:checked + .checkbox__label .check-toggle {
+  opacity: 1;
+}
+
+.checkbox__input-toggle:checked + .checkbox__label .close-toggle {
+  opacity: 0;
+}
+
+.checkbox__input-toggle:not(:checked) + .checkbox__label .check-toggle {
+  opacity: 0;
+}
+
+.checkbox__input-toggle:not(:checked) + .checkbox__label .close-toggle {
+  opacity: 1;
+}
+
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Deposit widget",
+  "tag": null,
+  "settings": [
+    {
+        "type": "inline_richtext",
+        "id": "label",
+        "label": "Label",
+        "info": "use [price] to render the price + currency_suffix"
+    },
+    {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "info": "use [price] to render the price + currency_suffix"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_gap",
+      "label": "Custom mobile gap",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Mobile gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.enable_mobile_gap == true }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_padding",
+      "label": "Custom Mobile Padding",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "mobile-padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "mobile-padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "mobile-padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "mobile-padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Deposit widget",
+    }
+  ]
+}
+{% endschema %}

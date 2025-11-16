@@ -92,6 +92,8 @@
             </div>
           {%- endif -%}
 
+          {% content_for 'block', type: 'deposit-widget', id: 'deposit-widget' %}
+
           {% content_for 'block', type: 'quantity', id: 'quantity' %}
 
           {%- if has_quantity_rules -%}
