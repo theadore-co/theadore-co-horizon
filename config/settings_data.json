@@ -63,7 +63,9 @@
     "secondary_button_border_width": 1,
     "button_border_radius_secondary": 14,
     "cart_type": "drawer",
-    "cart_price_font": "subheading",
+    "product_title_case": "uppercase",
+    "cart_price_font": "body",
+    "auto_open_cart_drawer": true,
     "show_cart_note": false,
     "show_add_discount_code": true,
     "show_accelerated_checkout_buttons": false,
@@ -84,8 +86,8 @@
     "variant_swatch_height": 34,
     "variant_swatch_radius": 32,
     "variant_button_border_width": 1,
-    "variant_button_radius": 14,
-    "variant_button_width": "equal-width-buttons",
+    "variant_button_radius": 0,
+    "variant_button_width": "default-width-buttons",
     "button_font_weight_secondary": "default",
     "content_for_index": [],
     "blocks": {
@@ -132,6 +134,11 @@
           "notification_duration": 3000,
           "notification_animation": "fade"
         }
+      },
+      "6053609962512334591": {
+        "type": "shopify://apps/preorder-bat/blocks/pre-order-block/6db3227b-acff-4966-bcdd-53204d4488c4",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -163,14 +170,14 @@
           "variant_background_color": "#ffffff",
           "variant_text_color": "#1f1919",
           "variant_border_color": "#00000021",
-          "variant_hover_background_color": "#f5f5f5",
+          "variant_hover_background_color": "#f7f5f4",
           "variant_hover_text_color": "#1f1919",
-          "variant_hover_border_color": "#e6e6e6",
-          "selected_variant_background_color": "#1f1919",
-          "selected_variant_text_color": "#ffffff",
+          "variant_hover_border_color": "#00000021",
+          "selected_variant_background_color": "#f7f5f4",
+          "selected_variant_text_color": "#1f1919",
           "selected_variant_border_color": "#1f1919",
-          "selected_variant_hover_background_color": "#1f1919",
-          "selected_variant_hover_text_color": "#ffffff",
+          "selected_variant_hover_background_color": "#f7f5f4",
+          "selected_variant_hover_text_color": "#1f1919",
           "selected_variant_hover_border_color": "#1f1919"
         }
       },

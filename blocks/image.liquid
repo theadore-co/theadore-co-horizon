@@ -23,7 +23,7 @@
 %}
 
 {% capture class %}
-  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style
+  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style {% if block_settings.zoom_on_hover == true %}zoom-on-hover{% endif %}
 {% endcapture %}
 
 {% capture style %}
@@ -123,6 +123,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:settings.image"
+    },
+    {
+        "type": "checkbox",
+        "id": "zoom_on_hover",
+        "label": "Zoom on hover",
+        "default": false
     },
     {
       "type": "url",

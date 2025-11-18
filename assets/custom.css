@@ -232,7 +232,8 @@ body .xb-product-quantity.show, .cart-bubble__background {
     transition-duration: .3s;
 }
 
-.group-block:hover .background-image-container img, .group-block__link:hover~.group-block-content .zoom-on-hover img, .zoom-on-hover:hover img {
+.group-block:hover .background-image-container img, .group-block__link:hover~.group-block-content .zoom-on-hover img, .zoom-on-hover:hover img,
+.featured-blog-posts-card__link:hover ~ .featured-blog-posts-card__inner .zoom-on-hover img {
     transform: scale(1.03);
 }
 
@@ -314,6 +315,10 @@ body .xb-product-quantity.show, .cart-bubble__background {
 
 .cart-items__price {
     font-size: var(--cart-font-size--2xs);
+}
+
+.variant-option--buttons legend {
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 1200px) {
