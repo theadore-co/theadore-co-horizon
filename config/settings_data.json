@@ -61,7 +61,8 @@
     "button_border_radius_primary": 0,
     "button_text_case_primary": "uppercase",
     "secondary_button_border_width": 1,
-    "button_border_radius_secondary": 14,
+    "button_border_radius_secondary": 0,
+    "button_text_case_secondary": "uppercase",
     "cart_type": "drawer",
     "product_title_case": "uppercase",
     "cart_price_font": "body",
@@ -134,11 +135,6 @@
           "notification_duration": 3000,
           "notification_animation": "fade"
         }
-      },
-      "6053609962512334591": {
-        "type": "shopify://apps/preorder-bat/blocks/pre-order-block/6db3227b-acff-4966-bcdd-53204d4488c4",
-        "disabled": true,
-        "settings": {}
       }
     },
     "color_schemes": {

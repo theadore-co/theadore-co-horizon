@@ -1,7 +1,7 @@
 {% liquid
   assign block_settings = block.settings
   assign product = closest.product
-  assign deposit = product.selling_plan_groups[0].selling_plans | where: 'name', 'Partial Payment'
+  assign deposit = product.selling_plan_groups[0].selling_plans | where: 'name', 'Partial payment'
 
   if deposit.size == 0
     break

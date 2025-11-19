@@ -321,6 +321,18 @@ body .xb-product-quantity.show, .cart-bubble__background {
     text-transform: uppercase;
 }
 
+.atc-icons {
+    margin-top: calc(-1 * var(--margin-sm));
+}
+
+.variant-picker__form {
+    gap: var(--gap) !important;
+}
+
+.blog-post-card__content-text {
+    text-wrap: auto;
+}
+
 @media screen and (min-width: 1200px) {
     .product-information__grid:not(.product-information__grid--half,:has(.product-information__media:empty)).product-information--media-left {
         grid-template-columns: 3fr 2fr !important;
