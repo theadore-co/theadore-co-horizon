@@ -26,17 +26,31 @@
             "case": "none"
           },
           "blocks": {}
+        },
+        "announcement_49CnCP": {
+          "type": "_announcement",
+          "settings": {
+            "text": "INTERNATIONAL SHIPPING",
+            "link": "",
+            "font": "var(--font-body--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "loose",
+            "case": "none"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announcement_BxgCk9",
+        "announcement_49CnCP"
       ],
       "custom_css": [
         "@media (max-width: 749px) {.announcement-bar {--padding-block-start: 10px !important; --padding-block-end: 10px !important; }}"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
-        "speed": 5,
+        "speed": 6,
         "section_width": "page-width",
         "color_scheme": "scheme-2",
         "divider_width": 0,
