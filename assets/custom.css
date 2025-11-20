@@ -111,6 +111,16 @@ a.link:not(.hero__container .link):after {
     height: var(--minimum-touch-target);
 }
 
+
+slideshow-controls.carousel-controls:has(.icon-pause) {
+    justify-content: center !important;
+}
+
+slideshow-controls.carousel-controls .icon-pause,
+slideshow-controls.carousel-controls .icon-play {
+    display: none !important;
+}
+
 .arrow-link {
     display: inline-block;
     margin-left: var(--margin-sm);

@@ -33,9 +33,30 @@
   {% assign arrows_position = 'top' %}
 {% endif %}
 
-{% if settings.icons_style != 'none' %}
-  {% capture slideshow_arrows %}
-    {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape, arrows_position: arrows_position %}
+{% if settings.arrow_position == true %}
+  {% assign arrows_position = 'top' %}
+{% endif %}
+
+{% unless settings.hide_arrows == true %}
+  {% if settings.icons_style != 'none' %}
+    {% capture slideshow_arrows %}
+      {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape, arrows_position: arrows_position %}
+    {% endcapture %}
+  {% endif %}
+{% endunless %}
+
+{% if settings.enable_dots == true and slide_count > 1 %}
+  {% capture controls %}
+    {%- render 'slideshow-controls',
+      style: 'dots',
+      autoplay: settings.autoplay,
+      item_count: slide_count,
+      show_arrows: false,
+      arrows_on_media: false,
+      controls_on_media: false,
+      pagination_position: 'center',
+      class: 'carousel-controls'
+    -%}
   {% endcapture %}
 {% endif %}
 
@@ -59,6 +80,9 @@
     infinite: false,
     initial_slide: 0,
     slide_count: slide_count,
-    slideshow_gutters: slideshow_gutters
+    slideshow_gutters: slideshow_gutters,
+    controls: controls,
+    autoplay: settings.autoplay,
+    autoplay_speed: settings.autoplay_speed
   %}
 </div>
