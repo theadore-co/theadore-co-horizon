@@ -95,7 +95,7 @@ a.link:not(.hero__container .link):after {
     height: var(--icon-size-md) !important;
 }
 
-.header:not(.header--compact) .header__row--bottom {
+.header:not([data-sticky-state="active"]):not(.header--compact) .header__row--bottom {
     --header-padding: var(--padding-lg) !important;
 }
 .header--collapse-row-paddings .header__row--top .header__columns {
