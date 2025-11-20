@@ -45,12 +45,12 @@
   {% endif %}
 {% endunless %}
 
-{% if settings.enable_dots == true and slides.size > 1 %}
+{% if settings.enable_dots == true and slide_count > 1 %}
   {% capture controls %}
     {%- render 'slideshow-controls',
       style: 'dots',
       autoplay: settings.autoplay,
-      item_count: slides.size,
+      item_count: slide_count,
       show_arrows: false,
       arrows_on_media: false,
       controls_on_media: false,
