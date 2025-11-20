@@ -98,6 +98,16 @@ a.link:not(.hero__container .link):after {
 .header:not([data-sticky-state="active"]):not(.header--compact) .header__row--bottom {
     --header-padding: var(--padding-lg) !important;
 }
+
+.header[data-sticky-state="active"] .header__row[style*='--border-bottom-width: 0px']  .menu-list__submenu.color-scheme-matches-parent,
+.header[data-sticky-state="active"] .header__row[style*='--border-bottom-width: 0px']  .overflow-menu.color-scheme-matches-parent::part(overflow) {
+    --submenu-padding-block-start: var(--header-padding) !important;
+}
+
+.mega-menu__grid {
+    gap: 0 var(--menu-horizontal-gap) !important;
+}
+
 .header--collapse-row-paddings .header__row--top .header__columns {
     --padding-block-end: var(--padding-lg) !important;
 }
