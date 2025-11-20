@@ -413,7 +413,7 @@
         "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "summary.menu__heading .menu__heading__default {font-weight: 500;}",
         "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: 365px auto; justify-content: space-between; }}",
-        "@media (max-width: 749px) {summary {padding-block: var(--padding-lg); } .mobile-google-review > .group-block-content > div {width: 100%; }}"
+        "@media (max-width: 749px) {summary {padding-block: var(--padding-lg); } .mobile-google-review > .group-block-content > div {width: 100%; } [class*=\"color-scheme\"] {background: #f7f5f4; }}"
       ],
       "name": "t:names.footer",
       "settings": {
@@ -457,12 +457,12 @@
       "custom_css": [
         "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         ".payment-icons__list .icon {height: var(--icon-size-sm);}",
-        "@media (max-width: 749px) {.payment-icons__list {--alignment: center !important; }}"
+        "@media (max-width: 749px) {.payment-icons__list {--alignment: center !important; } [class*=\"color-scheme\"] {background: #f7f5f4; } .utilities-wrapper {--border-width: 0px !important;}}"
       ],
       "settings": {
         "section_width": "page-width",
         "gap": 24,
-        "divider_thickness": 1,
+        "divider_thickness": 0.5,
         "color_scheme": "scheme-1",
         "padding-block-start": 16,
         "padding-block-end": 16

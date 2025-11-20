@@ -184,7 +184,7 @@
           "background": "#f7f5f4",
           "foreground_heading": "#1f1919",
           "foreground": "#1f1919",
-          "primary": "#1f1919",
+          "primary": "#1f191985",
           "primary_hover": "#ffffff",
           "border": "#1f1919",
           "shadow": "#1f1919",
