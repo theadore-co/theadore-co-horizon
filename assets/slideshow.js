@@ -73,6 +73,7 @@ export class Slideshow extends Component {
 
     const slideCount = this.slides?.length || 0;
     slideCount <= 1 ? this.#setupSlideshowWithoutControls() : this.#setupSlideshow();
+    window.addEventListener('resize', this.#handleDots.bind(this));
   }
 
   disconnectedCallback() {
@@ -343,8 +344,18 @@ export class Slideshow extends Component {
 
     if (current) current.textContent = `${value + 1}`;
 
+    // for (const controls of [thumbnails, dots]) {
+    //   controls?.forEach((el, i) => el.setAttribute('aria-selected', `${i === value}`));
+    // }
     for (const controls of [thumbnails, dots]) {
-      controls?.forEach((el, i) => el.setAttribute('aria-selected', `${i === value}`));
+      if (!controls) continue;
+
+      const len = controls.length;
+      const index = value % len; // wrap around
+
+      controls.forEach((el, i) => {
+        el.setAttribute('aria-selected', `${i === index}`);
+      });
     }
 
     if (previous) previous.disabled = Boolean(!this.infinite && value === 0);
@@ -789,6 +800,19 @@ export class Slideshow extends Component {
     });
 
     return visibleSlides.length;
+  }
+
+  #handleDots() {
+    if (!this.classList.contains('mobile-enabled')) return;
+
+    if (window.innerWidth >= 750) {
+      const index = this.initialSlideIndex;
+      const slide = this.refs.slides?.[index];
+
+      if (slide) {
+        this.select(index, undefined, { animate: false });
+      }
+    }
   }
 }
 

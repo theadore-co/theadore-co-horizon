@@ -208,13 +208,38 @@
       href="{% render 'product-card-variant-url', product: product %}"
       aria-label="{{- product.title -}}"
     >
+      {% assign media_size = all_media.size | at_most: 4 %}
+
+      {% if settings.product_card_carousel == true and media_size > 1 %}
+        {% capture controls %}
+          {%- render 'slideshow-controls',
+            style: 'dots',
+            autoplay: false,
+            item_count: media_size,
+            show_arrows: false,
+            arrows_on_media: false,
+            controls_on_media: true,
+            pagination_position: 'center',
+            class: 'hidden--desktop card-slider-controls'
+          -%}
+        {% endcapture %}
+
+        {% if controls != blank %}
+          {% assign infinite = true %}
+        {% endif %}
+
+        {% assign show_arrows = false %}
+      {% endif %}
+
       {% render 'slideshow',
         ref: 'slideshow',
         initial_slide: 0,
         slides: slides,
         slide_count: all_media.size,
         show_arrows: show_arrows,
-        attributes: slideshow_attributes
+        attributes: slideshow_attributes,
+        controls: controls,
+        infinite: true
       %}
     </a>
   {% elsif product != blank and product.media.size == 0 %}

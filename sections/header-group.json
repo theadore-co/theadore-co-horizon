@@ -326,7 +326,7 @@
                 "assigned_to": "Shop",
                 "image": "shopify://shop_images/Frame_5.jpg",
                 "zoom_on_hover": true,
-                "image_ratio": "standard",
+                "image_ratio": "taller_landscape",
                 "height": "fit",
                 "border": "none",
                 "border_width": 1,
