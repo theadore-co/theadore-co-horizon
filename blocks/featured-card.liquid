@@ -70,6 +70,23 @@
         "
     >
         {% content_for 'block', type: '_object-image', id: 'object-image' %}
+        {% if object.badge_texts.value.size > 0 %}
+            <div
+                class="product-badges {% if object.badge_texts.value.size > 1 %}flex-badges{% endif %} product-badges--{{ settings.badge_position }}"
+                style="
+                    --badge-border-radius: {{ settings.badge_corner_radius }}px;
+                    --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
+                "
+            >
+                {% for i in object.badge_texts.value %}
+                    <div
+                        class="product-badges__badge product-tag__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}"
+                    >
+                        {{  i }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         {{ children }}
     </div>
     </featured-card>
@@ -92,7 +109,6 @@
         }
     }
 
-    
   :is(.collection-wrapper--full-width, .collection-wrapper--full-width-on-mobile)
     [product-grid-view='default']
     .product-grid__card {
