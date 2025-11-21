@@ -379,7 +379,7 @@ body .xb-product-quantity.show, .cart-bubble__background {
 }
 
 .facets__label {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 @media screen and (min-width: 990px) {
