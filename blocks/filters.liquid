@@ -144,6 +144,7 @@
           class="facets__form"
           ref="facetsForm"
         >
+          {% render 'breadcrumbs', class: 'mobile:hidden' %}
           {% if should_show_pane %}
             {% render 'filter-remove-buttons',
               filters: filters,

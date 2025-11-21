@@ -15,6 +15,27 @@
     --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
   "
 >
+  {% liquid
+    assign tag_badges = 0
+
+    for i in product.tags
+      if i contains 'badge:'
+        assign tag_badges = tag_badges | plus: 1
+        assign badge_name = i | replace: 'badge:', ''
+      endif
+    endfor
+  %}
+
+  {% for i in product.tags %}
+    {% if i contains 'badge:' %}
+      <div
+        class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}"
+      >
+        {{  i | replace: 'badge:', '' }}
+      </div>
+    {% endif %}
+  {% endfor %}
+
   {%- if product.available == false or product.compare_at_price > product.price and product.available -%}
     <div
       class="

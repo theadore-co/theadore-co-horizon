@@ -224,7 +224,7 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 
 body .xb-product-quantity.show, .cart-bubble__background {
     background-color: var(--brand-color) !important;
-    color: var(--color-foreground) !important;
+    color: var(--color-primary-button-text) !important;
 }
 
 .header-actions__cart-icon {
@@ -395,6 +395,10 @@ body .xb-product-quantity.show, .cart-bubble__background {
 }
 
 @media (min-width: 750px) {
+    .facets--horizontal .facets__form {
+        align-items: center;
+    }
+
     .search-modal__button {
         gap: var(--gap-xs);
         border-bottom: .01rem solid var(--color-border);
