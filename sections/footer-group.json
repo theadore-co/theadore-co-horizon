@@ -433,6 +433,9 @@
         "group_xzpr68",
         "email_signup_wf9Hhw"
       ],
+      "custom_css": [
+        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
+      ],
       "name": "t:names.email_signup",
       "settings": {
         "content_direction": "row",
