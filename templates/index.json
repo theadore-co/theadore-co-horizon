@@ -3018,7 +3018,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>\"I ordered my engagement ring here after seeing a friend’s piece from Theodore + Co. The stone looks amazing in person.\"</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3173,7 +3173,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>“My wife’s earrings from Theodore + Co arrived last week and she has worn them every day. The quality surprised me in a good way.”</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3230,7 +3230,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>John D., 2025</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3328,7 +3328,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>\"I bought a simple gold necklace and it has become my everyday jewelry. It never irritates my skin and still looks new.\"</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3385,7 +3385,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Rachel P., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3483,7 +3483,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>“Got my wedding band from Theodore + Co and the fit is spot on. It feels comfortable even during long hours at work.”</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3540,7 +3540,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Michael K., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3638,7 +3638,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>“I have a few moissanite rings from different shops but the one I got here is my favorite. It looks clean and bright.”</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3695,7 +3695,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Anna G., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3793,7 +3793,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>“Purchased a bracelet as a gift for my sister. The build feels solid and she loved the design right away.”</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3850,7 +3850,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Chris T., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3948,7 +3948,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>“The pendant I ordered arrived earlier than expected. It has a nice shine that looks elegant but still simple.”</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -4005,7 +4005,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Samantha R., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -4040,6 +4040,161 @@
             "text_CjHKdd",
             "image_HeeRkj",
             "text_itWWqL"
+          ]
+        },
+        "carousel_card_JF9LCV": {
+          "type": "_carousel-card",
+          "name": "Carousel Item",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "custom_mobile_alignment": false,
+            "mobile_vertical_alignment": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 24,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-2",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 12,
+            "enable_mobile_radius": false,
+            "mobile_border_radius": 0,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "shadow"
+          },
+          "blocks": {
+            "icon_FyLegm": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/5-star-taupe.svg",
+                "width": 24,
+                "use_height": true,
+                "height": 12,
+                "custom_mobile_height": false,
+                "mobile-height": 24,
+                "link": "",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            },
+            "text_qb68Kr": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>“We chose my partner’s ring through Theodore + Co and the experience was really smooth. The final piece looked exactly like what we hoped for.”</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
+                "line_height": "loose",
+                "letter_spacing": "loose",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "image_YbpBzW": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_7Njd9p": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>David S.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
+                "line_height": "tight",
+                "letter_spacing": "loose",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_FyLegm",
+            "text_qb68Kr",
+            "image_YbpBzW",
+            "text_7Njd9p"
           ]
         },
         "static-header": {
@@ -4117,7 +4272,8 @@
         "carousel_card_7cW343",
         "carousel_card_ikKPkw",
         "carousel_card_ReCMA8",
-        "carousel_card_KNqHDf"
+        "carousel_card_KNqHDf",
+        "carousel_card_JF9LCV"
       ],
       "custom_css": [
         "@media (min-width: 750px) {.resource-list__carousel slideshow-arrows {padding-inline: 80px; }}"
