@@ -2408,8 +2408,8 @@
                   "type": "product-title",
                   "name": "t:names.product_title",
                   "settings": {
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",

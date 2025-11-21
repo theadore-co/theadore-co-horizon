@@ -224,16 +224,17 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 
 body .xb-product-quantity.show, .cart-bubble__background {
     background-color: var(--brand-color) !important;
-    color: var(--color-primary-button-text) !important;
+    color: var(--color-primary) !important;
+}
+
+.cart-bubble {
+    color: var(--color-primary) !important;
 }
 
 .header-actions__cart-icon {
     --cart-bubble-size: 16px !important;
 }
 
-.cart-bubble {
-    color: var(--color-foreground) !important;
-}
 
 .xb-product-quantity.show {
     font-size: var(--font-size--2xs) !important;

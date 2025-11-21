@@ -938,11 +938,11 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
-            "custom_mobile_padding": false,
+            "custom_mobile_padding": true,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
+            "mobile-padding-inline-start": 24,
+            "mobile-padding-inline-end": 24,
             "css_class": ""
           },
           "blocks": {
@@ -1077,7 +1077,7 @@
         "enable_mobile_gap": false,
         "mobile_gap": 12,
         "section_width": "page-width",
-        "full_width_on_mobile": false,
+        "full_width_on_mobile": true,
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
@@ -1276,6 +1276,7 @@
       "block_order": [
         "text_cbcgyb"
       ],
+      "disabled": true,
       "name": "t:names.product_recommendations",
       "settings": {
         "product": "{{ closest.product }}",

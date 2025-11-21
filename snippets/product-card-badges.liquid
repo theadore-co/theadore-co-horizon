@@ -8,35 +8,36 @@
   {% render 'product-card-badges', product: product, settings: settings %}
 {%- enddoc -%}
 
+{% liquid
+  assign tag_badges = 0
+
+  for i in product.tags
+    if i contains 'badge:'
+      assign tag_badges = tag_badges | plus: 1
+    endif
+  endfor
+%}
+
 <div
-  class="product-badges product-badges--{{ settings.badge_position }}"
+  class="product-badges {% if tag_badges > 1 %}flex-badges{% endif %} product-badges--{{ settings.badge_position }}"
   style="
     --badge-border-radius: {{ settings.badge_corner_radius }}px;
     --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
   "
 >
-  {% liquid
-    assign tag_badges = 0
 
-    for i in product.tags
-      if i contains 'badge:'
-        assign tag_badges = tag_badges | plus: 1
-        assign badge_name = i | replace: 'badge:', ''
-      endif
-    endfor
-  %}
 
   {% for i in product.tags %}
     {% if i contains 'badge:' %}
       <div
-        class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}"
+        class="product-badges__badge product-tag__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}"
       >
         {{  i | replace: 'badge:', '' }}
       </div>
     {% endif %}
   {% endfor %}
 
-  {%- if product.available == false or product.compare_at_price > product.price and product.available -%}
+  {%- if tag_badges == 0 and product.available == false or product.compare_at_price > product.price and product.available -%}
     <div
       class="
         product-badges__badge product-badges__badge--rectangle
@@ -76,7 +77,7 @@
   }
 
   .product-badges__badge {
-    --badge-font-size: var(--font-size--xs);
+    --badge-font-size: var(--font-size--2xs);
 
     display: flex;
     align-items: center;
@@ -94,5 +95,10 @@
   .product-badges__badge--rectangle {
     padding-block: var(--badge-rectangle-padding-block);
     padding-inline: var(--badge-rectangle-padding-inline);
+  }
+
+  .flex-badges {
+    display: flex;
+    gap: var(--gap-xs);
   }
 {% endstylesheet %}

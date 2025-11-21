@@ -6,6 +6,7 @@
   @param {object} products - Array of product objects
   @param {string} [title] - Header of the collection or search results
   @param {string} children - List or grid of product cards
+  @param {string} [featured_card] - The featured card
   @param {boolean} [enable_infinite_scroll] - Whether to enable infinite scroll (default: true)
 {%- enddoc -%}
 
@@ -132,6 +133,7 @@
         data-product-card-size="{{ section.settings.product_card_size }}"
         style="--mobile-columns: {% if section.settings.mobile_product_card_size == 'large' %}1{% else %}2{% endif %};"
       >
+        {{ featured_card }}
         {{ children }}
       </ul>
       {% if enable_infinite_scroll != false %}
