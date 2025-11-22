@@ -4,6 +4,10 @@
   assign deposit = product.selling_plan_groups[0].selling_plans | where: 'name', 'Partial payment'
 
   if deposit.size == 0
+    assign deposit = product.selling_plan_groups[0].selling_plans | where: 'name', 'Deposit-based pre-order'
+  endif
+
+  if deposit.size == 0
     break
   endif
 

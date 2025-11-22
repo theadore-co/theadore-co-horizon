@@ -387,7 +387,7 @@
         "product_grid_width": "full-width",
         "full_width_on_mobile": true,
         "columns_gap_horizontal": 8,
-        "columns_gap_vertical": 16,
+        "columns_gap_vertical": 34,
         "padding-inline-start": 24,
         "padding-inline-end": 24,
         "color_scheme": "scheme-1",
