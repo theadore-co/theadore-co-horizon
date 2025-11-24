@@ -15,7 +15,7 @@
 {% liquid
   if background_media == 'video'
     render 'background-video', background_video: background_video, background_video_position: background_video_position, placeholder: placeholder
-  elsif background_media == 'image'
+  elsif background_media == 'image' and background_image != blank
     render 'background-image', background_image: background_image, background_image_position: background_image_position, placeholder: placeholder
   endif
 %}
