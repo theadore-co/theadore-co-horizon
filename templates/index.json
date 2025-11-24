@@ -1345,6 +1345,8 @@
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1427,7 +1429,9 @@
         "mobile-padding-block-end": 72,
         "mobile-padding-inline-start": 0,
         "mobile-padding-inline-end": 0,
-        "css_class": ""
+        "css_class": "",
+        "add_section_id": false,
+        "section_id": ""
       }
     },
     "carousel_6jpBtg": {
@@ -2001,6 +2005,8 @@
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "enable_mobile_size": false,
+                "mobile_font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -2084,7 +2090,9 @@
         "mobile-padding-block-end": 80,
         "mobile-padding-inline-start": 0,
         "mobile-padding-inline-end": 0,
-        "css_class": ""
+        "css_class": "",
+        "add_section_id": false,
+        "section_id": ""
       }
     },
     "hero_Q6M4pc": {
@@ -2261,6 +2269,8 @@
                 "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "enable_mobile_size": true,
+                "mobile_font_size": "1.25rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -4244,6 +4254,8 @@
                 "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "enable_mobile_size": true,
+                "mobile_font_size": "1.25rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -4313,7 +4325,9 @@
         "mobile-padding-block-end": 0,
         "mobile-padding-inline-start": 0,
         "mobile-padding-inline-end": 0,
-        "css_class": ""
+        "css_class": "",
+        "add_section_id": false,
+        "section_id": ""
       }
     },
     "featured_blog_posts_eLxwcW": {
@@ -4365,6 +4379,8 @@
                 "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "enable_mobile_size": true,
+                "mobile_font_size": "1.25rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
