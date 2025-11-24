@@ -84,7 +84,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/BLOG_Featured_Image-36.png",
+        "image_1": "shopify://shop_images/Homepage_Slider_For_Clothing_Brand_Website_Sale_Blog_Banner_-13.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -373,25 +373,99 @@
               },
               "blocks": {}
             },
-            "button_NBWfxC": {
-              "type": "button",
+            "group_tnHPiy": {
+              "type": "group",
+              "name": "t:names.group",
               "settings": {
-                "label": "BOOK NOW",
-                "link": "https://bookings.gettimely.com/theadoreco/bb/book",
+                "link": "",
                 "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "custom",
-                "custom_width": 33,
-                "width_mobile": "custom",
-                "custom_width_mobile": 100
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "custom_mobile_alignment": false,
+                "mobile_vertical_alignment": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 24,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "enable_mobile_radius": false,
+                "mobile_border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
               },
-              "blocks": {}
+              "blocks": {
+                "button_UUTK9d": {
+                  "type": "button",
+                  "settings": {
+                    "label": "BOOK NOW",
+                    "link": "https://bookings.gettimely.com/theadoreco/bb/book",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "custom",
+                    "custom_width": 33,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 50
+                  },
+                  "blocks": {}
+                },
+                "button_9ytqRj": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "VIEW ON GOOGLE MAPS",
+                    "link": "https://maps.app.goo.gl/FQLwZSUM2pTdSPfF7",
+                    "open_in_new_tab": true,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_UUTK9d",
+                "button_9ytqRj"
+              ]
             }
           },
           "block_order": [
             "text_XcN9BN",
             "text_rKJUhB",
-            "button_NBWfxC"
+            "group_tnHPiy"
           ]
         }
       },
@@ -563,25 +637,99 @@
               },
               "blocks": {}
             },
-            "button_d4KyE7": {
-              "type": "button",
+            "group_HD7JjG": {
+              "type": "group",
+              "name": "t:names.group",
               "settings": {
-                "label": "BOOK NOW",
-                "link": "https://bookings.gettimely.com/theadoreco/bb/book",
+                "link": "",
                 "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "custom",
-                "custom_width": 33,
-                "width_mobile": "custom",
-                "custom_width_mobile": 100
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "custom_mobile_alignment": false,
+                "mobile_vertical_alignment": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 24,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "enable_mobile_radius": false,
+                "mobile_border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
               },
-              "blocks": {}
+              "blocks": {
+                "button_xMGHWW": {
+                  "type": "button",
+                  "settings": {
+                    "label": "BOOK NOW",
+                    "link": "https://bookings.gettimely.com/theadoreco/bb/book",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "custom",
+                    "custom_width": 33,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_iE6Ji7": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "VIEW ON GOOGLE MAPS",
+                    "link": "https://maps.app.goo.gl/JWwVduQzfMaK9Y1A8",
+                    "open_in_new_tab": true,
+                    "style_class": "link",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_xMGHWW",
+                "button_iE6Ji7"
+              ]
             }
           },
           "block_order": [
             "text_VnM7iz",
             "text_8UK9C4",
-            "button_d4KyE7"
+            "group_HD7JjG"
           ]
         },
         "image_mzFJFL": {
@@ -1779,7 +1927,7 @@
                       "type": "custom-liquid",
                       "name": "t:names.custom_liquid",
                       "settings": {
-                        "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220.0435852323252!2d153.4026885348114!3d-28.06426376545092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b910357ed3886a5%3A0xc57b9fdd1e8a26f4!2sThe%20Lakehouse%2C%20237%2F34%20Glenferrie%20Dr%2C%20Robina%20QLD%204226%2C%20Australia!5e0!3m2!1sen!2sph!4v1763982725582!5m2!1sen!2sph\" width=\"100%\" height=\"400\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+                        "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d440.0872432159549!2d153.402798!3d-28.064246000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9103ea263305db%3A0x19957727ade8fb26!2sTheadore%20%2B%20Co.!5e0!3m2!1sen!2sph!4v1763992871675!5m2!1sen!2sph\" width=\"100%\" height=\"400\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
                       },
                       "blocks": {}
                     },
@@ -2066,7 +2214,7 @@
                       "type": "custom-liquid",
                       "name": "t:names.custom_liquid",
                       "settings": {
-                        "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d829.5477566454916!2d151.16214058991753!3d-33.72987615087521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a815ee6f5689%3A0x7b0dc1703a93fcc9!2s7%2F15-17%20Stanley%20St%2C%20St%20Ives%20NSW%202075%2C%20Australia!5e0!3m2!1sen!2sph!4v1763983693424!5m2!1sen!2sph\" width=\"100%\" height=\"400\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+                        "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973.0110306589145!2d151.16118202819231!3d-33.72975254952685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a99701c2b483%3A0xc32a5119561edfba!2sTheadore%20%2B%20Co.!5e0!3m2!1sen!2sph!4v1763992969692!5m2!1sen!2sph\" width=\"100%\" height=\"400\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
                       },
                       "blocks": {}
                     },

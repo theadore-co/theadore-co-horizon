@@ -4511,6 +4511,9 @@
           "block_order": []
         }
       },
+      "custom_css": [
+        "@media (max-width: 749px) {slideshow-container {display: flex; flex-direction: column-reverse;}}"
+      ],
       "name": "t:names.blog_posts_carousel",
       "settings": {
         "blog": "news",
