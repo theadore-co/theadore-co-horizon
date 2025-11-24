@@ -422,11 +422,11 @@ body .xb-product-quantity.show, .cart-bubble__background {
 }
 
 .cart-items__price {
-    font-size: var(--cart-font-size--2xs);
+    font-size: var(--cart-font-size--2xs) !important;
 }
 
 .cart__total-value {
-    font-size: var(--cart-font-size--sm);
+    font-size: var(--cart-font-size--sm) !important;
 }
 
 @media screen and (min-width: 990px) {
