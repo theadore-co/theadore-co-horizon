@@ -383,11 +383,11 @@ body .xb-product-quantity.show, .cart-bubble__background {
     text-transform: uppercase !important;
 }
 
-#pp-native-btn-area, [data-native-pre-order-btn] {
+#pp-native-btn-area, #pp-native-btn-area + [data-native-pre-order-btn] {
     display: none !important;
 }
 
-[data-native-pre-order-btn] + .add-to-cart-button {
+[data-native-pre-order-btn] + .add-to-cart-button[data-native-pre-order-btn-added] {
     display: grid !important;
 }
 
