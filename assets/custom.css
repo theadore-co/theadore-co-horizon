@@ -45,6 +45,10 @@ a.link:not(.hero__container .link):after {
     font-size: var(--font-size--md);
 }
 
+.text-block:not(.text-block--full-width):is(.h1,.h2,.h3,.h4,.h5,.h6) {
+    text-wrap: pretty !important;
+}
+
 /* Header */
 .header__columns {
     --padding-block-end: calc(2 * var(--header-padding)) !important;
