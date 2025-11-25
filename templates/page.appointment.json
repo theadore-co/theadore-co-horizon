@@ -873,9 +873,18 @@
           },
           "blocks": {}
         },
+        "custom_liquid_8pe7iD": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<script src=\"//book.gettimely.com/widget/book-button-v1.5.js\" id=\"timelyScript\"></script>\n<script>new timelyButton(\"theadoreco\", {\"style\":\"dark\"});</script>"
+          },
+          "blocks": {}
+        },
         "button_hQfHKt": {
           "type": "button",
           "name": "t:names.button",
+          "disabled": true,
           "settings": {
             "label": "BOOK VIRTUAL CONSULTATION",
             "link": "shopify://collections/all",
@@ -892,6 +901,7 @@
       "block_order": [
         "text_8wVHrf",
         "text_CKmPz6",
+        "custom_liquid_8pe7iD",
         "button_hQfHKt"
       ],
       "custom_css": [
