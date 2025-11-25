@@ -844,7 +844,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Join us online for a personalized consultation to explore our collections from the comfort of your home. Our ring consultants are available worldwide and ready to guide you through every step of your jewelry journey.</p>",
+            "text": "<p>Unable to visit one of our showrooms or retailers? Our ring consultants are here to help you on your ring journey, wherever you are in the world.</p><p>Book in for a virtual consultation to explore our collection with either Sarah or Carla, offering expert advice from the founders of the brand itself. Your appointment will be catered to your preferences, budget and requirements.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
