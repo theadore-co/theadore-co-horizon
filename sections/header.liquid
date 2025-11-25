@@ -21,6 +21,9 @@
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.collection_color_scheme
+  elsif section.settings.enable_transparent_header_blog and template.name == 'blog'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.blog_color_scheme
   elsif page.metafields.custom.transparent_header_background == true
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.home_color_scheme
@@ -1113,6 +1116,33 @@
       ],
       "default": "default",
       "visible_if": "{{ section.settings.enable_transparent_header_collection }}"
+    },
+    {
+      "type": "header",
+      "content": "Blog page"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header_blog",
+      "label": "t:settings.transparent_background",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "blog_color_scheme",
+      "label": "t:settings.color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:options.default"
+        },
+        {
+          "value": "inverse",
+          "label": "t:options.inverse"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.enable_transparent_header_blog }}"
     }
   ],
   "presets": []

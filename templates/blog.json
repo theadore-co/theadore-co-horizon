@@ -15,7 +15,7 @@
         "text_Hmceth": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Journal</p>",
+            "text": "<p>Journal</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -172,13 +172,13 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "",
+                "color": "var(--color-foreground)",
                 "text": "",
                 "read_only": true,
                 "alignment": "left",
                 "show_alignment": false,
                 "padding-block-start": 0,
-                "padding-block-end": 10,
+                "padding-block-end": 8,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -211,7 +211,7 @@
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
-                "padding-block-start": 16,
+                "padding-block-start": 8,
                 "padding-block-end": 0
               },
               "blocks": {}
