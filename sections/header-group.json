@@ -324,7 +324,7 @@
               "name": "Megamenu item",
               "settings": {
                 "assigned_to": "Shop",
-                "image": "shopify://shop_images/Frame_5.jpg",
+                "image": "shopify://shop_images/Web_Banner-9.png",
                 "zoom_on_hover": true,
                 "image_ratio": "taller_landscape",
                 "height": "fit",
