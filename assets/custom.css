@@ -234,6 +234,10 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     font-size: var(--font-size--xs);
 }
 
+.blog-post-content div:has(img)+div:has(img) {
+    margin-top: var(--margin-sm);
+}
+
 body .xb-product-quantity.show, .cart-bubble__background {
     background-color: var(--brand-color) !important;
     color: var(--color-primary) !important;
