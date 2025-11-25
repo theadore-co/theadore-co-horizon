@@ -429,6 +429,28 @@ body .xb-product-quantity.show, .cart-bubble__background {
     font-size: var(--cart-font-size--sm) !important;
 }
 
+.shopify-policy__title {
+    margin-bottom: 2rem;
+}
+
+.shopify-policy__title h1 {
+    font-family: var(--font-h2--family);
+    font-style: var(--font-h2--style);
+    font-weight: var(--font-h2--weight);
+    font-size: var(--font-h2--size);
+    line-height: var(--font-h2--line-height);
+    letter-spacing: var(--font-h2--letter-spacing);
+    text-transform: var(--font-h2--case);
+}
+
+.shopify-policy__container {
+    max-width: 120ch !important;
+}
+
+.shopify-policy__container {
+    padding-block-end: var(--padding-6xl) !important;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
