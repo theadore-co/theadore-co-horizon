@@ -102,7 +102,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 24,
         "section_width": "page-width",
-        "section_height": "custom",
+        "section_height": "medium",
         "section_height_custom": 80,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
