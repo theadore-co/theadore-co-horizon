@@ -230,7 +230,7 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 }
 
 .blog-post-content {
-    max-width: var(--wide-content-width) !important;
+    max-width: 100% !important;
     font-size: var(--font-size--xs);
 }
 

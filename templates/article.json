@@ -77,7 +77,7 @@
             "border_opacity": 100,
             "border_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 12,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -90,6 +90,9 @@
           "blocks": {}
         }
       },
+      "custom_css": [
+        ".section-content-wrapper {max-width: 75rem; margin-inline: auto;}"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
