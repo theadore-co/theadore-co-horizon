@@ -429,12 +429,12 @@
                 "button_UUTK9d": {
                   "type": "button",
                   "settings": {
-                    "label": "BOOK NOW",
+                    "label": "BOOK APPOINTMENT",
                     "link": "https://bookings.gettimely.com/theadoreco/bb/book",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "custom",
-                    "custom_width": 33,
+                    "custom_width": 40,
                     "width_mobile": "fit-content",
                     "custom_width_mobile": 50
                   },
@@ -444,7 +444,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "VIEW ON GOOGLE MAPS",
+                    "label": "GET DIRECTION",
                     "link": "https://maps.app.goo.gl/FQLwZSUM2pTdSPfF7",
                     "open_in_new_tab": true,
                     "style_class": "link",
@@ -693,12 +693,12 @@
                 "button_xMGHWW": {
                   "type": "button",
                   "settings": {
-                    "label": "BOOK NOW",
+                    "label": "BOOK APPOINTMENT",
                     "link": "https://bookings.gettimely.com/theadoreco/bb/book",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "custom",
-                    "custom_width": 33,
+                    "custom_width": 40,
                     "width_mobile": "fit-content",
                     "custom_width_mobile": 100
                   },
@@ -708,7 +708,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "VIEW ON GOOGLE MAPS",
+                    "label": "GET DIRECTION",
                     "link": "https://maps.app.goo.gl/JWwVduQzfMaK9Y1A8",
                     "open_in_new_tab": true,
                     "style_class": "link",
@@ -1012,12 +1012,12 @@
                 "button_ah8iBd": {
                   "type": "button",
                   "settings": {
-                    "label": "BOOK NOW",
+                    "label": "BOOK APPOINTMENT",
                     "link": "https://bookings.gettimely.com/theadoreco/bb/book",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "custom",
-                    "custom_width": 33,
+                    "custom_width": 40,
                     "width_mobile": "fit-content",
                     "custom_width_mobile": 100
                   },
