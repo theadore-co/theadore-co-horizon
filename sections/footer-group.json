@@ -415,7 +415,7 @@
             "border_style": "underline",
             "border_width": 1,
             "border_radius": 0,
-            "input_type_preset": "paragraph",
+            "input_type_preset": "",
             "style_class": "button-unstyled",
             "display_type": "long-arrow",
             "label": "Sign up",

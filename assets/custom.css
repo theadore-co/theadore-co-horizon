@@ -451,6 +451,17 @@ body .xb-product-quantity.show, .cart-bubble__background {
     padding-block-end: var(--padding-6xl) !important;
 }
 
+.product-card__content .swatch {
+    --max-swatch-size: 11px !important;
+}
+.product-card__content swatches-variant-picker-component .variant-option--swatches {
+    --product-swatches-padding-block-start: 0px !important;
+}
+
+label, input, textarea, select {
+    letter-spacing: inherit;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
