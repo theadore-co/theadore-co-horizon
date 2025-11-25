@@ -1003,6 +1003,7 @@
                 "custom_liquid_giaVGJ": {
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
+                  "disabled": true,
                   "settings": {
                     "custom_liquid": "<script src=\"//book.gettimely.com/widget/book-button-v1.5.js\" id=\"timelyScript\"></script>\n<script>new timelyButton(\"theadoreco\", {\"style\":\"dark\"});</script>"
                   },
@@ -1010,7 +1011,6 @@
                 },
                 "button_ah8iBd": {
                   "type": "button",
-                  "disabled": true,
                   "settings": {
                     "label": "BOOK NOW",
                     "link": "https://bookings.gettimely.com/theadoreco/bb/book",
@@ -1022,28 +1022,11 @@
                     "custom_width_mobile": 100
                   },
                   "blocks": {}
-                },
-                "button_JgQzgN": {
-                  "type": "button",
-                  "name": "t:names.button",
-                  "disabled": true,
-                  "settings": {
-                    "label": "VIEW ON GOOGLE MAPS",
-                    "link": "https://maps.app.goo.gl/JWwVduQzfMaK9Y1A8",
-                    "open_in_new_tab": true,
-                    "style_class": "link",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "custom_liquid_giaVGJ",
-                "button_ah8iBd",
-                "button_JgQzgN"
+                "button_ah8iBd"
               ]
             }
           },
