@@ -8,7 +8,7 @@
     --font-subheading--family: 'Metropolis Semi', sans-serif !important;
     --font-subheading--style: normal !important;
     --font-subheading--weight: 600 !important;
-    --letter-spacing--body-loose: 0.1em !important;
+    --letter-spacing--body-loose: 0.13em !important;
     --font-h5--letter-spacing: var(--letter-spacing--body-loose) !important;
     --max-width--body-normal: 66ch !important;
     --font-size--2xs: 0.6875rem !important;
@@ -484,6 +484,10 @@ label, input, textarea, select {
 
 summary {
     -webkit-tap-highlight-color: transparent;
+}
+
+.accordion--dividers .details-content {
+    padding-block-end: var(--padding-lg) !important;
 }
 
 @media screen and (min-width: 990px) {

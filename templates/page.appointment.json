@@ -3036,7 +3036,7 @@
           "settings": {
             "icon": "caret",
             "dividers": true,
-            "type_preset": "h6",
+            "type_preset": "h5",
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",
@@ -3052,7 +3052,7 @@
             "accordion_row_3k6dVk": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How long does a consultation take?",
+                "heading": "How do I book an appointment?",
                 "open_by_default": true,
                 "icon": "none",
                 "width": 20
@@ -3061,7 +3061,7 @@
                 "text_6e9FEk": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>Click the \"BOOK APPOINTMENT\" button on the page, select your preferred showroom location (Gold Coast or Sydney) or virtual consultation option, choose an available time slot, and complete the booking form.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3098,7 +3098,7 @@
             "accordion_row_KVXE4U": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Can I reschedule my appointment?",
+                "heading": "What types of appointments are available?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3107,7 +3107,7 @@
                 "text_PVbY6K": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>We offer in-person consultations at our Gold Coast and Sydney showrooms, as well as virtual online consultations for engagement ring design and selection.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3144,7 +3144,7 @@
             "accordion_row_YcNA6c": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What should I bring to my showroom visit?",
+                "heading": "Do I need to book in advance or can I walk in?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3153,7 +3153,7 @@
                 "text_pjV3hC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>We operate by appointment only to ensure you receive personalized, dedicated attention from our team during your consultation.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3190,7 +3190,7 @@
             "accordion_row_7h3BKg": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are virtual consultations as effective as in-person?",
+                "heading": "Can I reschedule or cancel my appointment?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3199,7 +3199,7 @@
                 "text_yGjhFe": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>Yes, please contact us as soon as possible if you need to reschedule or cancel. We recommend providing at least 24-48 hours notice.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3236,7 +3236,7 @@
             "accordion_row_rKXQ4k": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Do you offer international consultations?",
+                "heading": "Will I receive a confirmation after booking?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3245,7 +3245,7 @@
                 "text_w8bVfF": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>Yes, you'll receive an email confirmation with all your appointment details including date, time, and location immediately after booking.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3278,6 +3278,52 @@
               "block_order": [
                 "text_w8bVfF"
               ]
+            },
+            "accordion_row_bekjKt": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do I need to know exactly what I want before my consultation?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_cKHday": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Not at all! Our consultations are designed to guide you through the process, whether you have a clear vision or are just starting to explore your options.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": false,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 0,
+                    "mobile-padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_cKHday"
+              ]
             }
           },
           "block_order": [
@@ -3285,7 +3331,8 @@
             "accordion_row_KVXE4U",
             "accordion_row_YcNA6c",
             "accordion_row_7h3BKg",
-            "accordion_row_rKXQ4k"
+            "accordion_row_rKXQ4k",
+            "accordion_row_bekjKt"
           ]
         }
       },
