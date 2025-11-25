@@ -206,12 +206,19 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     opacity: .5;
 }
 
-.featured-blog-posts-card__content .blog-post-card__content-text a {
-    margin-top: var(--margin-xs);
-    text-decoration: underline;
-    text-decoration: underline;
+.blog-post-card__content-text a {
+    text-decoration: underline !important;
     text-decoration-color: currentColor;
     text-decoration-thickness: auto;
+    padding-block-start: var(--padding-xs) !important;
+}
+
+.blog-post-card__image--large {
+    --blog-post-card-img-height: 480px;
+}
+
+.blog-post-card__image--large {
+    --blog-post-card-img-height: 518px;
 }
 
 .button--text {
