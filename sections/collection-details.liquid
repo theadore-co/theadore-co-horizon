@@ -176,14 +176,14 @@
                 {% endif %}
                 {% if block_content.bottom_heading != blank or block_content.bottom_content %}
                     <div class="group-block group-block--height-fit group-block--width-fill border-style spacing-style size-style border-top" style="--border-width:1px; --border-style:solid; --border-color:rgb(var(--color-border-rgb)/0.13); --border-radius:0px; --padding-block-start:max(20px, calc(var(--spacing-scale)*28px)); --padding-block-end:max(20px, calc(var(--spacing-scale)*28px)); --padding-inline-start:0px; --padding-inline-end:0px; --size-style-width:100%; --size-style-height:fit; --size-style-width-mobile:100%; --size-style-width-mobile-min:5rem;" data-testid="group-block">
-                        <div class="group-block-content layout-panel-flex layout-panel-flex--row mobile-column" style="--flex-direction:column; --flex-wrap:nowrap; --flex-wrap-mobile:wrap; --gap:12px; --horizontal-alignment:left; --vertical-alignment:center; --vertical-alignment-mobile:center;">
+                        <div class="group-block-content layout-panel-flex layout-panel-flex--row mobile-column" style="--flex-direction:column; --flex-wrap:nowrap; --flex-wrap-mobile:wrap; --gap:12px; --horizontal-alignment:left; --vertical-alignment:center; --vertical-alignment-mobile:center; --horizontal-mobile-alignment: flex-start;">
                             {% if block_content.bottom_heading != blank %}
-                                <div class="spacing-style text-block custom text-block--align-center custom-typography custom-font-size custom-color" style="--padding-block-start:0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color:var(--color-foreground); --font-size:1rem; --font-weight:var(--font-body--weight); --font-family:var(--font-body--family); --text-transform:none; --text-wrap:unset; --line-height:var(--line-height--body-normal); --letter-spacing:var(--letter-spacing--body-loose); --width:100%; --max-width:var(--max-width--body-none); --text-align:center;">
+                                <div class="spacing-style text-block custom custom-typography custom-font-size custom-color" style="--padding-block-start:0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px; --color:var(--color-foreground); --font-size:1rem; --font-weight:var(--font-body--weight); --font-family:var(--font-body--family); --text-transform:none; --text-wrap:unset; --line-height:var(--line-height--body-normal); --letter-spacing:var(--letter-spacing--body-loose); --width: fit-content; --max-width:var(--max-width--body-none); --text-align:center;">
                                     <h3 style="font-weight: 500;">{{ block_content.bottom_heading }}</h3>
                                 </div>
                             {% endif %}
                             {% if block_content.bottom_content != blank %}
-                                <div class="spacing-style text-block rte text-block--align-center"
+                                <div class="spacing-style mobile-align-left text-block rte"
                                     style="
                                         --padding-block-start: 0px; --padding-block-end:0px; 
                                         --padding-inline-start:0px; --padding-inline-end:0px; 
@@ -229,6 +229,12 @@
 
   .custom-section-content {
     z-index: var(--layer-flat);
+  }
+
+  @media (max-width: 749px) {
+    .mobile-align-left {
+        --text-align: left !important;
+    }
   }
 {% endstylesheet %}
 
