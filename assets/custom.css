@@ -504,13 +504,13 @@ summary {
     padding-block: var(--padding-xs) !important;
 }
 
-.sticky-add-to-cart__bar {
-    width: 700px !important;
-}
-
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
+    }
+
+    .sticky-add-to-cart__bar {
+        width: 700px !important;
     }
 }
 
