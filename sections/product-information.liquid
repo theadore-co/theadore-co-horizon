@@ -141,6 +141,14 @@
                 {{- 'products.product.sold_out' | t -}}
               {%- endif -%}
             </span>
+            <span class="button-divider">•</span>
+            <span class="button--price">
+              {% if settings.currency_code_enabled_product_pages %}
+                {{ current_variant.price | money_with_currency | replace: '.00', '' }}
+              {% else %}
+                {{ current_variant.price | money_without_trailing_zeros }}
+              {% endif %}
+            </span>
             <span
               class="quantity-display"
               ref="quantityDisplay"
