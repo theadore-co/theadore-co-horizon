@@ -290,8 +290,8 @@
         "section_id": ""
       }
     },
-    "carousel_xEmJP4": {
-      "type": "carousel",
+    "grid_section_xEmJP4": {
+      "type": "grid-section",
       "blocks": {
         "carousel_card_iBFLYM": {
           "type": "_carousel-card",
@@ -1434,8 +1434,8 @@
         "section_id": ""
       }
     },
-    "carousel_6jpBtg": {
-      "type": "carousel",
+    "grid_section_6jpBtg": {
+      "type": "grid-section",
       "blocks": {
         "carousel_card_jLqzab": {
           "type": "_carousel-card",
@@ -2964,8 +2964,8 @@
         "section_id": ""
       }
     },
-    "carousel_dzLMEB": {
-      "type": "carousel",
+    "grid_section_dzLMEB": {
+      "type": "grid-section",
       "blocks": {
         "carousel_card_YW7pgT": {
           "type": "_carousel-card",
@@ -4803,12 +4803,12 @@
   "order": [
     "hero_jVaWmY",
     "section_dRcrcq",
-    "carousel_xEmJP4",
-    "carousel_6jpBtg",
+    "grid_section_xEmJP4",
+    "grid_section_6jpBtg",
     "hero_Q6M4pc",
     "product_list_9GqaVt",
     "section_8qankE",
-    "carousel_dzLMEB",
+    "grid_section_dzLMEB",
     "featured_blog_posts_eLxwcW",
     "section_Ggbeg9"
   ]

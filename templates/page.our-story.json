@@ -973,8 +973,8 @@
         "section_id": ""
       }
     },
-    "carousel_xj7QqF": {
-      "type": "carousel",
+    "grid_section_xj7QqF": {
+      "type": "grid-section",
       "blocks": {
         "carousel_card_eXRgHR": {
           "type": "_carousel-card",
@@ -1863,7 +1863,7 @@
     "section_R8cT4i",
     "section_AKBcEm",
     "section_4L4DJ4",
-    "carousel_xj7QqF",
+    "grid_section_xj7QqF",
     "main"
   ]
 }
