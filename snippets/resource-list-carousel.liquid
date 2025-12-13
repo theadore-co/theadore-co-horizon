@@ -41,10 +41,6 @@
   {% assign arrows_position = 'top' %}
 {% endif %}
 
-{% if settings.arrow_position == true %}
-  {% assign arrows_position = 'top' %}
-{% endif %}
-
 {% unless settings.hide_arrows == true %}
   {% if settings.icons_style != 'none' %}
     {% capture slideshow_arrows %}
@@ -76,6 +72,7 @@
     ref: slideshow_ref,
     class: 'resource-list__carousel',
     slides: slides,
+    slideshow_arrows: slideshow_arrows,
     show_arrows: show_arrows,
     icon_style: settings.icons_style,
     icon_shape: settings.icons_shape,
