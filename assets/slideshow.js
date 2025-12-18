@@ -3,7 +3,6 @@ import {
   center,
   closest,
   clamp,
-  getVisibleElements,
   mediaQueryLarge,
   prefersReducedMotion,
   preventDefault,
@@ -95,6 +94,11 @@ export class Slideshow extends Component {
 
     if (this.#resizeObserver) {
       this.#resizeObserver.disconnect();
+    }
+
+    if (this.#intersectionObserver) {
+      this.#intersectionObserver.disconnect();
+      this.#intersectionObserver = null;
     }
   }
 
@@ -367,7 +371,7 @@ export class Slideshow extends Component {
   }
 
   get visibleSlides() {
-    return getVisibleElements(this.refs.scroller, this.slides, SLIDE_VISIBLITY_THRESHOLD, 'x');
+    return this.#visibleSlides;
   }
 
   get previousIndex() {
@@ -438,6 +442,18 @@ export class Slideshow extends Component {
   #resizeObserver;
 
   /**
+   * IntersectionObserver for efficient visibility tracking of slides
+   * @type {IntersectionObserver | null}
+   */
+  #intersectionObserver = null;
+
+  /**
+   * Cached visible slides result from IntersectionObserver
+   * @type {HTMLElement[]}
+   */
+  #visibleSlides = [];
+
+  /**
    * Setup the slideshow without controls for zero or one slides
    */
   #setupSlideshowWithoutControls() {
@@ -458,6 +474,9 @@ export class Slideshow extends Component {
    * Setup the slideshow with controls for when there are multiple slides
    */
   #setupSlideshow() {
+    // Setup IntersectionObserver first for efficient visibility tracking
+    this.#setupIntersectionObserver();
+
     // Setup the scroll instance
     const { scroller } = this.refs;
     this.#scroll = new Scroller(scroller, {
@@ -759,6 +778,56 @@ export class Slideshow extends Component {
     if (!(slideshowControls instanceof HTMLElement)) return;
 
     slideshowControls.hidden = scroller.scrollWidth <= scroller.offsetWidth;
+  }
+
+  /**
+   * Setup IntersectionObserver for efficient visibility tracking of slides
+   */
+  #setupIntersectionObserver() {
+    const { slides, scroller } = this.refs;
+    if (!slides?.length) return;
+
+    if (this.#intersectionObserver) {
+      this.#intersectionObserver.disconnect();
+    }
+
+    this.#intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        const allEntries = [
+          ...entries,
+          ...(this.#intersectionObserver ? this.#intersectionObserver.takeRecords() : []),
+        ];
+
+        for (const entry of allEntries) {
+          const slide = /** @type {HTMLElement} */ (entry.target);
+          const isCurrentlyVisible = this.#visibleSlides.includes(slide);
+          const shouldBeVisible = entry.intersectionRatio >= SLIDE_VISIBLITY_THRESHOLD;
+
+          if (shouldBeVisible && !isCurrentlyVisible) {
+            this.#visibleSlides.push(slide);
+          } else if (!shouldBeVisible && isCurrentlyVisible) {
+            const index = this.#visibleSlides.indexOf(slide);
+            if (index > -1) {
+              this.#visibleSlides.splice(index, 1);
+            }
+          }
+        }
+
+        this.#visibleSlides.sort((a, b) => slides.indexOf(a) - slides.indexOf(b));
+        this.#updateVisibleSlides();
+      },
+      {
+        root: scroller,
+        threshold: SLIDE_VISIBLITY_THRESHOLD,
+        // Add small margin to account for sub-pixel rendering
+        rootMargin: '1px',
+      }
+    );
+
+    // Observe all slides - observer will fire initial callback asynchronously
+    slides.forEach((slide) => {
+      this.#intersectionObserver?.observe(slide);
+    });
   }
 
   /**
