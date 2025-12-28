@@ -1391,7 +1391,6 @@
         "carousel_card_e87aN7"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "@media (max-width: 749px) {.resource-list {--resource-list-mobile-gap-max: 40px; }}"
       ],
       "name": "Carousel",
@@ -1411,7 +1410,7 @@
         "rows_gap": 98,
         "icons_style": "arrow",
         "icons_shape": "circle",
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "gap": 0,
         "color_scheme": "",
@@ -2051,7 +2050,6 @@
         "carousel_card_wkWLh7"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         ".slideshow-control {color: var(--color-foreground); opacity: 1;}",
         "@media (max-width: 749px) {.resource-list {gap: 32px 24px; }}"
       ],
@@ -2072,7 +2070,7 @@
         "rows_gap": 32,
         "icons_style": "arrow",
         "icons_shape": "none",
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "gap": 0,
         "color_scheme": "",
@@ -2925,9 +2923,7 @@
         "group_mzLXPJ",
         "group_Fka38R"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.multicolumn",
       "settings": {
         "content_direction": "row",
@@ -2941,7 +2937,7 @@
         "gap": 100,
         "enable_mobile_gap": true,
         "mobile_gap": 40,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "section_height": "",
         "section_height_custom": 50,

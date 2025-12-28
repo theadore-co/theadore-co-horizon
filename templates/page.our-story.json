@@ -386,9 +386,7 @@
         "image_QAqa7i",
         "group_JUeRyK"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -403,7 +401,7 @@
         "enable_mobile_gap": true,
         "mobile_gap": 32,
         "section_width": "full-width",
-        "full_width_on_mobile": false,
+        "full_width_on_mobile": true,
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
@@ -586,7 +584,6 @@
         "video_WKJyiV"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "@media (max-width: 749px) {.layout-panel-flex--row > .group-block--width-custom {flex-basis: auto; }}"
       ],
       "name": "t:names.image_with_text",
@@ -618,7 +615,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 40,
+        "padding-block-start": 0,
         "padding-block-end": 0,
         "custom_mobile_padding": true,
         "mobile-padding-block-start": 80,
@@ -816,7 +813,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 40,
+        "padding-block-start": 0,
         "padding-block-end": 0,
         "custom_mobile_padding": true,
         "mobile-padding-block-start": 80,
@@ -1757,7 +1754,6 @@
         "carousel_card_E7ErUm"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "@media (max-width: 749px) {.resource-list {--resource-list-mobile-gap-max: 32px; }}"
       ],
       "name": "Carousel",
@@ -1777,7 +1773,7 @@
         "rows_gap": 32,
         "icons_style": "arrow",
         "icons_shape": "circle",
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "gap": 0,
         "color_scheme": "scheme-1",

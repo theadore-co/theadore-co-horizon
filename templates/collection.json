@@ -533,7 +533,6 @@
         "group_cgLUWD"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         ".text-block[style*=\"--width: fit-content;\"] {--max-width: 56rem !important;}"
       ],
       "name": "Collection Details",
@@ -550,7 +549,7 @@
         "gap": 0,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,

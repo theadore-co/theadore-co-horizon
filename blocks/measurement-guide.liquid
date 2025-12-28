@@ -1,0 +1,241 @@
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-measurement-guide-{{ ai_gen_id }} {
+    display: block;
+    text-align: center;
+    padding: {{ block.settings.spacing }}px 0;
+    width: 100%;
+  }
+
+  .ai-measurement-guide__text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    margin-bottom: {{ block.settings.text_spacing }}px;
+  }
+
+  .ai-measurement-bottom__text-{{ ai_gen_id }} {
+    color: {{ block.settings.bottom_text_color }};
+    font-size: {{ block.settings.bottom_text_size }}px;
+    margin-top: {{ block.settings.bottom_text_spacing }}px;
+  }
+
+  .ai-measurement-guide__line-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.line_width }}rem;
+    height: {{ block.settings.line_thickness }}px;
+    background: {{ block.settings.line_color }};
+    margin: 0 auto;
+  }
+
+  .ai-measurement-guide__arrow-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    border-top: 2px solid {{ block.settings.text_color }};
+    border-right: 2px solid {{ block.settings.text_color }};
+  }
+
+  .ai-measurement-guide__line-{{ ai_gen_id }}:before {
+    content: '';
+    width: 1rem;
+    height: {{ block.settings.line_thickness }}px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: {{ block.settings.bottom_text_color }};
+  }
+
+  .ai-measurement-guide__line-{{ ai_gen_id }}:after {
+    content: '';
+    width: 1rem;
+    height: {{ block.settings.line_thickness }}px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: {{ block.settings.bottom_text_color }};
+  }
+
+  .ai-measurement-guide__arrow-left-{{ ai_gen_id }} {
+    left: 0.6rem;
+    transform: translateY(-50%) rotate(44deg);
+  }
+
+  .ai-measurement-guide__arrow-right-{{ ai_gen_id }} {
+    right: 0.5rem;
+    transform: translateY(-50%) rotate(-133deg);
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-measurement-guide__line-{{ ai_gen_id }} {
+      width: {{ block.settings.line_width_mobile }}%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-measurement-guide-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.text != blank %}
+    <div class="ai-measurement-guide__text-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+  {% endif %}
+  <div class="ai-measurement-guide__line-{{ ai_gen_id }}">
+    <div class="ai-measurement-guide__arrow-{{ ai_gen_id }} ai-measurement-guide__arrow-left-{{ ai_gen_id }}"></div>
+    <div class="ai-measurement-guide__arrow-{{ ai_gen_id }} ai-measurement-guide__arrow-right-{{ ai_gen_id }}"></div>
+  </div>
+  {% if block.settings.bottom_text != blank %}
+    <div class="ai-measurement-bottom__text-{{ ai_gen_id }}">{{ block.settings.bottom_text }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Measurement guide",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Measurement text",
+      "default": "50mm"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "label": "Space below text",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Guide line"
+    },
+    {
+      "type": "range",
+      "id": "line_width",
+      "label": "Desktop width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "rem",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "line_width_mobile",
+      "label": "Mobile width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "line_thickness",
+      "label": "Line thickness",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Line color",
+      "default": "#1f1919"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow size",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Bottom text"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Measurement text",
+      "default": "50mm"
+    },
+    {
+      "type": "range",
+      "id": "bottom_text_size",
+      "label": "Text size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "bottom_text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "bottom_text_spacing",
+      "label": "Space above text",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Vertical spacing",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Measurement guide"
+    }
+  ]
+}
+{% endschema %}

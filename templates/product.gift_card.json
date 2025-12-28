@@ -36,6 +36,7 @@
             "slideshow_mobile_controls_style": "dots",
             "thumbnail_position": "left",
             "thumbnail_width": 72,
+            "thumbnail_radius": 0,
             "aspect_ratio": "adapt",
             "constrain_to_viewport": false,
             "media_fit": "cover",
@@ -886,6 +887,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "gap": 80,
+        "enable_sticky_add_to_cart": true,
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -1060,9 +1062,7 @@
         "group_YQjHWX",
         "image_hB4tgp"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -1076,7 +1076,7 @@
         "gap": 32,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "section_height": "",
         "section_height_custom": 50,
@@ -1234,7 +1234,12 @@
                     "padding-block-start": 4,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": false,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 0,
+                    "mobile-padding-inline-end": 0
                   },
                   "blocks": {}
                 },

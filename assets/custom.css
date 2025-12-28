@@ -512,6 +512,11 @@ summary {
     padding-block: var(--padding-xs) !important;
 }
 
+.section--page-narrow {
+  --page-margin: 16px;
+  --page-width: calc(75rem + (var(--page-margin) * 2)) !important;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;

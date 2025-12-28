@@ -168,9 +168,7 @@
         "group_xzpr68",
         "email_signup_wf9Hhw"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.email_signup",
       "settings": {
         "content_direction": "row",
@@ -184,7 +182,7 @@
         "gap": 16,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
@@ -611,14 +609,13 @@
         "group_3t9Rbq"
       ],
       "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}",
         "summary.menu__heading .menu__heading__default {font-weight: 500;}",
         "@media (min-width: 990px) {.menu {width: fit-content; } .footer-content {grid-template-columns: 365px auto; justify-content: space-between; }}",
         "@media (max-width: 749px) {summary {padding-block: var(--padding-lg); } .mobile-google-review > .group-block-content > div {width: 100%; } [class*=\"color-scheme\"] {background: #f7f5f4; }}"
       ],
       "name": "t:names.footer",
       "settings": {
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "gap": 20,
         "color_scheme": "scheme-1",
         "padding-block-start": 80,

@@ -202,7 +202,7 @@
         "gap": 25,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
@@ -473,9 +473,7 @@
         "image_QAqa7i",
         "group_JUeRyK"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -489,7 +487,7 @@
         "gap": 60,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
@@ -760,9 +758,7 @@
         "group_m6tMHQ",
         "image_mzFJFL"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -776,7 +772,7 @@
         "gap": 60,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
@@ -1041,9 +1037,7 @@
         "image_63g4Hw",
         "group_NbaFjm"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -1057,7 +1051,7 @@
         "gap": 60,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
@@ -1923,9 +1917,7 @@
         "carousel_card_V3hntC",
         "carousel_card_4MDJzd"
       ],
-      "custom_css": [
-        "{--page-width: calc(75rem + (var(--page-margin) * 2));}"
-      ],
+      "custom_css": [],
       "name": "Carousel",
       "settings": {
         "alignment": "left",
@@ -1943,7 +1935,7 @@
         "rows_gap": 0,
         "icons_style": "arrow",
         "icons_shape": "circle",
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": false,
         "gap": 0,
         "color_scheme": "scheme-2",
