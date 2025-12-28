@@ -1,0 +1,55 @@
+{% assign block_settings = block.settings %}
+
+<tr {{ block.shopify_attributes }}>
+    <td {% if block_settings.center_text_1 == true %}
+        class="text-center"
+    {% endif %}>
+        {% if block_settings.text_column_1 != blank %}
+            {{ block_settings.text_column_1 }}
+        {% endif %}
+    </td>
+    <td {% if block_settings.center_text_2 == true %}
+        class="text-center"
+    {% endif %}>
+        {% if block_settings.text_column_2 != blank %}
+            {{ block_settings.text_column_2 }}
+        {% endif %}
+    </td>
+</tr>
+<!--@list/split-->
+
+{% schema %}
+{
+  "name": "Table row",
+  "tag": null,
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "text_column_1",
+        "label": "Text column 1"
+    },
+    {
+        "type": "checkbox",
+        "id": "center_text_1",
+        "label": "Center text 1",
+        "default": true
+    },
+    {
+        "type": "richtext",
+        "id": "text_column_2",
+        "label": "Text column 2"
+    },
+    {
+        "type": "checkbox",
+        "id": "center_text_2",
+        "label": "Center text 2",
+        "default": true
+    }
+  ],
+  "presets": [
+        {
+            "name": "Table row"
+        }
+    ]
+}
+{% endschema %}

@@ -565,6 +565,9 @@ summary {
         margin-inline-start: 0;
         margin-inline-end: calc(var(--gap-md) * -1);
     }
+    .popup-link__content {
+        padding-inline: var(--padding-md) !important;
+    }
 }
 
 @media (max-width: 749px) {

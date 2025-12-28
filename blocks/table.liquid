@@ -1,0 +1,86 @@
+
+
+{% capture list_items %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+{% liquid
+  # Create an array from the list items to be used for different layout types
+  assign list_items_array = list_items | strip | remove_last: '<!--@list/split-->' | split: '<!--@list/split-->'
+%}
+
+{% if list_items_array.size > 0 %}
+  <div class="table-wrapper" style="--width: {{ block.settings.custom_width }}%;">
+    <table>
+      <tbody>
+        {% for item in list_items_array %}
+            {{ item }}
+        {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endif %}
+
+
+{% stylesheet %}
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+
+  td {
+    padding: var(--padding-xs);
+    vertical-align: middle;
+    border: 1px solid var(--color-foreground);
+    width: 50%;
+  }
+
+    &:not(.popup-link__inner) {
+        @media (min-width: 750px) {
+            max-width: var(--width);
+            margin-inline: auto;
+        }
+
+        @media (max-width: 749px) {
+            table {
+            margin-inline: var(--page-margin);
+            }
+        }  
+    }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Table",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "custom_width",
+      "label": "t:settings.custom_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_table-row",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

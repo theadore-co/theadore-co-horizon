@@ -52,6 +52,7 @@
     "page_width": "normal",
     "page_transition_enabled": false,
     "transition_to_main_product": false,
+    "add_to_cart_animation": false,
     "card_hover_effect": "none",
     "badge_position": "top-left",
     "badge_corner_radius": 0,

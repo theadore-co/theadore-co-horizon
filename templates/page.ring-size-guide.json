@@ -945,10 +945,322 @@
             "mobile-padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "table_cgPMDb": {
+          "type": "table",
+          "name": "Table",
+          "settings": {
+            "custom_width": 69
+          },
+          "blocks": {
+            "table_row_8RrJDi": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p><strong>AUSTRALIAN, UNITED KINGDOM & NEW ZEALAND</strong></p>",
+                "center_text_1": true,
+                "text_column_2": "<p><strong>UNITED STATES & CANADA</strong></p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_3a8gD4": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>H</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_MVYkky": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>H 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>4</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_aYdHLT": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>I</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": false
+              },
+              "blocks": {}
+            },
+            "table_row_6y6AqJ": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>I 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>4.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_XCKbGz": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>J</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": false
+              },
+              "blocks": {}
+            },
+            "table_row_NLjDJd": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>J 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_yPB47g": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>K</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": false
+              },
+              "blocks": {}
+            },
+            "table_row_datjfR": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>K 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>5.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_efE8f6": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>L</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": false
+              },
+              "blocks": {}
+            },
+            "table_row_jgwTdP": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>L 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>6</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_rDy3ee": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>M</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_ALJqhE": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>M 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>6.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_M7QLyg": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>N</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": false
+              },
+              "blocks": {}
+            },
+            "table_row_r96AQp": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>N 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>7</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_Eqigda": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>O</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_TdcLTb": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>O 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>7.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_LMppK7": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>P</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_earGf8": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>P 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>8</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_w86wDA": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>Q</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_gt9Py3": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>Q 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>8.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_t4KWxt": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>R</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_C99d9q": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>R 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>9</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_LQgXB6": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>S</p>",
+                "center_text_1": true,
+                "text_column_2": "",
+                "center_text_2": true
+              },
+              "blocks": {}
+            },
+            "table_row_e4eGrY": {
+              "type": "_table-row",
+              "name": "Table row",
+              "settings": {
+                "text_column_1": "<p>S 1/2</p>",
+                "center_text_1": true,
+                "text_column_2": "<p>9.5</p>",
+                "center_text_2": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "table_row_8RrJDi",
+            "table_row_3a8gD4",
+            "table_row_MVYkky",
+            "table_row_aYdHLT",
+            "table_row_6y6AqJ",
+            "table_row_XCKbGz",
+            "table_row_NLjDJd",
+            "table_row_yPB47g",
+            "table_row_datjfR",
+            "table_row_efE8f6",
+            "table_row_jgwTdP",
+            "table_row_rDy3ee",
+            "table_row_ALJqhE",
+            "table_row_M7QLyg",
+            "table_row_r96AQp",
+            "table_row_Eqigda",
+            "table_row_TdcLTb",
+            "table_row_LMppK7",
+            "table_row_earGf8",
+            "table_row_w86wDA",
+            "table_row_gt9Py3",
+            "table_row_t4KWxt",
+            "table_row_C99d9q",
+            "table_row_LQgXB6",
+            "table_row_e4eGrY"
+          ]
         }
       },
       "block_order": [
-        "text_8hJFJJ"
+        "text_8hJFJJ",
+        "table_cgPMDb"
       ],
       "name": "t:names.custom_section",
       "settings": {
@@ -960,11 +1272,11 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
+        "gap": 24,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
         "section_width": "page-narrow",
-        "full_width_on_mobile": false,
+        "full_width_on_mobile": true,
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
