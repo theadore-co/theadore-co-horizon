@@ -48,7 +48,7 @@
     </anchored-popover-component>
 
     <dialog-component
-      class="account-drawer visibility_class"
+      class="account-drawer mobile:hidden"
       {{ block.shopify_attributes }}
     >
       {% render 'account-button', attributes: 'on:click="/showDialog"' %}

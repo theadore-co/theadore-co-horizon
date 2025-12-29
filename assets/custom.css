@@ -50,6 +50,16 @@ a.link:not(.hero__container .link):after {
 }
 
 /* Header */
+
+.header__row--bottom .menu-list__list-item:where(:not([slot=overflow])) > .menu-list__link {
+    margin-block: 0 !important;
+    padding-block: 0 !important;
+}
+
+.header--collapse-row-paddings .header__row--bottom .header__columns {
+    padding-bottom: var(--padding-xs);
+}
+
 .header__columns {
     --padding-block-end: calc(2 * var(--header-padding)) !important;
 }
