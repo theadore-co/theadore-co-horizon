@@ -174,9 +174,7 @@
         "text_UwVwTJ",
         "group_fTTPdJ"
       ],
-      "custom_css": [
-        ".hero__image {object-fit: contain; object-position: top center;}"
-      ],
+      "custom_css": [],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
