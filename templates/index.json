@@ -174,6 +174,9 @@
         "text_UwVwTJ",
         "group_fTTPdJ"
       ],
+      "custom_css": [
+        ".hero__image--desktop {height: auto;}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
