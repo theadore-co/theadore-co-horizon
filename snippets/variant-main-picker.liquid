@@ -3,6 +3,8 @@
 
   @param {object} product_resource - The product object.
   @param {object} [block] - The block object
+  @param {boolean} [enable_popup] - Popup boolean
+  @param {string} [popup_content] - The Popup html
 {%- enddoc -%}
 
 {% assign block_settings = block.settings %}
@@ -51,6 +53,19 @@
             assign option_id_attribute = 'data-option-id="' | append: fieldset_id | append: '"'
             assign longest_value = 0
           endif
+
+          assign has_popup = false
+          assign option_names = block_settings.option_names | split: ','
+
+          for i in option_names
+            assign option_name = product_option.name | handleize
+            assign i_name = i | handleize
+
+            if enable_popup == true and popup_content != blank and i_name == option_name
+              assign has_popup = true
+              break
+            endif
+          endfor
         -%}
 
         {%- if variant_style == 'swatch' or block_settings.variant_style == 'buttons' -%}
@@ -61,12 +76,28 @@
             ref="fieldsets[]"
             {{ option_id_attribute }}
           >
-            <legend>
-              {{ product_option.name | escape -}}
-              {%- if variant_style == 'swatch' -%}
-                <span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
-              {%- endif %}
-            </legend>
+            {% capture legend %}
+              <legend>
+                {{ product_option.name | escape -}}
+                {%- if variant_style == 'swatch' -%}
+                  <span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
+                {%- endif %}
+              </legend>
+            {% endcapture %}
+
+            {% if has_popup == true %}
+              <div class="variant-label-flex flex">
+                <div>
+                  {{ legend }}
+                </div>
+                <div>
+                  {{ popup_content }}
+                </div>
+              </div>
+            {% else %}
+              {{ legend }}
+            {% endif %}
+
             {%- for product_option_value in product_option.values -%}
               {% if product_option_value.size > longest_value and option_id_attribute %}
                 {% assign longest_value = product_option_value.size %}

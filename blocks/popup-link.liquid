@@ -11,6 +11,7 @@
 >
   <button
     on:click="/showDialog"
+    type="button"
     class="button button-unstyled popup-link__button text-left spacing-style {{ block_settings.type_preset }}"
     style="{% render 'spacing-style', settings: block_settings %}"
   >
@@ -35,6 +36,7 @@
     </div>
     <button
       ref="closeButton"
+      type="button"
       on:click="/closeDialog"
       class="button button-unstyled close-button popup-link__close"
       aria-label="{{ 'accessibility.close_dialog' | t }}"

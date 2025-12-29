@@ -517,6 +517,32 @@ summary {
   --page-width: calc(75rem + (var(--page-margin) * 2)) !important;
 }
 
+.variant-option+.variant-option {
+    margin-top: var(--padding-3xl) !important;
+}
+
+.variant-label-flex {
+    width: 100%;
+    align-items: center;
+    gap: 0;
+}
+
+.variant-label-flex .popup-link__button {
+    height: auto;
+    text-decoration: underline;
+    margin-left: var(--gap-xs);
+    padding-left: var(--gap-xs);
+    border-left: 1px solid var(--color-variant-border);
+}
+
+.variant-label-flex .popup-link__button svg {
+    display: none;
+}
+
+.variant-label-flex legend {
+    margin: 0 !important;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
