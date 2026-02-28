@@ -56,10 +56,6 @@ a.link:not(.hero__container .link):after {
     padding-block: 0 !important;
 }
 
-.header--collapse-row-paddings .header__row--bottom .header__columns {
-    padding-bottom: var(--padding-xs);
-}
-
 .header__columns {
     --padding-block-end: calc(2 * var(--header-padding)) !important;
 }
@@ -107,10 +103,6 @@ a.link:not(.hero__container .link):after {
 .header-actions__action svg {
     width: var(--icon-size-md) !important;
     height: var(--icon-size-md) !important;
-}
-
-.header:not([data-sticky-state="active"]):not(.header--compact) .header__row--bottom {
-    --header-padding: var(--padding-lg) !important;
 }
 
 .header[data-sticky-state="active"] .header__row[style*='--border-bottom-width: 0px']  .menu-list__submenu.color-scheme-matches-parent,
@@ -161,11 +153,6 @@ slideshow-controls.carousel-controls .icon-play {
     padding-inline-end: 0 !important;
     --padding-block-start: 0 !important;
     --padding-block-end: 0 !important;
-}
-
-.search-text {
-    line-height: 1em;
-    margin-bottom: -4px;
 }
 
 .use-height-icon img, .use-height-icon svg {
@@ -220,12 +207,16 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
     opacity: .5;
 }
 
+.slideshow-controls__dots button {
+    --size: .4rem !important;
+}
+
 .slideshow-controls__dots button[aria-selected=true]:after {
-    box-shadow: inset 0 0 0 1.5px #fff6 !important;
+    box-shadow: unset !important;
 }
 
 .slideshow-controls__dots button:after {
-    box-shadow: inset 0 0 0 1.5px #fff6 !important;
+    box-shadow: unset !important;
 }
 
 .blog-post-card__content-text a {
@@ -405,7 +396,7 @@ body .xb-product-quantity.show, .cart-bubble__background {
 }
 
 .card-slider-controls .slideshow-controls__dots button {
-  --size: 4px;
+  --size: 4px !important;
 }
 
 .card-slider-controls .slideshow-controls__dots button:after {
@@ -553,6 +544,10 @@ summary {
     margin: 0 !important;
 }
 
+.popular-countries {
+    display: none;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
@@ -582,6 +577,7 @@ summary {
         gap: var(--gap-xs);
         border-bottom: .01rem solid var(--color-border);
         padding-right: var(--padding-xs);
+        align-items: center;
     }
 
     .search-modal__button .svg-wrapper {
@@ -603,6 +599,10 @@ summary {
     }
     .popup-link__content {
         padding-inline: var(--padding-md) !important;
+    }
+
+    .header__column--right header-actions {
+        margin-inline-end: 0px !important;
     }
 }
 
