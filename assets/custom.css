@@ -548,6 +548,18 @@ summary {
     display: none;
 }
 
+.menu-list__link-title {
+    padding-inline: calc(var(--gap-2xl) / 2) !important;
+}
+.menu-list__list-item:not([slot=overflow]):after {
+    height: var(--padding-xl) !important;
+    margin-bottom: calc(-1 * var(--padding-xl)) !important;
+}
+
+.header__row[style*="--border-bottom-width: 0px"] .menu-list__submenu.color-scheme-matches-parent, .header__row[style*="--border-bottom-width: 0px"] .overflow-menu.color-scheme-matches-parent::part(overflow) {
+    --submenu-padding-block-start: var(--padding-lg) !important;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
