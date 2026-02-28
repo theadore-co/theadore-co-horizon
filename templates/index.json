@@ -4504,7 +4504,7 @@
         "hide_arrows": false,
         "autoplay": true,
         "autoplay_speed": 6,
-        "columns": 5,
+        "columns": 4,
         "peek_desktop": false,
         "mobile_columns": "2",
         "mobile_card_size": "80%",
