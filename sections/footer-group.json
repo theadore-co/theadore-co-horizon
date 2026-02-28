@@ -472,7 +472,7 @@
               "settings": {
                 "menu": "footer-menu-shop-horizon",
                 "heading": "SHOP",
-                "menu_spacing": 16,
+                "menu_spacing": 18,
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
@@ -493,7 +493,7 @@
               "settings": {
                 "menu": "theadore-co",
                 "heading": "THEADORE + CO.",
-                "menu_spacing": 16,
+                "menu_spacing": 18,
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
@@ -514,7 +514,7 @@
               "settings": {
                 "menu": "footer-menu-information-horizon",
                 "heading": "INFORMATION",
-                "menu_spacing": 16,
+                "menu_spacing": 18,
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
