@@ -4759,7 +4759,7 @@
         "full_width_on_mobile": true,
         "gap": 48,
         "color_scheme": "",
-        "padding-block-start": 0,
+        "padding-block-start": 100,
         "padding-block-end": 100
       }
     },
