@@ -3206,7 +3206,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3225,10 +3225,10 @@
             "border_radius": 0,
             "enable_mobile_radius": false,
             "mobile_border_radius": 0,
-            "padding-block-start": 42,
-            "padding-block-end": 42,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3263,7 +3263,7 @@
                 "alignment": "left",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "loose",
@@ -3286,17 +3286,41 @@
               },
               "blocks": {}
             },
+            "image_BBPyJf": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_URp4j6": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025 — Sydney</p>",
+                "text": "<p>Lauren, 2025</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
-                "font_size": "0.75rem",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3323,10 +3347,11 @@
           "block_order": [
             "icon_8KkRGb",
             "text_PEBJGK",
+            "image_BBPyJf",
             "text_URp4j6"
           ]
         },
-        "carousel_card_z3QxTT": {
+        "carousel_card_DyUfcn": {
           "type": "_carousel-card",
           "name": "Carousel Item",
           "settings": {
@@ -3336,7 +3361,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3355,10 +3380,10 @@
             "border_radius": 0,
             "enable_mobile_radius": false,
             "mobile_border_radius": 0,
-            "padding-block-start": 42,
-            "padding-block-end": 42,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3367,7 +3392,7 @@
             "css_class": "shadow"
           },
           "blocks": {
-            "icon_xzFWR6": {
+            "icon_z3pemh": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -3383,7 +3408,7 @@
               },
               "blocks": {}
             },
-            "text_wtGpNC": {
+            "text_fyPtWM": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -3416,17 +3441,41 @@
               },
               "blocks": {}
             },
-            "text_rXVGqV": {
+            "image_g7VT4U": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_xzKyRM": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>John D., 2025 — Sydney</p>",
+                "text": "<p>John D., 2025</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
-                "font_size": "0.75rem",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3451,12 +3500,13 @@
             }
           },
           "block_order": [
-            "icon_xzFWR6",
-            "text_wtGpNC",
-            "text_rXVGqV"
+            "icon_z3pemh",
+            "text_fyPtWM",
+            "image_g7VT4U",
+            "text_xzKyRM"
           ]
         },
-        "carousel_card_37BhjT": {
+        "carousel_card_fmpdwC": {
           "type": "_carousel-card",
           "name": "Carousel Item",
           "settings": {
@@ -3466,7 +3516,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3485,10 +3535,10 @@
             "border_radius": 0,
             "enable_mobile_radius": false,
             "mobile_border_radius": 0,
-            "padding-block-start": 42,
-            "padding-block-end": 42,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3497,7 +3547,7 @@
             "css_class": "shadow"
           },
           "blocks": {
-            "icon_ymYJTG": {
+            "icon_W9GDCw": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -3513,7 +3563,7 @@
               },
               "blocks": {}
             },
-            "text_kmbp8b": {
+            "text_p98hTN": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -3521,9 +3571,9 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "custom",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "loose",
@@ -3546,17 +3596,41 @@
               },
               "blocks": {}
             },
-            "text_ADdTqE": {
+            "image_fXf8Pb": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_ULBxbG": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Rachel P., 2024 — Sydney</p>",
+                "text": "<p>Rachel P., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
-                "font_size": "0.75rem",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3581,12 +3655,13 @@
             }
           },
           "block_order": [
-            "icon_ymYJTG",
-            "text_kmbp8b",
-            "text_ADdTqE"
+            "icon_W9GDCw",
+            "text_p98hTN",
+            "image_fXf8Pb",
+            "text_ULBxbG"
           ]
         },
-        "carousel_card_CAMpKP": {
+        "carousel_card_7cW343": {
           "type": "_carousel-card",
           "name": "Carousel Item",
           "settings": {
@@ -3596,7 +3671,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3615,10 +3690,10 @@
             "border_radius": 0,
             "enable_mobile_radius": false,
             "mobile_border_radius": 0,
-            "padding-block-start": 42,
-            "padding-block-end": 42,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3627,7 +3702,7 @@
             "css_class": "shadow"
           },
           "blocks": {
-            "icon_9cyEqa": {
+            "icon_nWhEJB": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -3643,7 +3718,7 @@
               },
               "blocks": {}
             },
-            "text_H4TDjG": {
+            "text_WBmXWY": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -3651,9 +3726,9 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "custom",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "loose",
@@ -3676,17 +3751,41 @@
               },
               "blocks": {}
             },
-            "text_7DWbc6": {
+            "image_DjypJ6": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_kin8er": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Michael K., 2024 — Sydney</p>",
+                "text": "<p>Michael K., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
-                "font_size": "0.75rem",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3711,12 +3810,13 @@
             }
           },
           "block_order": [
-            "icon_9cyEqa",
-            "text_H4TDjG",
-            "text_7DWbc6"
+            "icon_nWhEJB",
+            "text_WBmXWY",
+            "image_DjypJ6",
+            "text_kin8er"
           ]
         },
-        "carousel_card_NYWjUf": {
+        "carousel_card_ikKPkw": {
           "type": "_carousel-card",
           "name": "Carousel Item",
           "settings": {
@@ -3726,7 +3826,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3745,10 +3845,10 @@
             "border_radius": 0,
             "enable_mobile_radius": false,
             "mobile_border_radius": 0,
-            "padding-block-start": 42,
-            "padding-block-end": 42,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3757,7 +3857,7 @@
             "css_class": "shadow"
           },
           "blocks": {
-            "icon_F4cTm7": {
+            "icon_gRQ3kG": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -3773,7 +3873,7 @@
               },
               "blocks": {}
             },
-            "text_mx3i3N": {
+            "text_iFLqEP": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -3781,9 +3881,9 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "custom",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "loose",
@@ -3806,17 +3906,41 @@
               },
               "blocks": {}
             },
-            "text_CqerW6": {
+            "image_AhXLPA": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
+                "zoom_on_hover": false,
+                "link": "",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
+                "custom_width_mobile": 25,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 12,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_VeQAUC": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Anna G., 2024 — Sydney</p>",
+                "text": "<p>Anna G., 2024</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
-                "font_size": "0.75rem",
+                "font": "var(--font-body--family)",
+                "font_size": "0.6875rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3841,15 +3965,15 @@
             }
           },
           "block_order": [
-            "icon_F4cTm7",
-            "text_mx3i3N",
-            "text_CqerW6"
+            "icon_gRQ3kG",
+            "text_iFLqEP",
+            "image_AhXLPA",
+            "text_VeQAUC"
           ]
         },
         "carousel_card_ReCMA8": {
           "type": "_carousel-card",
           "name": "Carousel Item",
-          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4005,7 +4129,6 @@
         "carousel_card_KNqHDf": {
           "type": "_carousel-card",
           "name": "Carousel Item",
-          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4161,7 +4284,6 @@
         "carousel_card_JF9LCV": {
           "type": "_carousel-card",
           "name": "Carousel Item",
-          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4386,10 +4508,10 @@
       },
       "block_order": [
         "carousel_card_YW7pgT",
-        "carousel_card_z3QxTT",
-        "carousel_card_37BhjT",
-        "carousel_card_CAMpKP",
-        "carousel_card_NYWjUf",
+        "carousel_card_DyUfcn",
+        "carousel_card_fmpdwC",
+        "carousel_card_7cW343",
+        "carousel_card_ikKPkw",
         "carousel_card_ReCMA8",
         "carousel_card_KNqHDf",
         "carousel_card_JF9LCV"
@@ -4406,7 +4528,7 @@
         "hide_arrows": false,
         "autoplay": true,
         "autoplay_speed": 6,
-        "columns": 3,
+        "columns": 4,
         "peek_desktop": false,
         "mobile_columns": "2",
         "mobile_card_size": "80%",
@@ -4417,7 +4539,7 @@
         "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "gap": 0,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -4425,8 +4547,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 100,
-        "padding-block-end": 86,
+        "padding-block-start": 20,
+        "padding-block-end": 100,
         "custom_mobile_padding": false,
         "mobile-padding-block-start": 0,
         "mobile-padding-block-end": 0,
@@ -4637,7 +4759,7 @@
         "full_width_on_mobile": true,
         "gap": 48,
         "color_scheme": "",
-        "padding-block-start": 100,
+        "padding-block-start": 0,
         "padding-block-end": 100
       }
     },
