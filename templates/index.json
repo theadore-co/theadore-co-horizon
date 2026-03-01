@@ -4518,7 +4518,7 @@
         "rows_gap": 8,
         "icons_style": "arrow",
         "icons_shape": "none",
-        "section_width": "page-width",
+        "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "gap": 0,
         "color_scheme": "scheme-2",
