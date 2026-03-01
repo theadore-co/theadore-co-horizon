@@ -3206,7 +3206,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
@@ -3227,8 +3227,8 @@
             "mobile_border_radius": 0,
             "padding-block-start": 32,
             "padding-block-end": 32,
-            "padding-inline-start": 16,
-            "padding-inline-end": 16,
+            "padding-inline-start": 24,
+            "padding-inline-end": 24,
             "custom_mobile_padding": false,
             "mobile-padding-block-start": 0,
             "mobile-padding-block-end": 0,
@@ -3263,7 +3263,7 @@
                 "alignment": "left",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "0.6875rem",
+                "font_size": "0.75rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "loose",
@@ -3286,41 +3286,17 @@
               },
               "blocks": {}
             },
-            "image_BBPyJf": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "image": "shopify://shop_images/Theadoreco-1533_2cd1f6ee-4eba-47c3-9443-e38c3e0a85be.jpg",
-                "zoom_on_hover": false,
-                "link": "",
-                "image_ratio": "square",
-                "width": "custom",
-                "custom_width": 25,
-                "width_mobile": "custom",
-                "custom_width_mobile": 25,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 12,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_URp4j6": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lauren, 2025</p>",
+                "text": "<p>Lauren, 2025. — Sydney</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "0.6875rem",
+                "font": "var(--font-heading--family)",
+                "font_size": "0.75rem",
                 "enable_mobile_size": false,
                 "mobile_font_size": "1rem",
                 "line_height": "tight",
@@ -3347,13 +3323,13 @@
           "block_order": [
             "icon_8KkRGb",
             "text_PEBJGK",
-            "image_BBPyJf",
             "text_URp4j6"
           ]
         },
         "carousel_card_DyUfcn": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -3509,6 +3485,7 @@
         "carousel_card_fmpdwC": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -3664,6 +3641,7 @@
         "carousel_card_7cW343": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -3819,6 +3797,7 @@
         "carousel_card_ikKPkw": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -3974,6 +3953,7 @@
         "carousel_card_ReCMA8": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4129,6 +4109,7 @@
         "carousel_card_KNqHDf": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4284,6 +4265,7 @@
         "carousel_card_JF9LCV": {
           "type": "_carousel-card",
           "name": "Carousel Item",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -4528,7 +4510,7 @@
         "hide_arrows": false,
         "autoplay": true,
         "autoplay_speed": 6,
-        "columns": 4,
+        "columns": 3,
         "peek_desktop": false,
         "mobile_columns": "2",
         "mobile_card_size": "80%",
@@ -4536,7 +4518,7 @@
         "rows_gap": 8,
         "icons_style": "arrow",
         "icons_shape": "none",
-        "section_width": "page-narrow",
+        "section_width": "page-width",
         "full_width_on_mobile": true,
         "gap": 0,
         "color_scheme": "scheme-2",
