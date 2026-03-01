@@ -259,36 +259,6 @@
               },
               "blocks": {}
             },
-            "megamenu_item_jMbHLV": {
-              "type": "_megamenu-item",
-              "name": "Megamenu item",
-              "settings": {
-                "assigned_to": "Engagement Rings",
-                "image": "shopify://shop_images/Frame_5_1.jpg",
-                "zoom_on_hover": true,
-                "image_ratio": "standard",
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "text": "<p>DOUBLE BAND RINGS</p>",
-                "link": "#",
-                "read_only": false,
-                "alignment": "center",
-                "show_alignment": true,
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            },
             "megamenu_item_GrUgwe": {
               "type": "_megamenu-item",
               "name": "Megamenu item",
@@ -356,7 +326,6 @@
             "megamenu_item_kMyWRp",
             "megamenu_item_pp9mmM",
             "megamenu_item_bjF8Md",
-            "megamenu_item_jMbHLV",
             "megamenu_item_GrUgwe",
             "megamenu_item_EiEqUx"
           ]
