@@ -55,6 +55,8 @@
         %}
       {% endcapture %}
       {% capture children %}
+        {{ featured_card }}
+
         {% for product in collection.products %}
           {% liquid
             if featured_card != blank
