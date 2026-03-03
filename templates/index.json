@@ -4960,7 +4960,7 @@
                 "border_color": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
                 "slide_rounding": "20",
                 "slide_spacing": 16,
-                "padding_top": 40,
+                "padding_top": 0,
                 "pagination": "below",
                 "alignment": "center",
                 "click_action": "fullscreen",
