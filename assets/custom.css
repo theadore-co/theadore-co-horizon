@@ -720,4 +720,9 @@ summary {
         margin-bottom: calc(-1 * var(--margin-xl)) !important;
         display: block;
     }
+
+    .menu-drawer__menu > .menu-drawer__list-item:has(.megamenu-block-item) {
+        min-height: unset !important;
+        display: block;
+    }
 }
