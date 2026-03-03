@@ -724,5 +724,6 @@ summary {
     .menu-drawer__menu > .menu-drawer__list-item:has(.megamenu-block-item) {
         min-height: unset !important;
         display: block;
+        border: 0 !important;
     }
 }
