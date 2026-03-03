@@ -4953,7 +4953,7 @@
                 "header": "",
                 "slide_type": "cards",
                 "product_cards": "none",
-                "autoplay_mode": "none",
+                "autoplay_mode": "all",
                 "autoscroll_duration": 0,
                 "slide_size": "250",
                 "border": 0,
