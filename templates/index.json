@@ -4907,7 +4907,7 @@
             "custom_mobile_alignment": false,
             "mobile_vertical_alignment": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 0,
             "enable_mobile_gap": false,
             "mobile_gap": 12,
             "width": "fill",
@@ -4944,42 +4944,35 @@
             "css_class": ""
           },
           "blocks": {
-            "text_bQxJrt": {
-              "type": "text",
-              "name": "t:names.text",
+            "moast_carousel_qUbkMM": {
+              "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
               "settings": {
-                "text": "<p>Install Moast app widget (14-day free trial): <a href=\"https://apps.shopify.com/moast-interactive-ugc\" target=\"_blank\" title=\"https://apps.shopify.com/moast-interactive-ugc\">https://apps.shopify.com/moast-interactive-ugc</a></p>",
-                "width": "100%",
-                "max_width": "none",
+                "dynamic": false,
+                "feed": "",
+                "feed_usage": "back_up",
+                "header": "",
+                "slide_type": "cards",
+                "product_cards": "none",
+                "autoplay_mode": "none",
+                "autoscroll_duration": 0,
+                "slide_size": "250",
+                "border": 0,
+                "border_color": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+                "slide_rounding": "20",
+                "slide_spacing": 16,
+                "padding_top": 40,
+                "pagination": "below",
                 "alignment": "center",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "enable_mobile_size": false,
-                "mobile_font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0
-              },
-              "blocks": {}
+                "click_action": "fullscreen",
+                "float_location": "bottom_right",
+                "float_size": "medium",
+                "show_captions": false,
+                "custom_css": ""
+              }
             }
           },
           "block_order": [
-            "text_bQxJrt"
+            "moast_carousel_qUbkMM"
           ]
         }
       },
@@ -5000,7 +4993,7 @@
         "gap": 48,
         "enable_mobile_gap": false,
         "mobile_gap": 12,
-        "section_width": "page-width",
+        "section_width": "full-width",
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,

@@ -100,6 +100,11 @@
         "type": "shopify://apps/xb-wishlist/blocks/xo-wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
         "disabled": false,
         "settings": {}
+      },
+      "9108694385781200119": {
+        "type": "shopify://apps/moast/blocks/embed/1ac7547b-5443-446c-868c-7fab4566ee16",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
