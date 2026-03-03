@@ -4967,7 +4967,7 @@
                 "float_location": "bottom_right",
                 "float_size": "medium",
                 "show_captions": false,
-                "custom_css": ""
+                "custom_css": ".controls__branding {\ndisplay: none !important;\n}"
               }
             }
           },
