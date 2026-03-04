@@ -714,7 +714,7 @@
                   "static": true,
                   "settings": {
                     "label": "[price] Deposit",
-                    "description": "<p>Your dream ring. Made To Order.You won't be charged the balance until your ring has been made and is ready to be shipped.Pay a deposit of [price] for us to start making your dream ring today.</p>",
+                    "description": "<p>Your dream ring. Made To Order. You won't be charged the balance until your ring has been made and is ready to be shipped.Pay a deposit of [price] for us to start making your dream ring today.</p>",
                     "gap": 12,
                     "enable_mobile_gap": false,
                     "mobile_gap": 12,
