@@ -117,7 +117,7 @@
           "border_radius": 10,
           "save_thumbnail": true,
           "form_selector": "",
-          "media_selector": ""
+          "media_selector": ".product-media"
         }
       }
     },
