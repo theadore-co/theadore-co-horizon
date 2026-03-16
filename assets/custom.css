@@ -519,7 +519,7 @@ summary {
 }
 
 .variant-option+.variant-option {
-    margin-top: var(--padding-3xl) !important;
+    margin-top: var(--padding-xl) !important;
 }
 
 .variant-label-flex {
