@@ -1989,7 +1989,8 @@
         ".product-details > .group-block {max-width: var(--sidebar-width);}",
         ".product-details {justify-content: flex-start;}",
         ".popup-link {margin-top: calc(-1 * var(--margin-xs));}",
-        ".popup-link__button {text-decoration: underline;}"
+        ".popup-link__button {text-decoration: underline;}",
+        ".popup-link__button svg {display: none;}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
