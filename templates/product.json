@@ -297,12 +297,375 @@
                     "mobile-padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "popup_link_PQcUWQ": {
+                  "type": "popup-link",
+                  "name": "t:names.popup_link",
+                  "settings": {
+                    "behavior": "drawer",
+                    "heading": "SIZE GUIDE",
+                    "type_preset": "h6",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "text_Ff3RJW": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>SIZE GUIDE</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "h4",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "enable_mobile_size": false,
+                        "mobile_font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 12,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "mobile-padding-block-start": 0,
+                        "mobile-padding-block-end": 0,
+                        "mobile-padding-inline-start": 0,
+                        "mobile-padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "table_VB8EAp": {
+                      "type": "table",
+                      "name": "Table",
+                      "settings": {
+                        "custom_width": 100
+                      },
+                      "blocks": {
+                        "table_row_UNLg4V": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p><strong>AUSTRALIAN, UNITED KINGDOM & NEW ZEALAND</strong></p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p><strong>UNITED STATES & CANADA</strong></p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_7Fzt3x": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>H</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_nGgxPJ": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>H 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>4</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_64A9md": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>I</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": false
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_nFGfFw": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>I 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>4.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_RRkdHm": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>J</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": false
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_zWmMaY": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>J 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_ptgdE7": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>K</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": false
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_cLFNej": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>K 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>5.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_9znJhq": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>L</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": false
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_cgN736": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>L 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>6</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_qDrLWW": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>M</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_FWTak3": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>M 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>6.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_xJ8xkD": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>N</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": false
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_LPkRLd": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>N 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>7</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_DykRdL": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>O</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_h4iJCX": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>O 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>7.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_kQU3Tr": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>P</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_zm3h9n": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>P 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>8</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_qN3aHC": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>Q</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_jiKA7G": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>Q 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>8.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_tee4WE": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>R</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_JM89Wr": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>R 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>9</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_LLAB7R": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>S</p>",
+                            "center_text_1": true,
+                            "text_column_2": "",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        },
+                        "table_row_zzA6w4": {
+                          "type": "_table-row",
+                          "name": "Table row",
+                          "settings": {
+                            "text_column_1": "<p>S 1/2</p>",
+                            "center_text_1": true,
+                            "text_column_2": "<p>9.5</p>",
+                            "center_text_2": true
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "table_row_UNLg4V",
+                        "table_row_7Fzt3x",
+                        "table_row_nGgxPJ",
+                        "table_row_64A9md",
+                        "table_row_nFGfFw",
+                        "table_row_RRkdHm",
+                        "table_row_zWmMaY",
+                        "table_row_ptgdE7",
+                        "table_row_cLFNej",
+                        "table_row_9znJhq",
+                        "table_row_cgN736",
+                        "table_row_qDrLWW",
+                        "table_row_FWTak3",
+                        "table_row_xJ8xkD",
+                        "table_row_LPkRLd",
+                        "table_row_DykRdL",
+                        "table_row_h4iJCX",
+                        "table_row_kQU3Tr",
+                        "table_row_zm3h9n",
+                        "table_row_qN3aHC",
+                        "table_row_jiKA7G",
+                        "table_row_tee4WE",
+                        "table_row_JM89Wr",
+                        "table_row_LLAB7R",
+                        "table_row_zzA6w4"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "text_Ff3RJW",
+                    "table_VB8EAp"
+                  ]
                 }
               },
               "block_order": [
                 "group_gNBzej",
                 "price_tVjtKg",
-                "text_hGdf7t"
+                "text_hGdf7t",
+                "popup_link_PQcUWQ"
               ]
             },
             "divider_VJhene": {
@@ -317,368 +680,6 @@
                 "padding-block-end": 0
               },
               "blocks": {}
-            },
-            "popup_link_qW3qCM": {
-              "type": "popup-link",
-              "name": "t:names.popup_link",
-              "settings": {
-                "behavior": "drawer",
-                "heading": "SIZE GUIDE",
-                "type_preset": "h6",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_VLjqVX": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>SIZE GUIDE</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 12,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": false,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 0,
-                    "mobile-padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "table_iidCp7": {
-                  "type": "table",
-                  "name": "Table",
-                  "settings": {
-                    "custom_width": 100
-                  },
-                  "blocks": {
-                    "table_row_t3iRL9": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p><strong>AUSTRALIAN, UNITED KINGDOM & NEW ZEALAND</strong></p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p><strong>UNITED STATES & CANADA</strong></p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_AJxCdR": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>H</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_HLNwJX": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>H 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>4</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_JYg7hY": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>I</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": false
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_LdBCzY": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>I 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>4.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_YedwcJ": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>J</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": false
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_QkaixE": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>J 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_EkXyFp": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>K</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": false
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_HJ7XLY": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>K 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>5.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_kmqkYY": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>L</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": false
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_7cHrac": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>L 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>6</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_t6aXVX": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>M</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_dr8L9G": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>M 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>6.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_Lw7GJX": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>N</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": false
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_FPgHgD": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>N 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>7</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_MbB3yV": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>O</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_9VcqJy": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>O 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>7.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_cwG4ki": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>P</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_gykBiK": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>P 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>8</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_CYAcRh": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>Q</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_dm3QzK": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>Q 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>8.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_eWCzPa": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>R</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_669pyy": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>R 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>9</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_bzxTBA": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>S</p>",
-                        "center_text_1": true,
-                        "text_column_2": "",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    },
-                    "table_row_JUUriT": {
-                      "type": "_table-row",
-                      "name": "Table row",
-                      "settings": {
-                        "text_column_1": "<p>S 1/2</p>",
-                        "center_text_1": true,
-                        "text_column_2": "<p>9.5</p>",
-                        "center_text_2": true
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "table_row_t3iRL9",
-                    "table_row_AJxCdR",
-                    "table_row_HLNwJX",
-                    "table_row_JYg7hY",
-                    "table_row_LdBCzY",
-                    "table_row_YedwcJ",
-                    "table_row_QkaixE",
-                    "table_row_EkXyFp",
-                    "table_row_HJ7XLY",
-                    "table_row_kmqkYY",
-                    "table_row_7cHrac",
-                    "table_row_t6aXVX",
-                    "table_row_dr8L9G",
-                    "table_row_Lw7GJX",
-                    "table_row_FPgHgD",
-                    "table_row_MbB3yV",
-                    "table_row_9VcqJy",
-                    "table_row_cwG4ki",
-                    "table_row_gykBiK",
-                    "table_row_CYAcRh",
-                    "table_row_dm3QzK",
-                    "table_row_eWCzPa",
-                    "table_row_669pyy",
-                    "table_row_bzxTBA",
-                    "table_row_JUUriT"
-                  ]
-                }
-              },
-              "block_order": [
-                "text_VLjqVX",
-                "table_iidCp7"
-              ]
             },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
@@ -1972,7 +1973,6 @@
             "custom_liquid_Exx74U",
             "group_icgrde",
             "divider_VJhene",
-            "popup_link_qW3qCM",
             "variant_picker_R3rGDr",
             "zepto_product_personalizer_product_personalizer_page_cfRAaX",
             "buy_buttons_eYQEYi",
