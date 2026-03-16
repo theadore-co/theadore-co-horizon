@@ -301,6 +301,7 @@
                 "popup_link_PQcUWQ": {
                   "type": "popup-link",
                   "name": "t:names.popup_link",
+                  "disabled": true,
                   "settings": {
                     "behavior": "drawer",
                     "heading": "RING SIZE GUIDE",
