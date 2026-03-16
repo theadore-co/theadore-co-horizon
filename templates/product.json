@@ -303,7 +303,7 @@
                   "name": "t:names.popup_link",
                   "settings": {
                     "behavior": "drawer",
-                    "heading": "SIZE GUIDE",
+                    "heading": "RING SIZE GUIDE",
                     "type_preset": "h6",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -314,7 +314,7 @@
                     "text_Ff3RJW": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>RING SIZE GUIDE</p>",
+                        "text": "<p>SIZE GUIDE</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
