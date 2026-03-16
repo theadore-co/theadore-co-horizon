@@ -1987,7 +1987,8 @@
         "{--sidebar-width: 426px;}",
         ".media-gallery--carousel {--thumbnail-width: 132px !important;}",
         ".product-details > .group-block {max-width: var(--sidebar-width);}",
-        ".product-details {justify-content: flex-start;}"
+        ".product-details {justify-content: flex-start;}",
+        ".popup-link {margin-top: calc(-1 * var(--margin-xs));}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
