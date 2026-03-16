@@ -697,6 +697,12 @@
               },
               "block_order": []
             },
+            "zepto_product_personalizer_product_personalizer_page_cfRAaX": {
+              "type": "shopify://apps/zepto-product-personalizer/blocks/product_personalizer_page/7411210d-7b32-4c09-9455-e129e3be4729",
+              "settings": {
+                "product": "{{closest.product}}"
+              }
+            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -1605,6 +1611,7 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "zepto_product_personalizer_product_personalizer_page_cfRAaX",
             "buy_buttons_eYQEYi",
             "group_AkEif7",
             "text_aEtTtq",
