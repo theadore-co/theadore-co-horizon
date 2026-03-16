@@ -303,8 +303,8 @@
                   "name": "t:names.popup_link",
                   "settings": {
                     "behavior": "drawer",
-                    "heading": "SIZE GUIDE",
-                    "type_preset": "h6",
+                    "heading": "RING SIZE GUIDE",
+                    "type_preset": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -1987,7 +1987,9 @@
         "{--sidebar-width: 426px;}",
         ".media-gallery--carousel {--thumbnail-width: 132px !important;}",
         ".product-details > .group-block {max-width: var(--sidebar-width);}",
-        ".product-details {justify-content: flex-start;}"
+        ".product-details {justify-content: flex-start;}",
+        ".popup-link__button {text-decoration: underline;}",
+        ".popup-link__button svg {display: none;}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
