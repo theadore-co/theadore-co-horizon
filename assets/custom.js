@@ -1,4 +1,5 @@
 import { ThemeEvents, VariantUpdateEvent } from '@theme/events';
+import { formatMoney } from '@theme/money-formatting';
 
 class ToggleDeposit extends HTMLElement {
     /** @type {HTMLInputElement | null} */
@@ -118,4 +119,25 @@ function scrollToHash() {
 scrollToHash();
 
 // Run on hash change
-window.addEventListener("hashchange", scrollToHash);
+window.addEventListener('pplrAppInitiated', function() {
+  // Grab the format and currency. 
+  const moneyFormat = window.theme?.moneyFormat || '${{amount}}'; 
+  const currency = window.Shopify?.currency?.active || 'AUD';
+
+  // Query and loop in one go
+  document.querySelectorAll('[data-pplr_price]').forEach(el => {
+    // Safely parse the dataset string into a number
+    const rawPrice = parseFloat(el.dataset.pplr_price);
+
+    // If it's a valid number greater than 0, proceed
+    if (rawPrice > 0) {
+      const priceNum = rawPrice * 100; // Convert to cents for formatMoney
+      
+      // Format the money and chain the JS replace method to strip the .00
+      const formattedPrice = formatMoney(priceNum, moneyFormat, currency).replace('.00', '');
+      
+      // Append to the existing text content
+      el.textContent = `${el.textContent} (+${formattedPrice})`;
+    }
+  });
+});
