@@ -143,3 +143,9 @@ window.addEventListener('pplrAppInitiated', function() {
     }
   });
 });
+
+// Listen for the pplrAddToCartCompleted custom event
+window.addEventListener('pplrAddToCartCompleted' , function(e) {
+// check if the add to cart event has fired
+console.log(e)
+})

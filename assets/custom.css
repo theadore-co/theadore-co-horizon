@@ -569,7 +569,7 @@ summary {
 }
 
 .pplr-price-span {
-    opacity: var(--opacity-60);
+    opacity: var(--opacity-70);
     font-size: var(--font-size--3xs);
     margin-left: var(--gap-2xs);
 }
