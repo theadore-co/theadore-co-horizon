@@ -568,6 +568,12 @@ summary {
     margin: 0;
 }
 
+.pplr-price-span {
+    opacity: var(--opacity-60);
+    font-size: var(--font-size--3xs);
+    margin-left: var(--gap-2xs);
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;

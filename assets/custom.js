@@ -136,8 +136,8 @@ window.addEventListener('pplrAppInitiated', function() {
       // Format the money and chain the JS replace method to strip the .00
       const formattedPrice = formatMoney(priceNum, moneyFormat, currency).replace('.00', '');
       
-      // Append to the existing text content
-      el.textContent = `${el.textContent} (+${formattedPrice})`;
+      // Append the span directly to the end of the element
+      el.insertAdjacentHTML('beforeend', ` <span class="pplr-price-span">(+${formattedPrice})</span>`);
     }
   });
 });
