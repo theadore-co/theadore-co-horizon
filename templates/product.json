@@ -324,7 +324,7 @@
                 "variant_style": "buttons",
                 "show_swatches": true,
                 "alignment": "left",
-                "enable_popup": false,
+                "enable_popup": true,
                 "option_names": "Carat Size,Size",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -334,7 +334,6 @@
               "blocks": {
                 "popup-link": {
                   "type": "popup-link",
-                  "disabled": true,
                   "static": true,
                   "settings": {
                     "behavior": "drawer",
