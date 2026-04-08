@@ -574,6 +574,10 @@ summary {
     margin-left: var(--gap-2xs);
 }
 
+.cart-items__nested-line .cart-items__quantity, .cart-items__nested-line .cart-items__unit-price-wrapper {
+    display: none;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;

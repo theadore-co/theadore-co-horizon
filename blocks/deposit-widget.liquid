@@ -12,12 +12,33 @@
   endif
 
   assign product_form_id = 'BuyButtons-ProductForm-section.id' | replace: 'section.id', section.id
-  assign price = deposit[0].checkout_charge.value | money_without_trailing_zeros
 
-  if settings.currency_code_enabled_product_pages
-    assign price = deposit[0].checkout_charge.value | money_with_currency | replace: '.00', ''
+  if deposit[0].checkout_charge.value_type == 'percentage'
+    assign price = deposit[0].checkout_charge.value | append: '%' | replace: '.00', ''
+
+
+  elsif deposit[0].checkout_charge.value_type == 'price'
+    assign price = deposit[0].checkout_charge.value | money_without_trailing_zeros
+
+    if settings.currency_code_enabled_product_pages
+      assign price = deposit[0].checkout_charge.value | money_with_currency | replace: '.00', ''
+    endif
   endif
 %}
+
+{% if deposit[0].checkout_charge.value_type == 'percentage' %}
+  {% assign deposit_rate = deposit[0].checkout_charge.value %}
+  {% assign variant_price = product.selected_or_first_available_variant.price %}
+
+  {% comment %} Multiply by 20, then divide by 100 to get the 20% value {% endcomment %}
+  {% assign computed_deposit_price = variant_price | times: deposit_rate | divided_by: 100 %}
+
+  {% capture partial_price %}
+    (<span data-deposit="{{ deposit_rate }}" data-price="{{ variant_price }}" class="partial-price">
+      {{ computed_deposit_price | money }}
+    </span>)
+  {% endcapture %}
+{% endif %}
 
 <div class="group-block-content spacing-style layout-panel-flex layout-panel-flex--column mobile-column" 
     style="
@@ -56,7 +77,7 @@
                     </span>
                 </span>
                 {% comment %} {{ 'icon-checkmark.svg' | inline_asset_content }} {% endcomment %}
-                <span class="checkbox__label-text">{{- block_settings.label | replace: '[price]', price -}}</span>
+                <span class="checkbox__label-text">{{- block_settings.label | replace: '[price]', price | replace: '[partial_price]', partial_price -}}</span>
             </label>
 
             <noscript class="json-selling">
@@ -75,7 +96,7 @@
                 --width: fit-content;
                 --max-width: var(--max-width--body-normal);"
             >
-            {{ block_settings.description | replace: '[price]', price }}
+            {{ block_settings.description | replace: '[price]', price | replace: '[partial_price]', partial_price }}
         </rte-formatter>
     {% endif %}
 </div>
@@ -86,6 +107,10 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
+}
+
+.partial-price {
+    display: inline-block;
 }
 
 /* Label wrapper */
