@@ -1066,8 +1066,8 @@
               "settings": {
                 "product_form_id_prefix": "BuyButtons-ProductForm-",
                 "canvas_mount_selector": "",
-                "info_modal_layout": "popup",
-                "info_modal_content_max_width": 624
+                "info_modal_layout": "drawer",
+                "info_modal_content_max_width": 424
               }
             },
             "buy_buttons_eYQEYi": {
