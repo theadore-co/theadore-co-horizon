@@ -1065,7 +1065,8 @@
               "type": "shopify://apps/tc-custom-options/blocks/custom_options/019d696c-875a-71d9-821e-02ec783a1b50",
               "settings": {
                 "product_form_id_prefix": "BuyButtons-ProductForm-",
-                "canvas_mount_selector": ""
+                "canvas_mount_selector": "",
+                "info_modal_content_max_width": 624
               }
             },
             "buy_buttons_eYQEYi": {
