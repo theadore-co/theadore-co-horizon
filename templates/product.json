@@ -1061,10 +1061,11 @@
               },
               "block_order": []
             },
-            "zepto_product_personalizer_product_personalizer_page_cfRAaX": {
-              "type": "shopify://apps/zepto-product-personalizer/blocks/product_personalizer_page/7411210d-7b32-4c09-9455-e129e3be4729",
+            "tc_custom_options_custom_options_dmJf3w": {
+              "type": "shopify://apps/tc-custom-options/blocks/custom_options/019d696c-875a-71d9-821e-02ec783a1b50",
               "settings": {
-                "product": "{{closest.product}}"
+                "product_form_id_prefix": "BuyButtons-ProductForm-",
+                "canvas_mount_selector": ""
               }
             },
             "buy_buttons_eYQEYi": {
@@ -1976,7 +1977,7 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
-            "zepto_product_personalizer_product_personalizer_page_cfRAaX",
+            "tc_custom_options_custom_options_dmJf3w",
             "buy_buttons_eYQEYi",
             "group_AkEif7",
             "text_aEtTtq",
