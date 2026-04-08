@@ -586,6 +586,49 @@ summary {
     .sticky-add-to-cart__bar {
         width: 700px !important;
     }
+
+    /*
+    * Mega menu (desktop): widen + deepen the theme’s invisible ::after bridge on items with a submenu.
+    * Horizon keeps pointer on <li> via that flex ::after; extending width catches diagonal moves toward the panel.
+    * Negative margin-block on the submenu extends its hit area up without shifting visible content.
+    */
+    .header-menu .menu-list__list-item:not([slot='overflow']):has(> .menu-list__submenu)::after {
+        flex-shrink: 0;
+        width: calc(100% + 2 * var(--gap-xl));
+        margin-inline: calc(-1 * var(--gap-xl));
+        height: calc(var(--header-padding) + var(--padding-lg) + var(--gap-md));
+        margin-bottom: calc(-1 * (var(--header-padding) + var(--padding-lg) + var(--gap-md)));
+    }
+
+    .header-menu .menu-list__list-item:not([slot='overflow']):has(> .menu-list__submenu) > .menu-list__submenu {
+        margin-block-start: calc(-1 * (var(--padding-lg) + var(--gap-md)));
+        padding-block-start: calc(var(--padding-lg) + var(--gap-md));
+    }
+
+    /*
+    * Mid-open clipping: Horizon animates clip-path on the submenu while --full-open-header-height / --submenu-height
+    * can change in the same frame (or when switching items quickly). Interpolated clip rects cut off the inner panel.
+    * Snap clip-path immediately; keep theme geometry. Do not use clip-path:none (that broke layout before).
+    */
+    .header-menu .menu-list__list-item:not([slot='overflow']) > .menu-list__submenu,
+    .header-menu overflow-menu::part(overflow) {
+        transition: none !important;
+    }
+
+    .header-menu .menu-list__submenu-inner {
+        transition: opacity calc(var(--submenu-animation-speed, 0s) * 0.75) var(--animation-easing, ease) !important;
+    }
+
+    /*
+    * header.liquid uses content-visibility:auto + contain-intrinsic-size:0px 500px on .menu-list__submenu.
+    * [data-active] forces visible, but moving the pointer onto .menu-list__submenu-inner can still hit a frame
+    * where the browser culled or mis-sized content vs clip-path. Keep desktop mega panels fully laid out.
+    */
+    .header-menu .menu-list__submenu {
+        content-visibility: visible !important;
+        contain-intrinsic-size: unset !important;
+    }
+    /* ----- */
 }
 
 @media screen and (min-width: 1200px) {
