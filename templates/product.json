@@ -689,7 +689,7 @@
                 "show_swatches": true,
                 "alignment": "left",
                 "enable_popup": true,
-                "option_names": "Carat Size,Size",
+                "option_names": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
