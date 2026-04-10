@@ -642,6 +642,12 @@ summary {
     }
 }
 
+@media (max-width: 989px) {
+    .header__column--right header-actions {
+        gap: var(--gap-xs);
+    }
+}
+
 @media (min-width: 750px) {
     .blog-posts {
         --columns-gap: 48px !important;
