@@ -578,6 +578,11 @@ summary {
     display: none;
 }
 
+.header__icon--summary .header-drawer-icon {
+    width: auto !important;
+    height: var(--icon-size-sm) !important;
+}
+
 @media screen and (min-width: 990px) {
     .mega-menu__content-list--blocks {
         grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 420px)) !important;
@@ -676,6 +681,12 @@ summary {
 
     .header__column--right header-actions {
         margin-inline-end: 0px !important;
+    }
+}
+
+@media (max-width: 989px) {
+    #header-component[data-menu-style=drawer] .header__columns {
+        --header-template-columns: auto auto 1fr var(--header-mobile-bookend) var(--header-mobile-bookend) !important;
     }
 }
 
