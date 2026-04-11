@@ -273,7 +273,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "custom",
+                    "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "0.75rem",
                     "enable_mobile_size": false,
@@ -703,6 +703,8 @@
               "settings": {
                 "product_form_id_prefix": "BuyButtons-ProductForm-",
                 "canvas_mount_selector": "",
+                "cart_bundled_sections": "",
+                "enable_nested_cart_json": true,
                 "info_modal_layout": "drawer",
                 "info_modal_content_max_width": 424
               }
