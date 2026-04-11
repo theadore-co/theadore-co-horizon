@@ -1628,11 +1628,10 @@
         }
       },
       "custom_css": [
-        ".product-details > .group-block {max-width: var(--sidebar-width);}",
         ".product-details {justify-content: flex-start;}",
         ".popup-link__button {text-decoration: underline;}",
         ".popup-link__button svg {display: none;}",
-        "@media (min-width: 750px) {{--sidebar-width: 426px;}}"
+        "@media (min-width: 750px) {{--sidebar-width: 426px; }.product-details > .group-block {max-width: var(--sidebar-width);}}"
       ],
       "settings": {
         "content_width": "page-narrow",
