@@ -324,12 +324,30 @@
                 "variant_style": "buttons",
                 "show_swatches": true,
                 "alignment": "left",
+                "enable_popup": true,
+                "option_names": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "popup-link": {
+                  "type": "popup-link",
+                  "static": true,
+                  "settings": {
+                    "behavior": "default",
+                    "heading": "Popup link",
+                    "type_preset": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
@@ -876,10 +894,9 @@
         }
       },
       "custom_css": [
-        "{--sidebar-width: 426px;}",
         ".media-gallery--carousel {--thumbnail-width: 132px !important;}",
-        ".product-details > .group-block {max-width: var(--sidebar-width);}",
-        ".product-details {justify-content: flex-start;}"
+        ".product-details {justify-content: flex-start;}",
+        "@media (min-width: 750px) {.product-details > .group-block {max-width: var(--sidebar-width);} {--sidebar-width: 426px; }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",
