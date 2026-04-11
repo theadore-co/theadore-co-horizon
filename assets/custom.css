@@ -698,6 +698,10 @@ summary {
     :root {
         --font-size--paragraph: var(--font-size--xs) !important;
     }
+
+    .product-badges__badge {
+        --badge-font-size: var(--font-size--3xs) !important;
+    }
 }
 
 @media (max-width: 749px) {
