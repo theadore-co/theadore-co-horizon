@@ -692,7 +692,8 @@ summary {
 
 @media (max-width: 989px) {
     #header-component[data-menu-style=drawer] .header__columns {
-        --header-template-columns: auto auto 1fr var(--header-mobile-bookend) var(--header-mobile-bookend) !important;
+        /* --header-template-columns: auto auto 1fr var(--header-mobile-bookend) var(--header-mobile-bookend) !important; */
+        --header-template-columns: auto auto 1fr auto auto !important;
     }
 
     :root {
