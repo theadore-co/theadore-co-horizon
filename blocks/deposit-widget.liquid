@@ -13,12 +13,17 @@
 
   assign product_form_id = 'BuyButtons-ProductForm-section.id' | replace: 'section.id', section.id
 
+  assign variant_price = product.selected_or_first_available_variant.price
+  assign deposit_minor = ''
+  assign deposit_rate = ''
+
   if deposit[0].checkout_charge.value_type == 'percentage'
-    assign price = deposit[0].checkout_charge.value | append: '%' | replace: '.00', ''
-
-
+    assign deposit_rate = deposit[0].checkout_charge.value
+    assign price = deposit_rate | append: '%' | replace: '.00', ''
+    assign deposit_minor = variant_price | times: deposit_rate | divided_by: 100
   elsif deposit[0].checkout_charge.value_type == 'price'
     assign price = deposit[0].checkout_charge.value | money_without_trailing_zeros
+    assign deposit_minor = deposit[0].checkout_charge.value
 
     if settings.currency_code_enabled_product_pages
       assign price = deposit[0].checkout_charge.value | money_with_currency | replace: '.00', ''
@@ -27,11 +32,8 @@
 %}
 
 {% if deposit[0].checkout_charge.value_type == 'percentage' %}
-  {% assign deposit_rate = deposit[0].checkout_charge.value %}
-  {% assign variant_price = product.selected_or_first_available_variant.price %}
-
-  {% comment %} Multiply by 20, then divide by 100 to get the 20% value {% endcomment %}
-  {% assign computed_deposit_price = variant_price | times: deposit_rate | divided_by: 100 %}
+  {% comment %} Deposit in minor units matches deposit_minor above {% endcomment %}
+  {% assign computed_deposit_price = deposit_minor %}
 
   {% capture partial_price %}
     (<span data-deposit="{{ deposit_rate }}" data-price="{{ variant_price }}" class="partial-price">
@@ -48,7 +50,14 @@
     "
 >
     {% if block_settings.label != blank %}
-        <toggle-deposit class="checkbox toggle-deposit" ref="DepositToggle" data-selected-id="{{ product.selected_or_first_available_variant.id }}">
+        <toggle-deposit
+            class="checkbox toggle-deposit"
+            ref="DepositToggle"
+            data-selected-id="{{ product.selected_or_first_available_variant.id }}"
+            data-money-format="{{ shop.money_format | escape }}"
+            data-money-with-currency-format="{{ shop.money_with_currency_format | escape }}"
+            data-show-currency-code="{{ settings.currency_code_enabled_product_pages }}"
+        >
             <input
                 type="checkbox"
                 name="selling_plan"
@@ -56,6 +65,15 @@
                 id="checkbox-{{ block.id }}"
                 class="checkbox__input-toggle"
                 data-label="{{ block_settings.label }}"
+                data-charge-type="{{ deposit[0].checkout_charge.value_type }}"
+                data-charge-value="{{ deposit[0].checkout_charge.value }}"
+                data-variant-price-minor="{{ variant_price }}"
+                {% if deposit_minor != blank %}
+                    data-deposit-minor="{{ deposit_minor }}"
+                {% endif %}
+                {% if deposit_rate != blank %}
+                    data-deposit-rate="{{ deposit_rate }}"
+                {% endif %}
                 {% if price %}
                     data-price="{{ price }}"
                 {% endif %}
@@ -78,6 +96,7 @@
                 </span>
                 {% comment %} {{ 'icon-checkmark.svg' | inline_asset_content }} {% endcomment %}
                 <span class="checkbox__label-text">{{- block_settings.label | replace: '[price]', price | replace: '[partial_price]', partial_price -}}</span>
+                <span class="price-deposit-text" aria-live="polite"></span>
             </label>
 
             <noscript class="json-selling">
@@ -213,6 +232,11 @@
 
 .checkbox__input-toggle:not(:checked) + .checkbox__label .close-toggle {
   opacity: 1;
+}
+
+.price-deposit-text {
+  padding-left: var(--gap-xs);
+  border-left: 1px solid rgb(0 0 0 / 0.13);
 }
 
 {% endstylesheet %}

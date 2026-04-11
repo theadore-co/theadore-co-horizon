@@ -106,11 +106,6 @@
         "disabled": false,
         "settings": {}
       },
-      "1692329972272007824": {
-        "type": "shopify://apps/zepto-product-personalizer/blocks/product_personalizer_main/7411210d-7b32-4c09-9455-e129e3be4729",
-        "disabled": false,
-        "settings": {}
-      },
       "14363423897904516493": {
         "type": "shopify://apps/tc-custom-options/blocks/canvas_embed/019d696c-875a-71d9-821e-02ec783a1b50",
         "disabled": false,

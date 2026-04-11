@@ -1,13 +1,22 @@
 import { ThemeEvents, VariantUpdateEvent } from '@theme/events';
 import { formatMoney } from '@theme/money-formatting';
 
+/**
+ * @param {string} formatted
+ * @returns {string}
+ */
+function stripTrailingZeroDecimals(formatted) {
+    return formatted.replace('.00', '').replace(',00', '');
+}
+
 class ToggleDeposit extends HTMLElement {
     /** @type {HTMLInputElement | null} */
     input = null;
 
-    /** 
+    /**
      * @type {{
      *   id: number;
+     *   price?: number;
      *   selling_plan_allocations: { selling_plan_id: number }[];
      * } | null}
      */
@@ -16,17 +25,15 @@ class ToggleDeposit extends HTMLElement {
     /** @type {number | null} */
     selectedVariant = null;
 
-    connectedCallback() {
-        // Safely read data attribute
-        this.selectedVariant = this.dataset.selectedId
-        ? Number(this.dataset.selectedId)
-        : null;
+    /** Latest variant price (Shopify cents) for non-TC fallback after option changes. */
+    #lastVariantPriceCents = /** @type {number | undefined} */ (undefined);
 
-        // Safely query inside the component
+    connectedCallback() {
+        this.selectedVariant = this.dataset.selectedId ? Number(this.dataset.selectedId) : null;
+
         this.input = this.querySelector('input[type="checkbox"]');
 
-        // Safely query JSON outside
-        const jsonEl = document.querySelector('.json-selling');
+        const jsonEl = this.querySelector('.json-selling');
         if (jsonEl?.textContent) {
             try {
                 this.sellingJSON = JSON.parse(jsonEl.textContent);
@@ -35,117 +42,248 @@ class ToggleDeposit extends HTMLElement {
             }
         }
 
-        const closestSection = this.closest('.shopify-section');
-        if (!closestSection) return;
-        closestSection.addEventListener(
-        ThemeEvents.variantUpdate,
-        this.updateSellingPlan
-        );
+        if (typeof this.sellingJSON?.price === 'number' && Number.isFinite(this.sellingJSON.price)) {
+            this.#lastVariantPriceCents = this.sellingJSON.price;
+        }
 
-        this.update()
+        document.addEventListener('tc:optionschange', this.onTcOptionsChange);
+
+        const closestSection = this.closest('.shopify-section');
+        if (closestSection) {
+            closestSection.addEventListener(ThemeEvents.variantUpdate, this.updateSellingPlan);
+        }
+
+        this.update();
+        this.#updatePriceDepositText(this.#lastVariantPriceCents);
+        requestAnimationFrame(() => this.#updatePriceDepositText(this.#lastVariantPriceCents));
     }
 
     disconnectedCallback() {
+        document.removeEventListener('tc:optionschange', this.onTcOptionsChange);
+
         const closestSection = this.closest('.shopify-section, dialog');
-        if (!closestSection) return;
-        closestSection.removeEventListener(
-        ThemeEvents.variantUpdate,
-        this.updateSellingPlan
-        );
+        if (closestSection) {
+            closestSection.removeEventListener(ThemeEvents.variantUpdate, this.updateSellingPlan);
+        }
+    }
+
+    /**
+     * App dispatches `tc:optionschange` when options change; re-read TC totals and refresh deposit label.
+     * Optional `CustomEvent` detail: `{ variantPriceMinor: number }` to refresh fallback base.
+     * @param {Event} ev
+     */
+    onTcOptionsChange = (ev) => {
+        const detail = /** @type {CustomEvent<{ variantPriceMinor?: unknown }>} */ (ev).detail;
+        if (detail && typeof detail === 'object' && detail !== null) {
+            const p = /** @type {{ variantPriceMinor?: unknown }} */ (detail).variantPriceMinor;
+            if (typeof p === 'number' && Number.isFinite(p)) {
+                this.#lastVariantPriceCents = Math.round(p);
+                if (this.input) {
+                    this.input.dataset.variantPriceMinor = String(this.#lastVariantPriceCents);
+                }
+            }
+        }
+
+        this.#updatePriceDepositText(this.#lastVariantPriceCents);
+        requestAnimationFrame(() => this.#updatePriceDepositText(this.#lastVariantPriceCents));
+    };
+
+    /** @returns {string} */
+    #getCurrency() {
+        const active = /** @type {{ active?: string } | undefined} */ (window.Shopify?.currency)?.active;
+        return active || 'USD';
+    }
+
+    /** @returns {string} */
+    #getMoneyFormatTemplate() {
+        const show = this.dataset.showCurrencyCode === 'true';
+        const withCur = this.dataset.moneyWithCurrencyFormat;
+        const plain = this.dataset.moneyFormat;
+        if (show && withCur) return withCur;
+        if (plain) return plain;
+        return '${{amount}}';
+    }
+
+    /**
+     * @param {number} minor
+     * @returns {string}
+     */
+    #formatMinor(minor) {
+        const formatted = formatMoney(minor, this.#getMoneyFormatTemplate(), this.#getCurrency());
+        return stripTrailingZeroDecimals(formatted);
+    }
+
+    /**
+     * Shopify money: minor units (cents) from third-party pricing.
+     * @returns {number | null}
+     */
+    #getTcTotalWithVariantMinor() {
+        try {
+            const tc = /** @type {any} */ (window).tc;
+            if (!tc || typeof tc.getPricingPlain !== 'function') return null;
+            const plain = /** @type {{ minor?: { totalWithVariant?: unknown } } } */ (tc.getPricingPlain());
+            const v = plain?.minor?.totalWithVariant;
+            if (typeof v !== 'number' || !Number.isFinite(v)) return null;
+            return Math.round(v);
+        } catch {
+            return null;
+        }
+    }
+
+    /** @param {string | undefined} type */
+    #isPercentageCharge(type) {
+        return String(type ?? '').toLowerCase() === 'percentage';
+    }
+
+    /** @param {string | undefined} type */
+    #isPriceCharge(type) {
+        return String(type ?? '').toLowerCase() === 'price';
+    }
+
+    /**
+     * Deposit in cents: % of TC total (rate = whole percent, e.g. 20) or fixed checkout charge.
+     * `tcBaseMinor` must already be integer Shopify cents.
+     * @param {number} tcBaseMinor
+     * @returns {number | null}
+     */
+    #getDepositMinorFromTcBase(tcBaseMinor) {
+        if (!this.input) return null;
+        const type = this.input.dataset.chargeType;
+        const base = Math.round(tcBaseMinor);
+        if (!Number.isFinite(base)) return null;
+
+        if (this.#isPercentageCharge(type)) {
+            const rate = Number(this.input.dataset.depositRate);
+            if (!Number.isFinite(rate)) return null;
+            return Math.round((base * rate) / 100);
+        }
+        if (this.#isPriceCharge(type)) {
+            const fixed = Number(this.input.dataset.depositMinor);
+            return Number.isFinite(fixed) ? fixed : null;
+        }
+        return null;
+    }
+
+    /**
+     * @param {number | undefined} variantPriceCents
+     * @returns {number | null}
+     */
+    #getDepositMinorForVariant(variantPriceCents) {
+        if (!this.input) return null;
+        const type = this.input.dataset.chargeType;
+        const baseMinor =
+            typeof variantPriceCents === 'number' && Number.isFinite(variantPriceCents)
+                ? variantPriceCents
+                : Number(this.input.dataset.variantPriceMinor);
+
+        if (this.#isPercentageCharge(type)) {
+            const rate = Number(this.input.dataset.depositRate);
+            if (!Number.isFinite(rate) || !Number.isFinite(baseMinor)) return null;
+            return Math.round((baseMinor * rate) / 100);
+        }
+        if (this.#isPriceCharge(type)) {
+            const fixed = Number(this.input.dataset.depositMinor);
+            return Number.isFinite(fixed) ? fixed : null;
+        }
+        return null;
+    }
+
+    /**
+     * `.price-deposit-text`: formatted deposit only. With TC + percentage = rate% of
+     * `minor.totalWithVariant` (Shopify cents), not variant list price. No toggle dependency.
+     * @param {number | undefined} variantPriceCents
+     */
+    #updatePriceDepositText(variantPriceCents) {
+        const el = this.querySelector('.price-deposit-text');
+        if (!el || !this.input) return;
+
+        const tcCents = this.#getTcTotalWithVariantMinor();
+        let depositMinor = null;
+
+        if (tcCents != null) {
+            depositMinor = this.#getDepositMinorFromTcBase(tcCents);
+        }
+
+        if (depositMinor == null) {
+            depositMinor = this.#getDepositMinorForVariant(variantPriceCents);
+        }
+
+        if (depositMinor == null) {
+            el.textContent = '';
+            return;
+        }
+
+        el.textContent = this.#formatMinor(depositMinor);
     }
 
     update() {
         if (!this.sellingJSON) return;
         if (!this.selectedVariant) return;
 
-        // Compare the single object's id
         if (this.sellingJSON.id !== this.selectedVariant) return;
         if (!this.sellingJSON.selling_plan_allocations?.[0]) return;
         if (!this.input) return;
 
         const planId = this.sellingJSON.selling_plan_allocations[0].selling_plan_id;
-
-        console.log('sellingFound plan ID:', planId);
-
-        // Convert number → string before assigning
         this.input.value = planId.toString();
+
+        if (typeof this.sellingJSON.price === 'number' && Number.isFinite(this.sellingJSON.price)) {
+            this.#lastVariantPriceCents = Math.round(this.sellingJSON.price);
+        }
+        this.#updatePriceDepositText(this.#lastVariantPriceCents);
     }
 
     /**
-     * Updates the price.
      * @param {VariantUpdateEvent} event
      */
     updateSellingPlan = (event) => {
-        const sellingPlanAllocations = /** @type {any} */ (
-            event.detail.resource
-        )['selling_plan_allocations'];
+        const resource = /** @type {any} */ (event.detail.resource);
+        if (resource?.id) {
+            this.dataset.selectedId = String(resource.id);
+            this.selectedVariant = Number(resource.id);
+        }
 
-
+        const sellingPlanAllocations = resource?.selling_plan_allocations;
         if (!this.input) return;
         if (!sellingPlanAllocations?.[0]) return;
 
-        this.input.value = sellingPlanAllocations[0].selling_plan_id;
-    };
+        this.input.value = String(sellingPlanAllocations[0].selling_plan_id);
 
+        const cents = typeof resource?.price === 'number' ? resource.price : undefined;
+        if (typeof resource?.price === 'number' && Number.isFinite(resource.price)) {
+            this.#lastVariantPriceCents = Math.round(resource.price);
+            this.input.dataset.variantPriceMinor = String(this.#lastVariantPriceCents);
+        }
+        this.#updatePriceDepositText(this.#lastVariantPriceCents);
+        requestAnimationFrame(() => this.#updatePriceDepositText(this.#lastVariantPriceCents));
+    };
 }
 
 if (!customElements.get('toggle-deposit')) {
-  customElements.define('toggle-deposit', ToggleDeposit);
+    customElements.define('toggle-deposit', ToggleDeposit);
 }
 
 function scrollToHash() {
-  const hash = window.location.hash; // "#faq"
-  if (hash) {
-    const id = hash.slice(1); // remove #
-    const target = document.querySelector(`[data-section-id="${id}"]`);
-    if (target) {
-      let offset = 0;
-      const stickyHeader = document.querySelector('.header[data-sticky-state="active"]');
-      if (stickyHeader) {
-        offset = stickyHeader.clientHeight;
-      }
+    const hash = window.location.hash;
+    if (hash) {
+        const id = hash.slice(1);
+        const target = document.querySelector(`[data-section-id="${id}"]`);
+        if (target) {
+            let offset = 0;
+            const stickyHeader = document.querySelector('.header[data-sticky-state="active"]');
+            if (stickyHeader) {
+                offset = stickyHeader.clientHeight;
+            }
 
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth"
-      });
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+            });
+        }
     }
-  }
 }
 
-// Run on page load
 scrollToHash();
-
-// Run on hash change
-window.addEventListener("hashchange", scrollToHash);
-
-window.addEventListener('pplrAppInitiated', function() {
-  const moneyFormat = window.theme?.moneyFormat || '${{amount}}'; 
-  const currency = window.Shopify?.currency?.active || 'AUD';
-
-  document.querySelectorAll('[data-pplr_price]').forEach(el => {
-    const rawPrice = parseFloat(el.dataset.pplr_price);
-
-    if (rawPrice > 0) {
-      const priceNum = rawPrice * 100; 
-      const formattedPrice = formatMoney(priceNum, moneyFormat, currency).replace('.00', '');
-      
-      // Check if the element is an <option> tag
-      if (el.tagName.toLowerCase() === 'option') {
-        // Options only accept plain text
-        el.textContent = `${el.textContent} (+${formattedPrice})`;
-      } else {
-        // Other elements can accept the HTML span
-        el.insertAdjacentHTML('beforeend', ` <span class="pplr-price-span">(+${formattedPrice})</span>`);
-      }
-    }
-  });
-});
-
-// Listen for the pplrAddToCartCompleted custom event
-window.addEventListener('pplrAddToCartCompleted' , function(e) {
-// check if the add to cart event has fired
-console.log(e)
-})
+window.addEventListener('hashchange', scrollToHash);
