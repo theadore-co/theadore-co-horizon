@@ -1631,7 +1631,7 @@
         ".product-details {justify-content: flex-start;}",
         ".popup-link__button {text-decoration: underline;}",
         ".popup-link__button svg {display: none;}",
-        "@media (min-width: 750px) {{--sidebar-width: 426px; }.product-details > .group-block {max-width: var(--sidebar-width);}}"
+        "@media (min-width: 750px) {{--sidebar-width: 426px; } .product-details > .group-block {max-width: var(--sidebar-width); }}"
       ],
       "settings": {
         "content_width": "page-narrow",
@@ -1826,8 +1826,8 @@
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
-        "enable_mobile_gap": false,
-        "mobile_gap": 12,
+        "enable_mobile_gap": true,
+        "mobile_gap": 32,
         "section_width": "page-narrow",
         "full_width_on_mobile": true,
         "section_height": "",
