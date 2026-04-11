@@ -695,7 +695,7 @@ summary {
         --header-template-columns: auto auto 1fr var(--header-mobile-bookend) var(--header-mobile-bookend) !important;
     }
 
-    body {
+    :root {
         --font-paragraph--size: var(--font-size--xs) !important;
     }
 }
