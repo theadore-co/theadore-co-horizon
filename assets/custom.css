@@ -696,7 +696,7 @@ summary {
     }
 
     :root {
-        --font-paragraph--size: var(--font-size--xs) !important;
+        --font-size--paragraph: var(--font-size--xs) !important;
     }
 }
 
