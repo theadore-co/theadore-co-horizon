@@ -1610,7 +1610,7 @@
         ".product-details {justify-content: flex-start;}",
         ".popup-link__button {text-decoration: underline;}",
         ".popup-link__button svg {display: none;}",
-        ".Shopvid__VideoBlock__Grid__Container {padding-block: 0;}",
+        ".Shopvid__VideoBlock__Grid__Container {padding-block: 0 !important;}",
         "@media (min-width: 750px) {{--sidebar-width: 426px; } .product-details > .group-block {max-width: var(--sidebar-width); }}"
       ],
       "settings": {
