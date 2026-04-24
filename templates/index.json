@@ -4960,6 +4960,9 @@
         "group_jzwgzC",
         "group_tD77XQ"
       ],
+      "custom_css": [
+        ".Shopvid__VideoBlock__Grid .Shopvid__VideoBlock__Grid__Container {padding-block: 0;}"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
