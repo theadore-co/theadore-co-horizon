@@ -1579,37 +1579,16 @@
                   },
                   "blocks": {}
                 },
-                "moast_carousel_QaHxVa": {
-                  "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
+                "shopvid_mp_tiktok_block_xN7X8Y": {
+                  "type": "shopify://apps/shopvid/blocks/mp_tiktok_block/1216543a-6237-4445-a5f2-61991cd76022",
                   "settings": {
-                    "dynamic": false,
-                    "feed": "",
-                    "feed_usage": "back_up",
-                    "header": "",
-                    "slide_type": "stories",
-                    "product_cards": "none",
-                    "autoplay_mode": "all",
-                    "autoscroll_duration": 0,
-                    "slide_size": "100",
-                    "aspect_ratio": "vertical",
-                    "border": 0,
-                    "border_color": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-                    "slide_rounding": "20",
-                    "slide_spacing": 16,
-                    "padding_top": 0,
-                    "pagination": "overlay",
-                    "alignment": "center",
-                    "click_action": "fullscreen",
-                    "float_location": "bottom_right",
-                    "float_size": "medium",
-                    "show_captions": false,
-                    "custom_css": ""
+                    "mp_tiktok_feed_id": "2404-157030"
                   }
                 }
               },
               "block_order": [
                 "text_xcxnnz",
-                "moast_carousel_QaHxVa"
+                "shopvid_mp_tiktok_block_xN7X8Y"
               ]
             }
           },
