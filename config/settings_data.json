@@ -101,17 +101,17 @@
         "disabled": false,
         "settings": {}
       },
-      "9108694385781200119": {
-        "type": "shopify://apps/moast/blocks/embed/1ac7547b-5443-446c-868c-7fab4566ee16",
-        "disabled": false,
-        "settings": {}
-      },
       "14363423897904516493": {
         "type": "shopify://apps/tc-custom-options/blocks/canvas_embed/019d696c-875a-71d9-821e-02ec783a1b50",
         "disabled": false,
         "settings": {
           "min_height": 360
         }
+      },
+      "14020781649437803805": {
+        "type": "shopify://apps/shopvid/blocks/app_embed/1216543a-6237-4445-a5f2-61991cd76022",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
