@@ -254,11 +254,11 @@ slideshow-arrows[position="top"] .slideshow-control[disabled] {
 
 body .xb-product-quantity.show, .cart-bubble__background {
     background-color: var(--brand-color) !important;
-    color: var(--color-primary) !important;
+    color: var(--color-accent) !important;
 }
 
 .cart-bubble {
-    color: var(--color-primary) !important;
+    color: var(--color-accent) !important;
 }
 
 .header-actions__cart-icon {
@@ -548,8 +548,18 @@ summary {
     display: none;
 }
 
+/* v3 had no caret, so nav item spacing lived on the title. v4 wraps the title AND
+   the caret in .menu-list__link-inner, so title padding pushed the caret ~16px away
+   from its label. Same spacing value, applied to the wrapper instead: item-to-item
+   spacing is unchanged, and the caret sits next to its text. */
+.menu-list__link-inner {
+    /* Sum of the two paddings this replaces, so item-to-item spacing is byte-identical
+       to v3: the old title padding (--gap-2xl / 2) plus v4's own wrapper padding
+       (--gap-xl / 2), which this !important would otherwise override. */
+    padding-inline: calc((var(--gap-2xl) + var(--gap-xl)) / 2) !important;
+}
 .menu-list__link-title {
-    padding-inline: calc(var(--gap-2xl) / 2) !important;
+    padding-inline: 0 !important;
 }
 .menu-list__list-item:not([slot=overflow]):after {
     height: var(--padding-xl) !important;
@@ -659,7 +669,9 @@ summary {
 
     .search-modal__button {
         gap: var(--gap-xs);
-        border-bottom: .01rem solid var(--color-border);
+        /* currentColor tracks the header text colour in every state - white over a
+           transparent header, dark once it goes opaque. --color-border stays dark. */
+        border-bottom: .01rem solid currentColor;
         padding-right: var(--padding-xs);
         align-items: center;
     }
@@ -702,6 +714,77 @@ summary {
 
     .product-badges__badge {
         --badge-font-size: var(--font-size--3xs) !important;
+    }
+}
+.button, .button--secondary {
+    letter-spacing: var(--letter-spacing--body-normal);
+}
+
+.size-style.link {
+    position: relative;
+}
+
+.size-style.link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-foreground);
+    display: block;
+}
+
+/* Borderless quick-add: theme icon size assumes 2px border each side */
+.quick-add__button {
+    border: 0 !important;
+    box-sizing: border-box;
+}
+
+.quick-add__button .add-to-cart-icon {
+    width: var(--button-size-md) !important;
+}
+
+/* Collapsed icon-only: square footprint + round mask (hover expands to pill) */
+.quick-add__button:not(:is(:hover, :focus-visible)) {
+    width: var(--button-size-md);
+    min-width: var(--button-size-md);
+    border-radius: 50% !important;
+}
+
+.quick-add__button:not(:is(:hover, :focus-visible)) .add-to-cart-text {
+    width: 100%;
+    border-radius: 50% !important;
+}
+
+.quick-add__button:not(:is(:hover, :focus-visible)) .add-to-cart-icon {
+    width: 100% !important;
+}
+
+.quick-add__button:is(:hover, :focus-visible) {
+    width: auto;
+    min-width: var(--button-size-md);
+    border-radius: 50px !important;
+}
+
+.quick-add__button:is(:hover, :focus-visible) .add-to-cart-icon {
+    width: var(--button-size-md) !important;
+}
+
+.menu-list__link {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 750px) {
+    .quick-add--full-width-desktop .quick-add__button:not(:is(:hover, :focus-visible)) {
+        width: calc(
+            100% - (var(--quick-add-right, calc(var(--quick-add-offset, var(--padding-md)) + var(--padding-inline-end, 0px))) * 2)
+        ) !important;
+        min-width: 0;
+        border-radius: 0 !important;
+    }
+
+    .quick-add--full-width-desktop .quick-add__button:not(:is(:hover, :focus-visible)) .add-to-cart-text {
+        border-radius: 0 !important;
     }
 }
 
@@ -810,3 +893,131 @@ summary {
         border: 0 !important;
     }
 }
+
+/* Section Width - Narrow (78rem content) — page-content-width drives grid + carousel gutter offset */
+.section--narrow {
+  --page-content-width: 78rem;
+  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+}
+
+.section--narrow .section-content-wrapper,
+.section--narrow > .section-content {
+  max-width: 78rem;
+  margin-inline: auto;
+  /* padding-inline: var(--page-margin); */
+}
+
+.slideshow-controls__dots button:after {
+    box-shadow: unset !important;
+}
+
+.accordion .details__header {
+    padding-block: var(--padding-md);
+}
+
+.details-content .text-block h2, .details-content h2 {
+    font-size: var(--font-h4--size);
+}
+
+.tax-note, #shopify-installments, shopify-installments {
+    font-size: var(--font-size--xs) !important;
+}
+
+.accordion .details__header {
+    --summary-font-weight: 600;
+}
+
+.menu-list__submenu-inner {
+    --menu-child-font-case: unset !important;
+}
+
+.mega-menu__link--parent {
+    font-size: var(--font-size--sm) !important;
+}
+
+/* Icon block: size by height instead of width */
+.use-height-icon img, .use-height-icon svg {
+    width: auto !important;
+    height: var(--height) !important;
+    object-fit: contain;
+}
+
+/* Mega menu as submenu style — only for flat menus (no nested parent links) */
+/* Anchor the flat dropdown directly under its menu item */
+.menu-list__list-item:has(> .menu-list__submenu--flat) {
+    position: relative;
+}
+
+.menu-list__submenu--flat {
+    width: 23rem !important;
+    min-width: 23rem !important;
+    max-width: 23rem !important;
+    top: 100% !important;
+    left: 0 !important;
+    clip-path: none !important;
+    padding-inline: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Hide full-width header underlay only when a flat mega menu is open */
+.header:has(.menu-list__link--flat[aria-expanded='true']) .header__underlay-open {
+    display: none !important;
+}
+
+.menu-list__submenu--flat .mega-menu__list {
+    grid-template-columns: 1fr !important;
+    grid-column: 1 !important;
+}
+
+.menu-list__submenu--flat .mega-menu__grid {
+    grid-template-columns: 1fr !important;
+    grid-column: -1 / 1 !important;
+}
+
+.menu-list__submenu--flat .mega-menu {
+    grid-template-columns: 1fr !important;
+}
+
+.menu-list__submenu--flat .menu-list__submenu-inner {
+    transform: none !important;
+    padding-block: var(--padding-lg) !important;
+    padding-inline: var(--padding-md) !important;
+    border: 0.5px solid rgb(var(--color-border-rgb) / var(--opacity-25));
+    background: var(--color-background);
+}
+
+.variant-option__button-label {
+    min-height: 2.85em;
+}
+
+/* Full-width section: pull .contained-right in to match page / narrow column edge */
+@media screen and (min-width: 750px) {
+  .page-width-normal .section--full-width {
+    --contained-content-width: var(--normal-page-width);
+  }
+
+  .page-width-narrow .section--full-width {
+    --contained-content-width: 78rem;
+  }
+
+  .page-width-wide .section--full-width {
+    --contained-content-width: var(--wide-page-width);
+  }
+
+  .section--full-width {
+    --contained-margin-end: max(
+      var(--page-margin),
+      calc((100% - min(var(--contained-content-width, var(--page-content-width)), 100% - var(--page-margin) * 2)) / 2)
+    );
+  }
+
+  .section--full-width .contained-right {
+    margin-inline-end: var(--contained-margin-end);
+    box-sizing: border-box;
+  }
+
+  .section--page-width .contained-right,
+  .section--narrow .contained-right {
+    margin-inline-end: 0;
+  }
+}/* dev-sync-probe-1787234126 */

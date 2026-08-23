@@ -1,11 +1,48 @@
-{% if closest.collection == blank %}
-  {% assign text = 'placeholders.collection_title' | t %}
-  {% assign collection_title = '<p>' | append: text | append: '</p>' %}
-  {% render 'text', fallback_text: collection_title, block: block %}
-{% elsif closest.collection != blank %}
-  {% assign collection_title = '<p>' | append: closest.collection.title | append: '</p>' %}
-  {% render 'text', fallback_text: collection_title, block: block %}
-{% endif %}
+{% liquid
+  if closest.collection == blank
+    assign text = 'placeholders.collection_title' | t
+    assign collection_title = '<p>' | append: text | append: '</p>'
+  else
+    assign collection_title = '<p>' | append: closest.collection.title | append: '</p>'
+  endif
+%}
+
+<div
+  class="collection-title-row"
+  style="--width: {{ block.settings.width }};"
+>
+  <div class="collection-title-row__text">
+    {% render 'text', fallback_text: collection_title, block: block %}
+  </div>
+  <span class="svg-wrapper icon-arrow collection-title-row__icon" aria-hidden="true">
+    {{- 'icon-title-arrow.svg' | inline_asset_content -}}
+  </span>
+</div>
+
+{% stylesheet %}
+  .collection-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-sm);
+    width: var(--width);
+    max-width: 100%;
+    padding-inline: var(--gap-2xs);
+  }
+
+  .collection-title-row__text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .collection-title-row__text .text-block {
+    width: 100%;
+  }
+
+  .collection-title-row__icon {
+    flex: 0 0 auto;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -390,27 +427,6 @@
       "visible_if": "{{ block.settings.type_preset == 'custom' }}"
     },
     {
-      "type": "select",
-      "id": "color",
-      "label": "t:settings.color",
-      "options": [
-        {
-          "value": "var(--color-foreground)",
-          "label": "t:options.text"
-        },
-        {
-          "value": "var(--color-foreground-heading)",
-          "label": "t:options.heading"
-        },
-        {
-          "value": "var(--color-primary)",
-          "label": "t:options.link"
-        }
-      ],
-      "default": "var(--color-foreground)",
-      "visible_if": "{{ block.settings.type_preset != 'rte' }}"
-    },
-    {
       "type": "header",
       "content": "t:content.appearance"
     },
@@ -424,9 +440,14 @@
       "type": "color",
       "id": "background_color",
       "label": "t:settings.background_color",
-      "alpha": true,
-      "default": "#00000026",
+      "default": "{{ settings.color_palette.background }}",
       "visible_if": "{{ block.settings.background }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "{{ settings.color_palette.foreground }}"
     },
     {
       "type": "range",

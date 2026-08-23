@@ -144,7 +144,11 @@
 .toggle-svg {
   width: 36px;
   height: 20px;
-  background: var(--color-border); /* Unchecked color */
+  /* Unchecked color. v3's scheme-1 border was #0000000f (~6% alpha), so consuming
+     --color-border raw gave a faint track. v4 sets --color-border to the full page
+     foreground and expects consumers to apply their own opacity, so raw made the
+     unchecked track identical to the checked one (both #1f1919). */
+  background: rgb(var(--color-border-rgb) / var(--opacity-5-15));
   border-radius: 10px;
   position: relative;
   transition: background 0.25s ease;

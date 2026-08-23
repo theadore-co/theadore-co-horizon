@@ -1,5 +1,13 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<div class="section color-{{ section.settings.color_scheme }}">
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+<div class="section{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}">
   <div
     class="
       spacing-style
@@ -13,6 +21,11 @@
       {% render 'spacing-style', settings: section.settings %}
     "
   >
+    {% comment %}
+      These blocks are declared "static": true in templates/article.json, so
+      content_for 'blocks' skips them - they must be rendered explicitly or the
+      article page comes out blank.
+    {% endcomment %}
     <header>
       {%- content_for 'block', id: 'blog-post-title', type: 'text' %}
       {%- content_for 'block', id: 'blog-post-details', type: '_blog-post-info-text' %}
@@ -119,6 +132,18 @@
     },
     {
       "type": "@app"
+    },
+    {
+      "type": "_blog-post-title"
+    },
+    {
+      "type": "_blog-post-info-text"
+    },
+    {
+      "type": "_blog-post-featured-image"
+    },
+    {
+      "type": "_blog-post-content"
     }
   ],
   "class": "section-wrapper",
@@ -147,10 +172,10 @@
       "default": 12
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1"
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
     },
     {
       "type": "header",

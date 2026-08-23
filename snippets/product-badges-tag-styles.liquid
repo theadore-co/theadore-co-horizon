@@ -1,0 +1,18 @@
+{%- doc -%}
+  Theadore tag badge overrides. Rendered after 'product-badges-styles' so the
+  store's smaller badge font and flex layout win the cascade.
+
+  @example
+  {% render 'product-badges-tag-styles' %}
+{%- enddoc -%}
+
+{% stylesheet %}
+  .product-badges__badge {
+    --badge-font-size: var(--font-size--2xs);
+  }
+
+  .flex-badges {
+    display: flex;
+    gap: var(--gap-xs);
+  }
+{% endstylesheet %}

@@ -15,8 +15,7 @@
     video_style: video_style,
     video_preview_image: block_settings.video.preview_image,
     aspect_ratio: block_settings.aspect_ratio,
-    additional_attributes: block.shopify_attributes,
-    section_id: section.id
+    additional_attributes: block.shopify_attributes
   %}
 {% else %}
   {% render 'video',
@@ -27,8 +26,7 @@
     video_style: video_style,
     video_alt: block_settings.alt,
     video_preview_image: block_settings.cover_image,
-    additional_attributes: block.shopify_attributes,
-    section_id: section.id
+    additional_attributes: block.shopify_attributes
   %}
 {% endif %}
 
@@ -200,6 +198,13 @@
       "unit": "%",
       "label": "t:settings.opacity",
       "default": 100,
+      "visible_if": "{{ block.settings.border != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:settings.color",
+      "placeholder": "t:settings.default",
       "visible_if": "{{ block.settings.border != 'none' }}"
     },
     {
