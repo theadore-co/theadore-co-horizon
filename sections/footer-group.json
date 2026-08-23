@@ -39,8 +39,6 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
             "background_media": "none",
             "video_position": "cover",
             "background_image_position": "cover",
@@ -143,8 +141,6 @@
           "settings": {
             "width": "custom",
             "custom_width": 30,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
             "heading": "",
             "heading_preset": "",
             "border_style": "underline",
@@ -186,7 +182,6 @@
         "full_width_on_mobile": false,
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-2",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -207,7 +202,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "{{ settings.color_palette.color2 }}"
       }
     },
     "footer": {
@@ -238,8 +234,6 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
             "background_media": "none",
             "video_position": "cover",
             "background_image_position": "cover",
@@ -371,8 +365,6 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
             "background_media": "none",
             "video_position": "cover",
             "background_image_position": "cover",
@@ -409,8 +401,6 @@
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
                 "heading_preset": "h5",
                 "link_preset": "paragraph",
                 "padding-block-start": 0,
@@ -430,8 +420,6 @@
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
                 "heading_preset": "h5",
                 "link_preset": "paragraph",
                 "padding-block-start": 0,
@@ -451,8 +439,6 @@
                 "show_as_accordion": true,
                 "accordion_icon": "plus",
                 "accordion_dividers": true,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
                 "heading_preset": "h5",
                 "link_preset": "paragraph",
                 "padding-block-start": 0,
@@ -483,9 +469,9 @@
       "settings": {
         "section_width": "page-narrow",
         "gap": 20,
-        "color_scheme": "scheme-1",
         "padding-block-start": 80,
-        "padding-block-end": 80
+        "padding-block-end": 80,
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "utilities": {
@@ -527,9 +513,9 @@
         "section_width": "page-width",
         "gap": 24,
         "divider_thickness": 0.5,
-        "color_scheme": "scheme-1",
         "padding-block-start": 16,
-        "padding-block-end": 16
+        "padding-block-end": 16,
+        "background_color": "{{ settings.color_palette.background }}"
       }
     }
   },

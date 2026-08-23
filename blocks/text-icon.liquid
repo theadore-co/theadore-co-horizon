@@ -6,6 +6,8 @@
   {% content_for 'blocks' %}
 {% endcapture %}
 
+{% render 'contrast-override', background_color: block_settings.background_color, section_id: block.id %}
+
 <div
   class="
     group-block
@@ -15,7 +17,7 @@
     size-style
     text-icon-block
     {% if block_settings.reverse_on_mobile == true %}mobile-group-column-reverse{% endif %}
-    {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
+    {% if block_settings.background_color != blank %} color-custom-{{ block.id }}{% endif %}
   "
   style="
     {% render 'spacing-style', settings: block_settings %}
@@ -54,13 +56,19 @@
       {% if block_settings.use_height != blank %}
           <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings.mobile-height }}px;{% endif %}">
       {% endif %}
-          {% render 'icon-or-image',
-              icon: block_settings.icon,
-              image_upload: block_settings.image_upload,
-              width: block_settings.icon_width,
-              class_name: icon_block_class,
-              attributes: block.shopify_attributes
-          %}
+          {% if block_settings.custom_svg != blank %}
+            <div class="{{ icon_block_class }} custom-svg-icon" style="width: {{ block_settings.icon_width }}px;">
+              {{ block_settings.custom_svg }}
+            </div>
+          {% else %}
+            {% render 'icon-or-image',
+                icon: block_settings.icon,
+                image_upload: block_settings.image_upload,
+                width: block_settings.icon_width,
+                class_name: icon_block_class,
+                attributes: block.shopify_attributes
+            %}
+          {% endif %}
       {% if block_settings.use_height != blank %}
           </div>
       {% endif %}
@@ -90,6 +98,29 @@
   .icon-block__media {
     height: auto;
   }
+
+  .custom-svg-icon svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .use-height-icon .custom-svg-icon {
+    width: auto !important;
+    height: var(--height) !important;
+  }
+
+  .use-height-icon .custom-svg-icon svg {
+    width: auto;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .use-height-icon .custom-svg-icon {
+      height: var(--mobile-height, var(--height)) !important;
+    }
+  }
+
   @media screen and (max-width: 749px) {
     .text-icon-block .text-block {
       flex: 0 auto !important;
@@ -369,6 +400,12 @@
       "type": "image_picker",
       "id": "image_upload",
       "label": "t:settings.image_icon"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_svg",
+      "label": "Custom SVG",
+      "info": "Paste full SVG code. Overrides icon and image when provided."
     },
     {
       "type": "range",
@@ -826,7 +863,7 @@
           "label": "t:options.heading"
         },
         {
-          "value": "var(--color-primary)",
+          "value": "var(--color-accent)",
           "label": "t:options.link"
         }
       ],
@@ -1049,17 +1086,10 @@
       "content": "t:content.appearance"
     },
     {
-      "type": "checkbox",
-      "id": "inherit_color_scheme",
-      "label": "t:settings.inherit_color_scheme",
-      "default": true
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1",
-      "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
     },
     {
       "type": "select",

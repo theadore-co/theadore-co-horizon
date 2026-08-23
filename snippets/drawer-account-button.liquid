@@ -9,8 +9,14 @@
 <{{ tag }}
   class="drawer-account-button header-actions__action"
   aria-label="{{ 'accessibility.account' | t }}"
-  aria-haspopup="dialog"
-  ref="trigger"
+  {%- comment -%}
+    Only a <button> opens a dialog. When rendered as a link (v4 sends the customer
+    straight to the account page) these would be a lie to assistive tech.
+  {%- endcomment -%}
+  {%- if tag == 'button' %}
+    aria-haspopup="dialog"
+    ref="trigger"
+  {%- endif %}
   {{ attributes }}
 >
   <div class="account-label">

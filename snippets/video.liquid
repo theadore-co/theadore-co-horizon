@@ -16,7 +16,6 @@
   @param {boolean} [disable_controls] - Whether to disable controls. If true, only play/pause will be usable.
   @param {object} video - The Shopify video object or a string containing a YouTube ID or Vimeo ID
   @param {boolean} [aspect_ratio] - Aspect ratio
-  @param {string} section_id - The section ID
   @param {object} [block] - The block object
 
   Video from URL:
@@ -25,7 +24,7 @@
   @param {string} [video_alt] - The video alt text
 
   @example
-  {% render 'video', video: section.settings.video, video_autoplay: true, video_loop: true, section_id: section.id %}
+  {% render 'video', video: section.settings.video, video_autoplay: true, video_loop: true %}
 {%- enddoc -%}
 
 {% liquid
@@ -208,14 +207,5 @@
   </div>
 {% endif %}
 
-{% stylesheet %}
-  .video-interaction-hint {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: var(--layer-flat);
-  }
-
-  .video-interaction-hint:hover {
-    opacity: 1;
-  }
-{% endstylesheet %}
+{% render 'video-placeholder-styles' %}
+{% render 'deferred-media-video-styles' %}
